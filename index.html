@@ -97,7 +97,7 @@
 <h1 id="解决方法1"><a href="#解决方法1" class="headerlink" title="解决方法1"></a>解决方法1</h1><p>参考官方文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/asset-folders.html">资源文件夹 | Hexo</a></p>
 <p><img src="/2022/03/03/Hexo-github-page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/image-20220303090525332.png" alt="官方解决方案"></p>
 <p>按照图片最下面修改了hexo根目录下的_config.yml文件夹就成功了。</p>
-<p><code>post_asset_folder: true marked:   prependRoot: true   postAsset: true</code></p>
+<p><code>post_asset_folder: true</code><br><code>marked:</code><br><code>  prependRoot: true</code>s<br><code>  postAsset: true</code></p>
 <p>图片插入格式<code>![](image.png)</code></p>
 <h1 id="解决方法2"><a href="#解决方法2" class="headerlink" title="解决方法2"></a>解决方法2</h1><p>在Hexo的目录source中创建一个图片文件夹，例如pic</p>
 <p>把你要插入的图片文件放到该目录下面，在你的文章中正常使用markdown的语法插入图片即可</p>
@@ -146,17 +146,17 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h1 id="测试一下"><a href="#测试一下" class="headerlink" title="测试一下"></a>测试一下</h1><p>看看图片功能</p>
-<p><img src="/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/test.jpg" alt="test"></p>
-<p><img src="https://img-blog.csdnimg.cn/20191220164226525.png" alt="test"></p>
+<p><img src="/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/test.jpg" alt="test本地图"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191220164226525.png" alt="test网图"></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/as3522/article/details/102972473?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_default&utm_relevant_index=1">(20条消息) Hexo不显示图片,不需要插件,超简单_as3522的博客-CSDN博客_hexo 图片插件</a></p>
 <p>根据这位大佬的第二种方法终于在本地加载出本地的图片了</p>
-<p><img src="https://img-blog.csdnimg.cn/20191220164226525.png" alt="test"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191220164226525.png" alt="test网图"></p>
 <p>网图也在本地端口成功加载出来了！！！</p>
-<p><img src="/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/%E5%9B%BE%E7%89%87%E5%9C%A8%E6%9C%AC%E5%9C%B0%E5%8A%A0%E8%BD%BD%E6%88%90%E5%8A%9F%E4%BA%86.png" alt="测试成功"></p>
-<p><img src="/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/%E5%86%8D%E8%AF%95%E8%AF%95%E5%A4%A7%E4%BD%AC%E7%9A%84%E7%AC%AC%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95.jpg" alt="大佬的第一种方法"></p>
+<p><img src="/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/%E5%9B%BE%E7%89%87%E5%9C%A8%E6%9C%AC%E5%9C%B0%E5%8A%A0%E8%BD%BD%E6%88%90%E5%8A%9F%E4%BA%86.png" alt="测试成功本地图"></p>
+<p><img src="/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/%E5%86%8D%E8%AF%95%E8%AF%95%E5%A4%A7%E4%BD%AC%E7%9A%84%E7%AC%AC%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95.jpg" alt="大佬的第一种方法本地图"></p>
 <h1 id="显示情况"><a href="#显示情况" class="headerlink" title="显示情况"></a>显示情况</h1><p>网图在markdown文件和本地端口、远程端口都能正常显示！</p>
 <p>本地图片通过这种格式可以在本地和远端正常显示。md显示异常。</p>
-<p><img src="/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/image-20220303082723263.png" alt="image-20220303082723263"></p>
+<p><img src="/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/image-20220303082723263.png" alt="本地图"></p>
 
       
     </div>
