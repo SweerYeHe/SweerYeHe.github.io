@@ -4,15 +4,37 @@
   <meta charset="utf-8">
   
   
-  <title>SweerYeHe</title>
+  <title>2022考古，搭建hexo博客部署到github上 | SweerYeHe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="SweerYeHe">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="参照官网的文档进行安装和部署Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 hexo官网：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F; 官方文档教你在mac&#x2F;windows&#x2F;Linux上搭建hexo博客：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F; 主要步骤安装git，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2022考古，搭建hexo博客部署到github上">
+<meta property="og:url" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/index.html">
 <meta property="og:site_name" content="SweerYeHe">
+<meta property="og:description" content="参照官网的文档进行安装和部署Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 hexo官网：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F; 官方文档教你在mac&#x2F;windows&#x2F;Linux上搭建hexo博客：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F; 主要步骤安装git，">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303185825348.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303183636530.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image001-16463042546491.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303184345897.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303184752031.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303190313452.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303191521358.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303191245941.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image001-16463064082162.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image001-16463064982603.png">
+<meta property="og:image" content="http://example.com/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image001-16463067073014.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image002.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image003.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image004.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303193405657.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303193604220.png">
+<meta property="article:published_time" content="2022-03-03T09:23:44.000Z">
+<meta property="article:modified_time" content="2022-03-03T11:37:46.381Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="blog 博客 hexo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303185825348.png">
   
     <link rel="alternate" href="/atom.xml" title="SweerYeHe" type="application/atom+xml">
   
@@ -69,9 +91,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-2022考古，搭建Hexo博客部署到GitHub上" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-2022考古，搭建Hexo博客部署到GitHub上" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/" class="article-date">
   <time class="dt-published" datetime="2022-03-03T09:23:44.000Z" itemprop="datePublished">2022-03-03</time>
@@ -84,8 +104,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/">2022考古，搭建hexo博客部署到github上</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      2022考古，搭建hexo博客部署到github上
     </h1>
   
 
@@ -179,211 +199,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Hexo-github-page搭建个人博客图片显示问题解决方案（亲测有效）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/03/03/Hexo-github-page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/" class="article-date">
-  <time class="dt-published" datetime="2022-03-03T00:40:45.000Z" itemprop="datePublished">2022-03-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/03/Hexo-github-page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/">Hexo + github page搭建个人博客图片显示问题解决方案（亲测有效）</a>
-    </h1>
+    <a href="/2022/03/03/Hexo-github-page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo + github page搭建个人博客图片显示问题解决方案（亲测有效）</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>按照教程搭载好博客，并且部署到远端，全文本格式的md都使用正常。但是带图片的博客却无法正常显示图片。</p>
-<h1 id="解决方法1"><a href="#解决方法1" class="headerlink" title="解决方法1"></a>解决方法1</h1><p>参考官方文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/asset-folders.html">资源文件夹 | Hexo</a></p>
-<p><img src="/2022/03/03/Hexo-github-page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/image-20220303090525332.png" alt="官方解决方案"></p>
-<p>按照图片最下面修改了hexo根目录下的_config.yml文件夹就成功了。</p>
-<p><code>post_asset_folder: true</code><br><code>marked:</code><br><code>  prependRoot: true</code>s<br><code>  postAsset: true</code></p>
-<p>图片插入格式<code>![](image.png)</code></p>
-<h1 id="解决方法2"><a href="#解决方法2" class="headerlink" title="解决方法2"></a>解决方法2</h1><p>在Hexo的目录source中创建一个图片文件夹，例如pic</p>
-<p>把你要插入的图片文件放到该目录下面，在你的文章中正常使用markdown的语法插入图片即可</p>
-<p>例如<code>![img](/pic/xxx.png)</code></p>
-<p>到此你就完成了插图，并且图片在你的博客上面也会正常显示！</p>
-<p>记住在pic前面有一个&#x2F;，表示根目录的意思，因为对于hexo来说它的资源文件的根目录就是source,当然你也可以修改_config.yml改变这个配置</p>
-<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/as3522/article/details/102972473">https://blog.csdn.net/as3522/article/details/102972473</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/03/Hexo-github-page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/" data-id="cl0aamnfb0000x0umd60k4jnd" data-title="Hexo + github page搭建个人博客图片显示问题解决方案（亲测有效）" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo-github-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" rel="tag">Hexo github 个人博客</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-测试图片" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/" class="article-date">
-  <time class="dt-published" datetime="2022-03-02T11:40:54.000Z" itemprop="datePublished">2022-03-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/">测试图片</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="测试一下"><a href="#测试一下" class="headerlink" title="测试一下"></a>测试一下</h1><p>看看图片功能</p>
-<p><img src="/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/test.jpg" alt="test本地图"></p>
-<p><img src="https://img-blog.csdnimg.cn/20191220164226525.png" alt="test网图"></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/as3522/article/details/102972473?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_default&utm_relevant_index=1">(20条消息) Hexo不显示图片,不需要插件,超简单_as3522的博客-CSDN博客_hexo 图片插件</a></p>
-<p>根据这位大佬的第二种方法终于在本地加载出本地的图片了</p>
-<p><img src="https://img-blog.csdnimg.cn/20191220164226525.png" alt="test网图"></p>
-<p>网图也在本地端口成功加载出来了！！！</p>
-<p><img src="/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/%E5%9B%BE%E7%89%87%E5%9C%A8%E6%9C%AC%E5%9C%B0%E5%8A%A0%E8%BD%BD%E6%88%90%E5%8A%9F%E4%BA%86.png" alt="测试成功本地图"></p>
-<p><img src="/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/%E5%86%8D%E8%AF%95%E8%AF%95%E5%A4%A7%E4%BD%AC%E7%9A%84%E7%AC%AC%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95.jpg" alt="大佬的第一种方法本地图"></p>
-<h1 id="显示情况"><a href="#显示情况" class="headerlink" title="显示情况"></a>显示情况</h1><p>网图在markdown文件和本地端口、远程端口都能正常显示！</p>
-<p>本地图片通过这种格式可以在本地和远端正常显示。md显示异常。</p>
-<p><img src="/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/image-20220303082723263.png" alt="本地图"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/02/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/" data-id="cl09mqm3k00045gumgd04dc57" data-title="测试图片" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/03/02/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-03-02T11:05:25.710Z" itemprop="datePublished">2022-03-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/02/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/02/hello-world/" data-id="cl09mqm3900005gumc30cdqha" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="page-我的第一篇blog" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/03/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/" class="article-date">
-  <time class="dt-published" datetime="2022-03-02T07:44:30.000Z" itemprop="datePublished">2022-03-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/">我的第一篇blog</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>搞了两三天了，还没搞好，昨天搞好了，换了个主题yilia结果头像图片显示不出来，搜索了很多解决方案，结果还是不行，有点烦了，全删了重新装了hexo。<br>烦人。</p>
-<h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>原来要在#符号后面加空格才能显示小标题字体！文章总算可以显示小标题了。</p>
-<h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><p>下一步学习在文章中放图片</p>
-<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>图片还是显示不出来啊！烦了！</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/6860761-fd2f51090a890873.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/550/format/webp" alt="我用markdown插入的第一张图片"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/" data-id="cl09mqm3e00015gumbf0a6l7l" data-title="我的第一篇blog" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
