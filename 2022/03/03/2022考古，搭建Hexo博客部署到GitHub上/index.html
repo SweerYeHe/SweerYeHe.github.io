@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   
   
-  <title>2022考古，搭建hexo博客部署到github上 | SweerYeHe</title>
+  <title>2022考古，搭建Hexo博客部署到GitHub上 | SweerYeHe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="参照官网的文档进行安装和部署Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 hexo官网：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F; 官方文档教你在mac&#x2F;windows&#x2F;Linux上搭建hexo博客：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F; 主要步骤安装git，">
+  <meta name="description" content="参照官网的文档进行安装和部署Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。  hexo官网：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;   官方文档教你在mac&#x2F;windows&#x2F;Linux上搭建hexo博客：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;  主要步骤安装">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2022考古，搭建hexo博客部署到github上">
+<meta property="og:title" content="2022考古，搭建Hexo博客部署到GitHub上">
 <meta property="og:url" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/index.html">
 <meta property="og:site_name" content="SweerYeHe">
-<meta property="og:description" content="参照官网的文档进行安装和部署Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 hexo官网：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F; 官方文档教你在mac&#x2F;windows&#x2F;Linux上搭建hexo博客：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F; 主要步骤安装git，">
+<meta property="og:description" content="参照官网的文档进行安装和部署Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。  hexo官网：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;   官方文档教你在mac&#x2F;windows&#x2F;Linux上搭建hexo博客：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;  主要步骤安装">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303185825348.png">
 <meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303183636530.png">
@@ -23,16 +23,18 @@
 <meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303191245941.png">
 <meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image001-16463064082162.png">
 <meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image001-16463064982603.png">
-<meta property="og:image" content="http://example.com/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image001-16463067073014.png">
+<meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image001-16463067073014.png">
 <meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image002.png">
 <meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image003.png">
 <meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image004.png">
 <meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303193405657.png">
 <meta property="og:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303193604220.png">
 <meta property="article:published_time" content="2022-03-03T09:23:44.000Z">
-<meta property="article:modified_time" content="2022-03-03T11:37:46.381Z">
+<meta property="article:modified_time" content="2022-03-04T11:01:51.962Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="blog 博客 hexo">
+<meta property="article:tag" content="Blog">
+<meta property="article:tag" content="博客">
+<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303185825348.png">
   
@@ -105,7 +107,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      2022考古，搭建hexo博客部署到github上
+      2022考古，搭建Hexo博客部署到GitHub上
     </h1>
   
 
@@ -114,13 +116,19 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h1 id="参照官网的文档进行安装和部署"><a href="#参照官网的文档进行安装和部署" class="headerlink" title="参照官网的文档进行安装和部署"></a>参照官网的文档进行安装和部署</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a target="_blank" rel="noopener" href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<p>hexo官网：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
-<p>官方文档教你在mac&#x2F;windows&#x2F;Linux上搭建hexo博客：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></p>
+<blockquote>
+<p><strong>hexo官网：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></strong></p>
+</blockquote>
+<blockquote>
+<p><strong>官方文档教你在mac&#x2F;windows&#x2F;Linux上搭建hexo博客：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></strong></p>
+</blockquote>
 <h1 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h1><p>安装git，安装NodeJS长期版，安装hexo， 注册GitHub并创建一个特殊仓库（命名相同）</p>
-<h1 id="详细教程"><a href="#详细教程" class="headerlink" title="详细教程"></a>详细教程</h1><h2 id="安装Git，直接去官网安装"><a href="#安装Git，直接去官网安装" class="headerlink" title="安装Git，直接去官网安装"></a>安装Git，直接去官网安装</h2><p><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a></p>
+<h1 id="详细教程"><a href="#详细教程" class="headerlink" title="详细教程"></a>详细教程</h1><h2 id="安装Git，直接去官网安装"><a href="#安装Git，直接去官网安装" class="headerlink" title="安装Git，直接去官网安装"></a>安装Git，直接去官网安装</h2><blockquote>
+<p><strong><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a></strong></p>
+</blockquote>
 <p><img src="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303185825348.png" alt="下载安装Git"></p>
 <h2 id="安装nodejs，直接去官网安装"><a href="#安装nodejs，直接去官网安装" class="headerlink" title="安装nodejs，直接去官网安装"></a>安装nodejs，直接去官网安装</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org/</a></p>
+<p><strong><a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org/</a></strong></p>
 </blockquote>
 <p><img src="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303183636530.png" alt="nodejs下载长期适用版"></p>
 <p>打开cmd命令流窗口</p>
@@ -141,7 +149,7 @@
 <p><img src="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303184752031.png" alt="初始化hexo博客"></p>
 <p>安装完成了</p>
 <p>提示start blogging with hexo！（开心！！）</p>
-<h2 id="启动hexo"><a href="#启动hexo" class="headerlink" title="启动hexo"></a>启动hexo</h2><p>首先命令窗口进入到hexo根目录</p>
+<h2 id="启动Hexo"><a href="#启动Hexo" class="headerlink" title="启动Hexo"></a>启动Hexo</h2><p>首先命令窗口进入到hexo根目录</p>
 <p><code>cd e:</code></p>
 <p><code>cd holder/blog</code></p>
 <p>输入：</p>
@@ -149,7 +157,7 @@
 <p><img src="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303190313452.png" alt="启动hexo"></p>
 <p>显示如图说明在本地localhost:4000端口顺利启动了</p>
 <p>在网页输入这个端口地址就可以看到刚建起来的个人blog了！可以看到里面初始化生成了一篇HelloWorld的博客，里面介绍了hexo的一些指令。</p>
-<h2 id="写下第一篇blog"><a href="#写下第一篇blog" class="headerlink" title="写下第一篇blog"></a>写下第一篇blog</h2><p>然后你可以创建你自己的第一篇blog了</p>
+<h2 id="写下第一篇Blog"><a href="#写下第一篇Blog" class="headerlink" title="写下第一篇Blog"></a>写下第一篇Blog</h2><p>然后你可以创建你自己的第一篇blog了</p>
 <p>命令窗口进入hexo根目录然后输入：</p>
 <p><code>hexo new &quot;我的第一篇blog&quot;</code></p>
 <p><img src="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303191521358.png" alt="创建blog"></p>
@@ -171,36 +179,46 @@
 <p>打开blog文件夹里的_config.yml文件，这是一个hexo的配置文件，里面可以修改title等大多数配置。</p>
 <p>用vs可以打开，然后修改配置</p>
 <p><img src="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image001-16463064982603.png" alt="修改配置"></p>
-<p>然后在命令窗口将博客部署到远端</p>
-<p><code>Hexo g -f </code> (相当于hexo clean 再hexo g，清理缓存，发布网站)</p>
-<p><code>Hexo d</code></p>
-<p>然后就成功啦！</p>
-<h2 id="github似乎取消了http远程访问权限，只支持通过ssh访问了。"><a href="#github似乎取消了http远程访问权限，只支持通过ssh访问了。" class="headerlink" title="github似乎取消了http远程访问权限，只支持通过ssh访问了。"></a>github似乎取消了http远程访问权限，只支持通过ssh访问了。</h2><p><img src="/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image001-16463067073014.png" alt="emote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.  gi thub_ for more information.  emote: Please see https• "></p>
+<p><strong>github似乎取消了http远程访问权限，只支持通过ssh访问了。</strong></p>
+<p><img src="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image001-16463067073014.png" alt="hhtps访问失败"></p>
 <p><img src="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image002.png" alt="https访问失败，用ssh访问"></p>
-<p>将_config.fml文件的配置改了一下，把https改成了ssh公钥，branch改成了main。</p>
-<p><img src="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image003.png" alt="修改配置"></p>
+<h3 id="2，将-config-fml文件的配置改了一下，把https改成了ssh公钥，branch改成了main。"><a href="#2，将-config-fml文件的配置改了一下，把https改成了ssh公钥，branch改成了main。" class="headerlink" title="2，将_config.fml文件的配置改了一下，把https改成了ssh公钥，branch改成了main。"></a>2，将_config.fml文件的配置改了一下，把https改成了ssh公钥，branch改成了main。</h3><p><img src="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image003.png" alt="修改配置"></p>
 <p>这些跟你的github账号有关，github现在版本建立repository branch默认都是main了。</p>
 <p>ssh公钥在github主页的setting里面创建。用git连接github的仓库时就要用到的，我这里密码就是之前用git向远程push代码时创建的。</p>
 <p><img src="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/clip_image004.png" alt="ssh公钥"></p>
-<h2 id="成功送到远程github的仓库了"><a href="#成功送到远程github的仓库了" class="headerlink" title="成功送到远程github的仓库了"></a>成功送到远程github的仓库了</h2><p><img src="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303193405657.png" alt="部署成功"></p>
+<h3 id="3，然后在命令窗口将博客部署到远端"><a href="#3，然后在命令窗口将博客部署到远端" class="headerlink" title="3，然后在命令窗口将博客部署到远端"></a>3，然后在命令窗口将博客部署到远端</h3><p><code>Hexo g -f </code> (相当于hexo clean 再hexo g，清理缓存，发布网站)</p>
+<p><code>Hexo d</code></p>
+<p>然后就成功啦！</p>
+<p><strong>成功送到远程github的仓库了</strong></p>
+<p><img src="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303193405657.png" alt="部署成功"></p>
 <p><img src="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/image-20220303193604220.png" alt="远端访问"></p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="每次都要输入密码很麻烦"><a href="#每次都要输入密码很麻烦" class="headerlink" title="每次都要输入密码很麻烦"></a>每次都要输入密码很麻烦</h3><p>去git bash.exe（安装完Git就会有这个工具）里配置一下你的身份 就不用每次输入github的账号密码了</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p><strong>每次都要输入密码很麻烦</strong></p>
+<p>去git bash.exe（安装完Git就会有这个工具）里配置一下你的身份 就不用每次输入github的账号密码了</p>
 <p><code>git config --global user.name &quot;你的github用户名&quot;</code></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/" data-id="cl0awysmr0000wsum0a1p2dds" data-title="2022考古，搭建hexo博客部署到github上" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/" data-id="cl0awysmr0000wsum0a1p2dds" data-title="2022考古，搭建Hexo博客部署到GitHub上" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog-%E5%8D%9A%E5%AE%A2-hexo/" rel="tag">blog 博客 hexo</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li></ul>
 
     </footer>
   </div>
   
     
 <nav id="article-nav">
+  
+    <a href="/2022/03/04/MarkDown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          MarkDown语法学习
+        
+      </div>
+    </a>
   
   
     <a href="/2022/03/03/Hexo-github-page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
@@ -225,7 +243,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-github-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" rel="tag">Hexo github 个人博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog-%E5%8D%9A%E5%AE%A2-hexo/" rel="tag">blog 博客 hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-github-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" rel="tag">Hexo github 个人博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li></ul>
     </div>
   </div>
 
@@ -235,7 +253,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Hexo-github-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">Hexo github 个人博客</a> <a href="/tags/blog-%E5%8D%9A%E5%AE%A2-hexo/" style="font-size: 10px;">blog 博客 hexo</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">日常</a>
+      <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Hexo-github-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">Hexo github 个人博客</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">日常</a>
     </div>
   </div>
 
@@ -257,7 +275,11 @@
       <ul>
         
           <li>
-            <a href="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/">2022考古，搭建hexo博客部署到github上</a>
+            <a href="/2022/03/04/MarkDown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/">MarkDown语法学习</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/">2022考古，搭建Hexo博客部署到GitHub上</a>
           </li>
         
           <li>
@@ -270,10 +292,6 @@
         
           <li>
             <a href="/2022/03/02/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/">我的第一篇blog</a>
           </li>
         
       </ul>
