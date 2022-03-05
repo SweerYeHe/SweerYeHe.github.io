@@ -93,21 +93,83 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="方案1"><a href="#方案1" class="headerlink" title="方案1"></a>方案1</h1><ul>
-<li><p><strong>用PicGo上传图片到指定的GitHub图床仓库</strong></p>
+        <h1 id="图床测试（教程）"><a href="#图床测试（教程）" class="headerlink" title="图床测试（教程）"></a>图床测试（教程）</h1><ul>
+<li><p>图床一般是指储存图片的服务器，一般写作的同学需要把图片上传到图床。</p>
 </li>
-<li><p><strong>在Typora编辑博客文章（MarkDown文件）</strong></p>
-<ul>
-<li>在设置中关闭Typora插入图片是的复制或上传功能</li>
+<li><p>图床有免费的付费的，自己的 GitHub 当然是免费的。</p>
+</li>
+<li><p>这篇文章介绍如何把自己的 GitHub 当作图床，使用开源软件 PicGo ，把图片上传到 GitHub。</p>
+</li>
+<li><p>当然了PicGo 除了可以把 GitHub 作为图床，还可以使用其他的图床。</p>
+</li>
+<li><p>我的操作系统是 windows 10，我们开始吧！</p>
+</li>
 </ul>
+<h2 id="下载-PicGo"><a href="#下载-PicGo" class="headerlink" title="下载 PicGo"></a>下载 PicGo</h2><p>官网免费下载：<a target="_blank" rel="noopener" href="https://molunerfinn.com/PicGo/">PicGo (molunerfinn.com)</a></p>
+<h2 id="创建存放图片的仓库"><a href="#创建存放图片的仓库" class="headerlink" title="创建存放图片的仓库"></a>创建存放图片的仓库</h2><h2 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h2><ol>
+<li>如果从本地往仓库上传图片，需要有类似于 <strong>密钥</strong> 的东西🔑，也就是这一步获取的 <strong>token</strong>。</li>
+<li>点击右上角的头像，选择 <strong>settings</strong> </li>
+<li>进入设置页面，点击左侧的 <strong>Developer Settings</strong></li>
+<li>进入如下的页面，选择左侧的 <strong>Personal access tokens</strong></li>
+<li>接着，点击右上角的 <strong>Generate new token</strong> 按钮</li>
+<li>进入新建 token 的页面，按照图片的提示完成设置，然后点击最下面的 <strong>Generate token</strong> 按钮：</li>
+<li>根据自己需求选择token的有效期，可以选择无限</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/%E8%8E%B7%E5%8F%96token.png"></p>
+<p>然后页面就会显示新生成的 <strong>token</strong>，是一串数字和字母的组合，复制下来，接下来要用。</p>
+<h2 id="设置PicGo"><a href="#设置PicGo" class="headerlink" title="设置PicGo"></a>设置PicGo</h2><p>打开 PicGo，点击左侧 <strong>图床设置</strong>，选择 <strong>GitHub 设置</strong>：</p>
+<p>下面是我填写的示范：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">设定仓库名：就是你的GitHub用户名/仓库名</span><br><span class="line">设定分支名：写 main就行</span><br><span class="line">设定 Token：把刚刚生成的 token 填上</span><br><span class="line">指定存储路径：写成 img/ ，以后的图片都会存在 img 文件夹下，也可以写成其他路径</span><br><span class="line">设定自定义域名：这是固定的格式，https://raw.githubusercontent.com/你的用户名/你的仓库名/main</span><br></pre></td></tr></table></figure>
+
+<p>然后点击确定即可，若配置的信息正确，在屏幕右下角会弹出设置成功的通知。</p>
+<p><strong>PicGo设置</strong></p>
+<ul>
+<li><p>勾选 上传前重命名，每次上传时会弹出窗口让你自定义图片名。默认是以时间作为图片名。</p>
+</li>
+<li><p>勾选 上传后自动赋值URL，这样上传完就可以直接去md文章中粘贴就可以插入图片了。</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/PicGo%E8%AE%BE%E7%BD%AE.png" alt="PicGo设置"></p>
+<h2 id="上传图片"><a href="#上传图片" class="headerlink" title="上传图片"></a><strong>上传图片</strong></h2><p>用PicGo上传图片到指定的GitHub图床仓库。或其他图床仓库。</p>
+<p>上传成功后，右下角会弹出 <strong>上传成功</strong> 的提示</p>
+<p>点击左边的相册，也会看到上传的图片，当然去 GitHub 仓库也能看到。点击复制，就能复制图片的 markdown 链接，完成👍</p>
+<h2 id="文章插入图片"><a href="#文章插入图片" class="headerlink" title="文章插入图片"></a><strong>文章插入图片</strong></h2><p>用Typora编辑博客文章（MarkDown文件）</p>
+<h2 id="设置Typora"><a href="#设置Typora" class="headerlink" title="设置Typora"></a>设置Typora</h2><p><strong>在Typora设置中关闭插入图片时自动复制或上传的功能</strong></p>
 <p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/%E5%9B%BE%E5%BA%8A%E6%B5%8B%E8%AF%95%E2%80%94Typora%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE.png"></p>
-<ul>
-<li>修改Hexo根目录-blog文件夹中的_config配置文件，关闭自动生成文章同名文件夹功能</li>
-</ul>
-</li>
-</ul>
+<h2 id="修改hexo配置文件-config"><a href="#修改hexo配置文件-config" class="headerlink" title="修改hexo配置文件_config"></a>修改hexo配置文件_config</h2><p><strong>修改Hexo根目录—blog文件夹中的_config配置文件，关闭自动生成文章同名文件夹功能</strong></p>
 <p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/%E5%9B%BE%E5%BA%8A%E6%B5%8B%E8%AF%95%E2%80%94blog_config%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B9.png"></p>
 <p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/%E5%9B%BE%E5%BA%8A%E6%B5%8B%E8%AF%95%E2%80%94%E5%9C%B0%E5%9D%80%E6%A0%BC%E5%BC%8F.png" alt="上一张图片地址"></p>
+<p>成功啦！</p>
+<p>从本地和远程端口访问效果如图：</p>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/%E5%9B%BE%E5%BA%8A%E6%B5%8B%E8%AF%95%E2%80%94%E8%BF%9C%E7%AB%AF%E8%AE%BF%E9%97%AE%E6%88%90%E5%8A%9F.png" alt="成功显示出来了！"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>利用PicGo和GitHub管理图片，将博客用到的图片存放于云端，而不占用自己的电脑内存空间。</p>
+<ul>
+<li><p>下载安装PicGo</p>
+</li>
+<li><p>创建GitHub图片仓库</p>
+</li>
+<li><p>配置GitHub</p>
+</li>
+<li><p>设置PicGo</p>
+</li>
+<li><p>给文章插入图片</p>
+</li>
+<li><p>设置Typora</p>
+</li>
+<li><p>修改hexo配置文件_config</p>
+</li>
+</ul>
+<p>最后说一句， GitHub 图床虽然免费，但是上传有些慢，也可能因为网络的原因上传失败，需要多试几次~</p>
+<h2 id="优点："><a href="#优点：" class="headerlink" title="优点："></a><strong>优点：</strong></h2><ol>
+<li><p>降低本地内存开销。通过图床仓库来管理的话图片就都保存在了GitHub云端上，可以节省本地空间了。在使用图床之前，我只发了几篇文章就占用了近100M的内存</p>
+</li>
+<li><p>简便很多。发博客很多都是用的截图，再也不用把截图保存到本地再插入到文章里了。</p>
+</li>
+</ol>
+<h2 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a><strong>缺点：</strong></h2><ol>
+<li>图床仓库是公开的，上传图片要注意保护个人隐私。</li>
+</ol>
+<p>参考文献：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/9d91355e8418">图床工具的使用—PicGo - 简书 (jianshu.com)</a></p>
 
       
     </div>
@@ -149,7 +211,7 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h1 id="Typora简介"><a href="#Typora简介" class="headerlink" title="Typora简介"></a>Typora简介</h1><p>“<em>Typora是一款跨平台的Markdown编辑器软件</em>，拥有Windows、macOS客户端。Typora支持MarkDown的标准语法，同时这款软件还支持动态预览功能，一键预览。”</p>
-<p><img src="/image-20220304203854141.png" alt="Typora界面"></p>
+<p><img src="/image-20220304203847641.png" alt="Typora界面"></p>
 <p><strong>优点：界面简洁，编写所需功能应有尽有，可以打开左侧窗口管理当前文件夹的文档、查看当前文档大纲，功能很实用，编写MarkDown文档的利器！语法敲完即刻渲染完成，并显示预览效果。集成了Word和MarkDown的优点，使用体验很棒！</strong></p>
 <h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><p>这篇文章介绍使用Typora基于MarkDown语法写文章！</p>
 <p><strong>一到五和上篇文章没什么区别，可以直接跳过</strong></p>
@@ -183,6 +245,7 @@
 <p><strong>这是加粗的文字</strong><br> <em>这是倾斜的文字</em><br> <em><strong>这是斜体加粗的文字</strong></em><br> <del>这是加删除线的文字</del></p>
 <hr>
 <h1 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h1><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;<br>n个…<br>貌似可以一直加下去，字体会逐级放大。</p>
+<p>引用在GitHub上不好使。</p>
 <p>示例：</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;这是引用的内容</span><br><span class="line">&gt;&gt;这是引用的内容</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</span><br></pre></td></tr></table></figure>
 
