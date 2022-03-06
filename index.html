@@ -71,9 +71,248 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-PicGo图床功能测试" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-C++基础" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/03/05/PicGo%E5%9B%BE%E5%BA%8A%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/" class="article-date">
+    <a href="/2022/03/06/C++%E5%9F%BA%E7%A1%80/" class="article-date">
+  <time class="dt-published" datetime="2022-03-06T10:14:02.000Z" itemprop="datePublished">2022-03-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/03/06/C++%E5%9F%BA%E7%A1%80/">C++基础</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="C-编程介绍"><a href="#C-编程介绍" class="headerlink" title="C++编程介绍"></a>C++编程介绍</h1><p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/C++%E6%A1%86%E6%9E%B6.png" alt="C++框架"></p>
+<p><strong>头文件到底是个什么东西？</strong></p>
+<p>头文件其实跟源文件没什么区别，都是C++的源代码</p>
+<p><strong>因为在编译的时候头文件中的内容会被直接copy进cpp文件</strong>，但是有的时候头文件会互相包含，这可能就会造成在一份源码中copy两次同样的头文件，<strong>这也是为什么需要ifndef endif 或者#pragma once的用处</strong>。</p>
+<p>头文件相互包含总会有一个文件在另一个文件中被忽略。</p>
+<p>因为预处理时include<strong>是将包含的文件中的代码插入到当前代码里,文件是不能包含自己的</strong>,如果相互包含编译器只能取舍一下,否则是不可能正常通过的。如果遇到这种情况就需要<strong>对头文件进行重构，修改其包含关系</strong></p>
+<p>所以头文件里<strong>最好只放变量和函数的声明</strong>，而不能放它们的定义（如果多个函数都include定义，那么就会出错了）。</p>
+<p><strong>但有三个例外！</strong></p>
+<p>其一，就是const&#x2F;static可以在<strong>头文件的中定义</strong>，因为const&#x2F;static默认为全局数据区，<strong>仅在当前文件有效，即使被多个文件包含也只会定义一次</strong>。</p>
+<p>其二，就是内联函数的定义。内联函数和普通函数的区别<strong>在于编译阶段编译器需要知道内联函数的内部具体实现</strong>（才能够将其展开插入源代码），<strong>因此将内联函数放于头文件甚至有好处的。</strong></p>
+<p>其三，就是类的定义。程序在创建一个类对象的时候，编译器只有在类定义完全可见的情况下才能够对其进行布局（如内存分配、数据成员有哪些、函数接口有哪些），且也可以将函数成员的实现也放在头文件中，<strong>因为如果函数成员在类的定义体中被定义，那么就默认这个函数是内联的。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/1bab86143f1c">GCC详解</a></p>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/C++%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B.png" alt="C++编译过程"></p>
+<ol>
+<li><strong>预处理器</strong></li>
+</ol>
+<p>C&#x2F;C++的预处理器其实就是一个词法（而不是语法）预处理器，<strong>其主要完成文本替换、宏展开以及删除注释</strong>等，完成这些操作之后，将会获得真正地<strong>“源代码”</strong>。</p>
+<p>常见的include语句即是一个预处理器命名，在预处理器中它将所有的头文件包含进来。</p>
+<p>（该步骤的文件扩展名为.i）</p>
+<ol start="2">
+<li><strong>编译器</strong></li>
+</ol>
+<p>在这一步骤，将.i文件翻译为.s，得到<strong>汇编程序语言</strong>，值得注意的是所有的编译器输出的汇编语言都是同一种语法。</p>
+<p><strong>注：内联函数就是在这一环节“膨胀”进源码的</strong>，它的作用即在于：不是在调用时<strong>发生控制转</strong>移，而是在编译时将函数体<strong>嵌入在每一个调用处</strong>，适用于功能简单，<strong>规模较小又使用频繁的函数</strong>。<strong>递归函数无法内联处理，内联函数不能有循环体，switch语句，不能进行异常接口声明。仅仅省去了函数调用的开销</strong>，从而提高函数的执行效率。如果执行函数体内代码的时间，相比于函数调用的开销较大，那么效率的收获会很少。<strong>另一方面，每一处内联函数的调用都要复制代码，将使程序的总代码量增大，消耗更多的内存空间。</strong></p>
+<ol start="3">
+<li><strong>汇编器</strong></li>
+</ol>
+<p><strong>将</strong><strong>.s****翻译成机器语言指令</strong>，把这些指令打包成一种叫做<strong>可重定位目标程序</strong>的格式，并将结果保存在目标文件.o中(把汇编语言翻译成机器语言的过程)。</p>
+<ol start="4">
+<li><strong>链接器</strong>**</li>
+</ol>
+<p>链接的主要内容就是<strong>将各个模块之间相互引用的部分正确的衔接起来</strong>。它的工作就是把一些指令对其他符号地址的引用加以修正。<strong>链接过程主要包括了地址和空间分配、符号决议和重定向。</strong></p>
+<p><strong>符号决议：</strong>有时候也被叫做符号绑定、名称绑定、名称决议、或者地址绑定，其实就是指用符号来去标识一个地址。比如说 int a &#x3D; 6;这样一句代码，用a来标识一个块4个字节大小的空间，空间里边存放的内容就是4.</p>
+<p><strong>重定位：</strong>重新计算各个目标的<strong>地址</strong>过程叫做重定位。</p>
+<p>gcc会到系统默认的<strong>搜索路径”&#x2F;usr&#x2F;lib”下进行查找</strong>，也就是链接到libc.so.6库函数中去。 </p>
+<hr>
+<p>函数库一般分为静态库和动态库两种。静态库是指编译链接时，<strong>把库文件的代码全部加入到可执行文件中，因此生成的文件比较大</strong>，<strong>但在运行时也就不再需要库文件了。</strong>其后缀名一般为”.a”。动态库与之相反，在编译链接时并没有把库文件的代码加入到可执行文件中，<strong>而是在程序执行时由运行时链接文件加载库，这样可以节省系统的开销。</strong>动态库一般后缀名为”.so”，如前面所述的libc.so.6就是动态库。<strong>gcc在编译时默认使用动态库。</strong></p>
+<hr>
+<p>.txt（代码段） </p>
+<p>.data（全局静态已初始化变量） </p>
+<p>.bss（全局未初始化变量） </p>
+<p>heap（堆） </p>
+<p>stack（栈）</p>
+<p>内存分段见下图：</p>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/C++%E5%86%85%E5%AD%98%E5%88%86%E6%AE%B5.png" alt="C++内存分段"></p>
+<p>其中，.data用于<strong>存放初始化过的全局变量</strong>。若全局变量值为0，为了优化编译器会将它放在**.bss段**中。</p>
+<p>.bss段被<strong>用来存放那些没有初始化或者初始化为0的全局变量</strong>。bss段只占运行时的内存空间而不占文件空间。在程序运行的整个周期内，.bss段的数据一直存在。</p>
+<ol>
+<li><p>内存栈区： 存放局部变量名； </p>
+</li>
+<li><p>内存堆区： 存放new或者malloc出来的对象； </p>
+</li>
+<li><p>常数区： <strong>存放局部变量或者全局变量的值</strong>； </p>
+</li>
+<li><p>静态区： <strong>用于存放全局变量或者静态变量</strong>；</p>
+</li>
+<li><p>代码区：二进制代码。</p>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/jirryzhang/article/details/79518408">https://blog.csdn.net/jirryzhang/article/details/79518408</a></p>
+<h1 id="C-基础知识"><a href="#C-基础知识" class="headerlink" title="C++基础知识"></a>C++基础知识</h1><h2 id="全局-x2F-局部静态变量？"><a href="#全局-x2F-局部静态变量？" class="headerlink" title="全局&#x2F;局部静态变量？"></a>全局&#x2F;局部静态变量？</h2><p><strong>静态变量都存放于全局数据区</strong>，都在程序退出时才销毁，两者唯一的区别就在于<strong>作用域不同，全局变量全局可见</strong>，<strong>而局部静态变量仅在局部区域可见</strong>。</p>
+<p>作用域和生命周期是从两个不同的角度：<strong>时间和空间</strong>对变量进行描述。</p>
+<p>作用域，即是该变量<strong>可被引用的范围</strong>；</p>
+<p>生命周期即是该变量<strong>从初始化到销毁的时间</strong>；</p>
+<p><strong>一个程序的内存分为代码区、全局数据区、堆区、栈区，不同的内存区域，对应不同的生命周期</strong>。</p>
+<blockquote>
+<p><strong>全局变量</strong></p>
+</blockquote>
+<ul>
+<li>作用域：全局作用域（全局变量只需在一个源文件中定义，就可以作用域所有源文件。）</li>
+<li>生命周期：程序运行期间一直存在</li>
+<li>引用方法：其他文件中使用必须用extern关键字声明引用的全局变量</li>
+<li>内存分布：全局数据区</li>
+<li>注意：如果在两个文件中都定义了相同名字的全局变量，连接出错：变量重定义</li>
+</ul>
+<blockquote>
+<p><strong>全局静态变量</strong></p>
+</blockquote>
+<ul>
+<li>作用域：文件作用域（只在被定义的文件中可见。）</li>
+<li>生命周期：程序运行期间一直存在</li>
+<li>内存分布：全局数据区</li>
+<li>定义方法：static关键字，const关键字</li>
+<li>注意：只要文件不互相包含，在两个不同的文件中是可以定义完全相同的两个静态变量的，它们彼此独立，只作用在各自文件中。</li>
+</ul>
+<blockquote>
+<p><strong>局部静态变量</strong></p>
+</blockquote>
+<ul>
+<li>作用域：局部作用域（只在局部作用域可见）</li>
+<li>生命周期：程序运行期间一直存在</li>
+<li>内存分布：全局数据区</li>
+<li>定义方法：局部作用域中用static定义</li>
+<li>注意：值被初始化一次，多线程中需加锁保护）</li>
+</ul>
+<blockquote>
+<p><strong>局部变量</strong></p>
+</blockquote>
+<ul>
+<li>作用域：局部作用域（只在局部作用域可见）</li>
+<li>生命周期：程序运行出局部作用域即被销毁</li>
+<li>内存分布：栈区</li>
+</ul>
+<h2 id="函数指针与指针函数"><a href="#函数指针与指针函数" class="headerlink" title="函数指针与指针函数"></a>函数指针与指针函数</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/03/06/C++%E5%9F%BA%E7%A1%80/" data-id="cl0f4r4ih0000kcum0c0164yq" data-title="C++基础" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-C语言笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/03/06/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2022-03-06T01:58:00.000Z" itemprop="datePublished">2022-03-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/03/06/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/">C语言笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p><strong>原码：</strong>原码表示法在数值前面前面有一位符号位（即最高位为符号位），<a target="_blank" rel="noopener" href="http://baike.baidu.com/view/71505.htm">正数</a>该位为0，负数该位为1（0有两种表示：+0和-0），其余位表示数值的大小。</p>
+<p><strong>反码：</strong>正数的反码与其原码相同；负数的反码是对其原码逐位取反，但符号位除外</p>
+<p><strong>补码：</strong>计算机用反码计算时存在-0问题，所以诞生了补码</p>
+<p><strong>补码计算</strong>：正数和+0的补码是其原码；负数则先计算其反码，然后反码加上1，得到补码；补码减掉1，得到反码，再将反码取反，得到原码。</p>
+<p>8位二进制取值范围是(-2^7)～(２^7-1)，即-128～127。</p>
+<p>由于补码&#x3D;10000000具有特殊性，计算机在编写底层算法时，将其规定为该取值范围中的最小数-128，其值与(-1)+(-127)的计算结果正好符合。</p>
+<p>8位二进制补码1000 0000没有对应的反码和原码，其他位数的二进制补码与此类似。</p>
+<ol>
+<li><strong>字符和整形变量</strong></li>
+</ol>
+<p>数据类型的本质就是为了合理利用内存空间</p>
+<p>字节：1B&#x3D;&#x3D;8位b（二进制）</p>
+<p>1b只能存放0或1</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">	test01();</span><br><span class="line"></span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">test01</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">char</span> ch;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;sizeof (ch)=%d\n&quot;</span>, <span class="keyword">sizeof</span>(ch));<span class="comment">//1字节</span></span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> num;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;sizeof(num)=d%\n&quot;</span>, <span class="keyword">sizeof</span>(num));<span class="comment">//4字节</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<ol start="2">
+<li><strong>指针变量</strong></li>
+</ol>
+<p>硬盘——内存——CPU</p>
+<p>内存是CPU和硬盘的桥梁</p>
+<p>内存地址：内存编号，内存中每一个字节分配一个号码，就是内存编号</p>
+<p>指针变量：存放上面的号码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">test02</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> num = <span class="number">100</span>;</span><br><span class="line">	<span class="comment">//取变量地址   用&amp;</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, &amp;num);<span class="comment">//num变量空间4字节，取到的是变量num的起始地址，第一字节地址</span></span><br><span class="line">	<span class="comment">//需求   定义一个指针变量保存num的地址</span></span><br><span class="line">	<span class="type">int</span> *p=<span class="literal">NULL</span>;</span><br><span class="line">	<span class="comment">//定义时：*说明p是指针变量   int *整体定义p是一个整数指针类型！</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;sizeof(p)=%d\n&quot;</span>, <span class="keyword">sizeof</span>(p));</span><br><span class="line">	p = &amp;num;<span class="comment">//p指向了num变量空间的首地址，于是通过p可以找到num变量</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*p=%d\n&quot;</span>, *p);</span><br><span class="line">	<span class="comment">//使用中：*表示取p变量指向的地址空间的内容（间接地取到变量num的值）</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">00AFFCE4</span><br><span class="line">sizeof(p)=4</span><br><span class="line">*p=100</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>test03</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">test03</span><span class="params">()</span> </span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> num = <span class="number">10</span>;</span><br><span class="line">	<span class="type">int</span> *p = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="comment">//指针变量的两种类型：自身类型   指向类型</span></span><br><span class="line">	<span class="comment">//自身类型：在指针变量定义的时候，除去变量名剩下的就是该指针变量的的类型</span></span><br><span class="line">		<span class="comment">//指针变量p自身类型就是int *</span></span><br><span class="line">	<span class="comment">//指向类型：在指针变量定义时，除去*p剩下的就是该指针变量合法的指向类型</span></span><br><span class="line">		<span class="comment">//指针变量p的指向类型就是int，所以只能合法地指向int类型的变量</span></span><br><span class="line">	<span class="comment">//指向类型决定了   指针变量所取空间内容的宽度 决定了指针变量+1跳过的</span></span><br><span class="line">	p = &amp;num;</span><br><span class="line">	<span class="comment">//指针变量的跨度</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;&amp;num=%u\n&quot;</span>, &amp;num);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;p=%u\n&quot;</span>, p);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;p+1=%u\n&quot;</span>, p + <span class="number">1</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*p=%d\n&quot;</span>, *p);</span><br><span class="line"></span><br><span class="line">	<span class="type">char</span> *p1 = &amp;num;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;p1=%u\n&quot;</span>, p1);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;p1+1=%u\n&quot;</span>, p1 + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&amp;num=16448116</span><br><span class="line">p=16448116</span><br><span class="line">p+1=16448120</span><br><span class="line">*p=10</span><br><span class="line">p1=16448116</span><br><span class="line">p1+1=16448117</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>testmy01</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">testmy01() </span><br><span class="line">&#123;</span><br><span class="line">	int num = 1021;</span><br><span class="line">	int *p = NULL;</span><br><span class="line">	p = &amp;num;</span><br><span class="line">	printf(&quot;&amp;num=%u\n&quot;, &amp;num);</span><br><span class="line">	printf(&quot;p=%u\n&quot;, p);</span><br><span class="line">	printf(&quot;*p=%d\n&quot;, *p);</span><br><span class="line"></span><br><span class="line">	char *p1 = &amp;num;//p1步长是一个字节</span><br><span class="line"></span><br><span class="line">	printf(&quot;p1=%u\n&quot;, p1);</span><br><span class="line">	printf(&quot;*p1=%d\n&quot;, *p1);</span><br><span class="line"></span><br><span class="line">	p1 += 1;</span><br><span class="line">	printf(&quot;p1=%u\n&quot;, p1);</span><br><span class="line">	printf(&quot;*p1=%d\n&quot;, *p1);</span><br><span class="line"></span><br><span class="line">	p1 += 1;</span><br><span class="line">	printf(&quot;p1=%u\n&quot;, p1);</span><br><span class="line">	printf(&quot;*p1=%d\n&quot;, *p1);</span><br><span class="line"></span><br><span class="line">	p1 += 1;</span><br><span class="line">	printf(&quot;p1=%u\n&quot;, p1);</span><br><span class="line">	printf(&quot;*p1=%d\n&quot;, *p1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&amp;num=5503868</span><br><span class="line">p=5503868</span><br><span class="line">*p=1021</span><br><span class="line">p1=5503868</span><br><span class="line">*p1=-3</span><br><span class="line">p1=5503869</span><br><span class="line">*p1=3</span><br><span class="line">p1=5503870</span><br><span class="line">*p1=0</span><br><span class="line">p1=5503871</span><br><span class="line">*p1=0</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure>
+
+<p><strong>我不李姐</strong></p>
+<hr>
+<p>test04</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">test04</span><span class="params">()</span> </span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> num = <span class="number">0x12020304</span>;<span class="comment">//赋值十六进制</span></span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> *p1 = &amp;num;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*p1=%#x\n&quot;</span>, *p1);<span class="comment">//输出十六进制</span></span><br><span class="line"></span><br><span class="line">	<span class="type">short</span> *p2 = &amp;num;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*p2=%#x\n&quot;</span>, *p2);</span><br><span class="line"></span><br><span class="line">	<span class="type">char</span> *p3 = &amp;num;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*p3=%#x\n&quot;</span>, *p3);</span><br><span class="line"></span><br><span class="line">	<span class="type">short</span> *p4 = &amp;num;</span><br><span class="line">	p4 += <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*p4=%#x\n&quot;</span>, *p4);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>编译结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*p1=0x12020304</span><br><span class="line">*p2=0x304</span><br><span class="line">*p3=0x4</span><br><span class="line">*p4=0x1202</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/03/06/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/" data-id="cl0f4plgb000030umap6p9i49" data-title="C语言笔记" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-GitHub+PicGo图床功能测试（&amp;教程）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/03/05/GitHub+PicGo%E5%9B%BE%E5%BA%8A%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%EF%BC%88&%E6%95%99%E7%A8%8B%EF%BC%89/" class="article-date">
   <time class="dt-published" datetime="2022-03-05T05:25:02.000Z" itemprop="datePublished">2022-03-05</time>
 </a>
     
@@ -85,7 +324,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/05/PicGo%E5%9B%BE%E5%BA%8A%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/">PicGo图床功能测试</a>
+      <a class="p-name article-title" href="/2022/03/05/GitHub+PicGo%E5%9B%BE%E5%BA%8A%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%EF%BC%88&%E6%95%99%E7%A8%8B%EF%BC%89/">GitHub+PicGo图床功能测试（&amp;教程）</a>
     </h1>
   
 
@@ -93,7 +332,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="图床测试（教程）"><a href="#图床测试（教程）" class="headerlink" title="图床测试（教程）"></a>图床测试（教程）</h1><ul>
+        <h1 id="图床测试（-amp-教程）"><a href="#图床测试（-amp-教程）" class="headerlink" title="图床测试（&amp;教程）"></a>图床测试（&amp;教程）</h1><ul>
 <li><p>图床一般是指储存图片的服务器，一般写作的同学需要把图片上传到图床。</p>
 </li>
 <li><p>图床有免费的付费的，自己的 GitHub 当然是免费的。</p>
@@ -174,7 +413,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/05/PicGo%E5%9B%BE%E5%BA%8A%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/" data-id="cl0dffx2d0000q4um87doafwx" data-title="PicGo图床功能测试" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/03/05/GitHub+PicGo%E5%9B%BE%E5%BA%8A%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%EF%BC%88&%E6%95%99%E7%A8%8B%EF%BC%89/" data-id="cl0fa3nor0000moumbowv8qbw" data-title="GitHub+PicGo图床功能测试（&amp;教程）" class="article-share-link">Share</a>
       
       
       
@@ -771,6 +1010,22 @@
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p><strong>每次都要输入密码很麻烦</strong></p>
 <p>去git bash.exe（安装完Git就会有这个工具）里配置一下你的身份 就不用每次输入github的账号密码了</p>
 <p><code>git config --global user.name &quot;你的github用户名&quot;</code></p>
+<hr>
+<p>当输入hexo s -g发布博文并预览时出现下面的提示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line x, column y:</span><br></pre></td></tr></table></figure>
+
+<p>报错信息是提示hexo的yml配置文件 </p>
+<p>冒号后面少了空格，补上即可</p>
+<hr>
+<p><strong>hexo头像不显示问题</strong></p>
+<p>解决方案参考：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32627137/article/details/108047800">(22条消息) hexo无法显示头像问题_合成大西瓜是怎么火的-CSDN博客_hexo头像显示不出来</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/444277738">之前搭建的hexo博客一直头像不显示问题如何解决 - 知乎 (zhihu.com)</a></p>
+<hr>
+<p><strong>进阶个性化页面设计完整教程</strong></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249/">GitHub+Hexo 搭建个人网站详细教程 - 知乎 (zhihu.com)</a></p>
+<p>优秀博客设计</p>
+<p><a target="_blank" rel="noopener" href="https://www.dandyweng.com/">翁天信 · Dandy Weng 的个人网站主页</a></p>
 
       
     </div>
@@ -789,9 +1044,9 @@
 
 
   
-    <article id="post-Hexo-github-page搭建个人博客图片显示问题解决方案（亲测有效）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-Hexo + GitHub Page搭建个人博客图片显示问题解决方案（亲测有效）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/03/03/Hexo-github-page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/" class="article-date">
+    <a href="/2022/03/03/Hexo%20+%20GitHub%20Page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/" class="article-date">
   <time class="dt-published" datetime="2022-03-03T00:40:45.000Z" itemprop="datePublished">2022-03-03</time>
 </a>
     
@@ -803,7 +1058,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/03/Hexo-github-page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/">Hexo + github page搭建个人博客图片显示问题解决方案（亲测有效）</a>
+      <a class="p-name article-title" href="/2022/03/03/Hexo%20+%20GitHub%20Page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/">Hexo + GitHub Page搭建个人博客图片显示问题解决方案（亲测有效）</a>
     </h1>
   
 
@@ -823,11 +1078,13 @@
 <p>到此你就完成了插图，并且图片在你的博客上面也会正常显示！</p>
 <p>记住在pic前面有一个&#x2F;，表示根目录的意思，因为对于hexo来说它的资源文件的根目录就是source,当然你也可以修改_config.yml改变这个配置</p>
 <p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/as3522/article/details/102972473">https://blog.csdn.net/as3522/article/details/102972473</a></p>
+<h1 id="解决方法3"><a href="#解决方法3" class="headerlink" title="解决方法3"></a>解决方法3</h1><p>把图片全部保存到云端，推荐使用GitHub+PicGo图床，参见文章   <strong>PicGo图床功能测试</strong></p>
+<p><a target="_blank" rel="noopener" href="https://sweeryehe.github.io/2022/03/05/PicGo%E5%9B%BE%E5%BA%8A%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/">PicGo图床功能测试 | SweerYeHe</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/03/Hexo-github-page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/" data-id="cl0aamnfb0000x0umd60k4jnd" data-title="Hexo + github page搭建个人博客图片显示问题解决方案（亲测有效）" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/03/03/Hexo%20+%20GitHub%20Page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/" data-id="cl0fa3nq00003moumc0ah9vwg" data-title="Hexo + GitHub Page搭建个人博客图片显示问题解决方案（亲测有效）" class="article-share-link">Share</a>
       
       
       
@@ -893,9 +1150,9 @@
 
 
   
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-Hello World" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/03/02/hello-world/" class="article-date">
+    <a href="/2022/03/02/Hello%20World/" class="article-date">
   <time class="dt-published" datetime="2022-03-02T11:05:25.710Z" itemprop="datePublished">2022-03-02</time>
 </a>
     
@@ -907,7 +1164,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/02/hello-world/">Hello World</a>
+      <a class="p-name article-title" href="/2022/03/02/Hello%20World/">Hello World</a>
     </h1>
   
 
@@ -932,7 +1189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/02/hello-world/" data-id="cl09mqm3900005gumc30cdqha" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/03/02/Hello%20World/" data-id="cl0fa3npy0001moumfqru3sa1" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -1002,7 +1259,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PicGo/" rel="tag">PicGo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" rel="tag">个人博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag">图床</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PicGo/" rel="tag">PicGo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" rel="tag">个人博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag">图床</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li></ul>
     </div>
   </div>
 
@@ -1012,7 +1269,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/MarkDown/" style="font-size: 20px;">MarkDown</a> <a href="/tags/PicGo/" style="font-size: 10px;">PicGo</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/test/" style="font-size: 20px;">test</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">个人博客</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 10px;">图床</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">日常</a>
+      <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/MarkDown/" style="font-size: 20px;">MarkDown</a> <a href="/tags/PicGo/" style="font-size: 10px;">PicGo</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/test/" style="font-size: 20px;">test</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">个人博客</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 10px;">图床</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">日常</a>
     </div>
   </div>
 
@@ -1034,7 +1291,15 @@
       <ul>
         
           <li>
-            <a href="/2022/03/05/PicGo%E5%9B%BE%E5%BA%8A%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/">PicGo图床功能测试</a>
+            <a href="/2022/03/06/C++%E5%9F%BA%E7%A1%80/">C++基础</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/06/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/">C语言笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/05/GitHub+PicGo%E5%9B%BE%E5%BA%8A%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%EF%BC%88&%E6%95%99%E7%A8%8B%EF%BC%89/">GitHub+PicGo图床功能测试（&amp;教程）</a>
           </li>
         
           <li>
@@ -1043,14 +1308,6 @@
         
           <li>
             <a href="/2022/03/04/MarkDown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/">MarkDown语法学习</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/03/2022%E8%80%83%E5%8F%A4%EF%BC%8C%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A/">2022考古，搭建Hexo博客部署到GitHub上</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/03/Hexo-github-page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/">Hexo + github page搭建个人博客图片显示问题解决方案（亲测有效）</a>
           </li>
         
       </ul>
