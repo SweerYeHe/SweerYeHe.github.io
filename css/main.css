@@ -2537,7 +2537,7 @@ ul.breadcrumb li:last-child {
   }
 }
 .site-brand-container {
-  background: #87daff;
+  background: #333;
 }
 @media (max-width: 991px) {
   .site-nav-on .site-brand-container {
@@ -2727,35 +2727,32 @@ body {
   background-image: url("https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/20220315223840.png");
   background-attachment: fixed;
   background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 .site-meta {
   background: url("https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/1500202620193.jpeg");
 }
 .brand {
-  color: #4dfc23;
+  color: #f5f5f5;
 }
 .site-subtitle {
-  color: #4dfc23;
+  color: #f5f5f5;
 }
-.footer {
-  font-size: 14px;
-  color: #ededed;
-}
-����͸��������,
-.post-block {
-  background-color: transparent;
+.main-inner {
   opacity: 0.8;
+}
+.post-block {
+  opacity: 0.9;
 }
 .sidebar {
-  background-color: transparent;
-  opacity: 0.8;
+  background: transparent;
+  opacity: 0.9;
 }
 .header-inner {
-  background: rgba(255,255,255,0.8);
+  background: rgba(51,51,51,0.9);
 }
 .popup {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .fa {
   font-size: 14px;
