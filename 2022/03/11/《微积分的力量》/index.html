@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/manifest.json">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"sweeryehe.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="看到第27页，我感到这本书在用常人能听懂的方式讲述微积分的实际应用。不得不说这种讲述方式很讨喜，我有点喜欢上了。 同时令我想到了昨天在朋友桌上翻看的《费曼学习法》中所述，用输出逼迫自己高效输入，而输出的正确方式是将你所学到的知识用非专业的人能听懂的话来讲，如果是以想要炫耀自己学习深度的态度去输出比如用很多专业的术语，那样则没有效果。 确实，作为这种输出方式的接受者我感到获得了帮助，如果这般输出还能">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="《微积分的力量》">
+<meta property="og:url" content="https://sweeryehe.github.io/2022/03/11/%E3%80%8A%E5%BE%AE%E7%A7%AF%E5%88%86%E7%9A%84%E5%8A%9B%E9%87%8F%E3%80%8B/index.html">
+<meta property="og:site_name" content="SweerYeHe">
+<meta property="og:description" content="看到第27页，我感到这本书在用常人能听懂的方式讲述微积分的实际应用。不得不说这种讲述方式很讨喜，我有点喜欢上了。 同时令我想到了昨天在朋友桌上翻看的《费曼学习法》中所述，用输出逼迫自己高效输入，而输出的正确方式是将你所学到的知识用非专业的人能听懂的话来讲，如果是以想要炫耀自己学习深度的态度去输出比如用很多专业的术语，那样则没有效果。 确实，作为这种输出方式的接受者我感到获得了帮助，如果这般输出还能">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/qq_pic_merged_1647332901253.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203162123398.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/IMG_20220316_185815.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203162205085.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203162227186.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181527033.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181417206.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181525533.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181607315.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203211039501.jpg">
+<meta property="article:published_time" content="2022-03-11T10:58:00.000Z">
+<meta property="article:modified_time" content="2022-03-21T09:10:00.130Z">
+<meta property="article:author" content="SweerYeHe">
+<meta property="article:tag" content="微积分">
+<meta property="article:tag" content="读书笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/qq_pic_merged_1647332901253.jpg">
+
+
+<link rel="canonical" href="https://sweeryehe.github.io/2022/03/11/%E3%80%8A%E5%BE%AE%E7%A7%AF%E5%88%86%E7%9A%84%E5%8A%9B%E9%87%8F%E3%80%8B/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sweeryehe.github.io/2022/03/11/%E3%80%8A%E5%BE%AE%E7%A7%AF%E5%88%86%E7%9A%84%E5%8A%9B%E9%87%8F%E3%80%8B/","path":"2022/03/11/《微积分的力量》/","title":"《微积分的力量》"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>《微积分的力量》 | SweerYeHe</title>
+  
+
+
+
+
+<script src="/lib/fireworks.js"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">SweerYeHe</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">day day up!</p>
+      <img class="custom-logo-image" src="/uploads/custom-logo.jpg" alt="SweerYeHe">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">18</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">11</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%B0%E7%90%83%E4%B8%8A%E7%9A%84%E8%BF%90%E5%8A%A8%E2%80%94%E2%80%94%E9%98%BF%E5%9F%BA%E7%B1%B3%E5%BE%B7%E7%9A%84%E5%AD%A6%E7%94%9F%E4%BC%BD%E5%88%A9%E7%95%A5-%E7%90%86%E6%80%A7%E4%B8%BB%E4%B9%89%E8%80%85"><span class="nav-number">1.</span> <span class="nav-text">地球上的运动——阿基米德的学生伽利略     理性主义者</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">----------------读书反思</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%8F%E6%A0%BC%E6%8B%89%E5%BA%95%E5%BC%8F%E5%AF%B9%E8%AF%9D%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">苏格拉底式对话？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%92%9F%E6%91%86%E8%B5%8B%E4%BA%88%E4%BA%86%E4%BA%BA%E7%B1%BB%E7%AC%AC%E4%B8%80%E7%A7%8D%E5%87%86%E7%A1%AE%E8%AE%A1%E6%97%B6%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">钟摆赋予了人类第一种准确计时法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%AA%E9%98%B3%E7%B3%BB%E7%9A%84%E8%BF%90%E5%8A%A8%E2%80%94%E2%80%94%E5%BC%80%E6%99%AE%E5%8B%92-%E7%A5%9E%E7%A7%98%E4%B8%BB%E4%B9%89%E8%80%85"><span class="nav-number">3.</span> <span class="nav-text">太阳系的运动——开普勒    神秘主义者</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">----------------读书反思</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95"><span class="nav-number"></span> <span class="nav-text">解析几何</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9"><span class="nav-number">1.</span> <span class="nav-text">数据压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%95%E5%8A%A0%E7%B4%A2%EF%BC%9A%E2%80%9C%E8%89%BA%E6%9C%AF%E6%98%AF%E8%AE%A9%E6%88%91%E4%BB%AC%E8%AE%A4%E8%AF%86%E7%9C%9F%E7%90%86%E7%9A%84%E8%B0%8E%E8%A8%80%E2%80%9D"><span class="nav-number">3.</span> <span class="nav-text">毕加索：“艺术是让我们认识真理的谎言”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%9B%E9%A1%BF%E6%8A%8A%E9%9D%A2%E7%A7%AF%E7%9C%8B%E6%88%90%E4%B8%80%E4%B8%AA%E6%B5%81%E5%8A%A8%E7%9A%84%E6%88%96%E7%A7%BB%E5%8A%A8%E7%9A%84%E9%87%8F"><span class="nav-number">4.</span> <span class="nav-text">牛顿把面积看成一个流动的或移动的量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E7%A7%AF%E5%88%86%E7%9A%84%E4%B8%89%E5%A4%A7%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">微积分的三大核心问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E7%A7%AF%E5%88%86%E8%BF%90%E7%AE%97%E5%8F%98%E5%BE%97%E6%AF%AB%E4%B8%8D%E8%B4%B9%E5%8A%9B%EF%BC%81"><span class="nav-number">6.</span> <span class="nav-text">微积分运算变得毫不费力！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%B7%E6%90%AD%E5%A4%A7%E5%B8%88"><span class="nav-number">7.</span> <span class="nav-text">混搭大师</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">----------------读书反思</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E7%A7%AF%E5%88%86%E4%B8%8E%E8%89%BE%E6%BB%8B%E7%97%85%E6%B2%BB%E7%96%97"><span class="nav-number">1.</span> <span class="nav-text">微积分与艾滋病治疗</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">----------------读书反思</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">----------------读书反思</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%BC%A6%E6%B3%A2"><span class="nav-number">1.</span> <span class="nav-text">正弦波</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">----------------读书反思</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E7%A7%AF%E5%88%86%E7%9A%84%E6%9C%AA%E6%9D%A5"><span class="nav-number">1.</span> <span class="nav-text">微积分的未来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%B3%E5%AE%9A%E8%AE%BA%E5%8F%8A%E5%85%B6%E5%B1%80%E9%99%90"><span class="nav-number">2.</span> <span class="nav-text">决定论及其局限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%B7%E6%B2%8C"><span class="nav-number">3.</span> <span class="nav-text">混沌</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%BC%8F%EF%BC%81"><span class="nav-number">4.</span> <span class="nav-text">模式！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD%E9%83%A8%E5%88%86"><span class="nav-number">5.</span> <span class="nav-text">结语部分</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">那些科研中的喜悦</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%BF%E5%9F%BA%E7%B1%B3%E5%BE%B7"><span class="nav-number"></span> <span class="nav-text">阿基米德</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%BD%E5%88%A9%E7%95%A5"><span class="nav-number"></span> <span class="nav-text">伽利略</span></a></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="SweerYeHe"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">SweerYeHe</p>
+  <div class="site-description" itemprop="description">If we learn so much knowledge that we can not help others, what is the use of learning?</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/sweeryehe" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;sweeryehe" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:sweerhe@qq.com" title="E-Mail → mailto:sweerhe@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/7512971479" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7512971479" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sweeryehe.github.io/2022/03/11/%E3%80%8A%E5%BE%AE%E7%A7%AF%E5%88%86%E7%9A%84%E5%8A%9B%E9%87%8F%E3%80%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="SweerYeHe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SweerYeHe">
+      <meta itemprop="description" content="If we learn so much knowledge that we can not help others, what is the use of learning?">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="《微积分的力量》 | SweerYeHe">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          《微积分的力量》
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-11 18:58:00" itemprop="dateCreated datePublished" datetime="2022-03-11T18:58:00+08:00">2022-03-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-21 17:10:00" itemprop="dateModified" datetime="2022-03-21T17:10:00+08:00">2022-03-21</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>14k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>13 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>看到第27页，我感到这本书在用常人能听懂的方式讲述微积分的实际应用。不得不说这种讲述方式很讨喜，我有点喜欢上了。</p>
+<p>同时令我想到了昨天在朋友桌上翻看的《费曼学习法》中所述，用输出逼迫自己高效输入，而输出的正确方式是将你所学到的知识用非专业的人能听懂的话来讲，如果是以想要炫耀自己学习深度的态度去输出比如用很多专业的术语，那样则没有效果。</p>
+<p>确实，作为这种输出方式的接受者我感到获得了帮助，如果这般输出还能使输出者高效输入，则是互利共赢了，实在找不到不接受的理由。</p>
+<p>还有一句不久前不知从哪看来的话，我觉得让我眼前一亮，分享在这里也不错：</p>
+<p><strong>“如果我们学习这么多知识，却不能用来帮助他人，那学来何用呢？”</strong></p>
+<span id="more"></span>
+<hr>
+<hr>
+<hr>
+<p><strong>无穷原则</strong></p>
+<p>让复杂的问题简单化，微积分痴迷于简单性。</p>
+<p>曲线、运动和变化是最大的难题。<strong>但在无穷远处，一切都变得更简单了</strong></p>
+<p><strong>分而治之</strong>    运用到极致   就是说到了无穷的程度</p>
+<p>微积分不是把一个大问题切分成有限的几小块，而是无休止地切分下去，直到这个问题被切分成无穷多个最微小并且可以想象的部分。之后它会逐一解决所有微小的问题，这些问题通常要比那个庞大的原始问题更容易解决。然后把所有微小问题的答案重新组合起来，这一步的难度会比较大，但也比原始问题简单得多。</p>
+<p>微积分可分为两个步骤：<strong>切分和重组</strong>。如上所述，用数学术语来说，切分过程总是涉及无限精密的减法运算，用于量化各部分之间的差异，这个部分叫做微分学。重组过程则总是涉及无限的加法运算，将各个部分整合成原来的整体，这个部分叫做积分学。</p>
+<p><strong>创造力是直觉的产物，而理性则珊珊来迟。</strong></p>
+<p>微积分的故事中，逻辑落后于直觉的情况更多，那些研究微积分的天才看起来和常人也差不多。</p>
+<p><strong>微积分是几何学的产物</strong></p>
+<p>圆是一种很特别的形状，它十分完美。大自然中圆无处不在，当我们凝视圆的时候，圆实际上也在注视着我们，因为它们就在我们所爱之人的瞳孔和虹膜的圆形轮廓中。</p>
+<p><strong>圆的专一</strong></p>
+<p>在数学上圆体现的是一种没有变化的变化，一个点绕着另一个点运动，尽管方向不断在变化，它们之间的距离却始终不变。</p>
+<p>几何学执着于平直性，因为它容易理解，正是这种执着和征服曲线的“珠峰”的原始冲动碰撞出了微积分的火花。</p>
+<p><strong>微积分的诞生</strong></p>
+<p>圆的面积   切披萨   移动披萨块组成矩形    顶边底边长度等于圆周长的一半    侧边长等于圆半径   圆周长和半径可用卷尺测量</p>
+<p>把披萨不断切割成更小块就更接近矩形，当披萨块数量到达无穷时，<strong>极限</strong>矩形诞生了。</p>
+<p><strong>极限的不可达性</strong></p>
+<p>披萨块拼成的图形，经过无数次细分后会越来越逼近矩形。遗憾的是，永远不可成为真正的矩形，就像朝一面墙每次走一半的距离，永远不可能到达墙根。</p>
+<p>幸运的是，在微积分中极限的不可到达性无关紧要。通过想象，我们能够到达极限，然后看看这种想象意味着什么，这常常就足以解决我们手头的问题。</p>
+<p>但是不要认为不可达就不存在。从一开始，微积分就固执地认为万物是连续的（时间空间物质能量）。</p>
+<p>万物——空间和时间，物质和能量，一切已经存在和将要出现的事物都应该被视为连续的。</p>
+<p>麦克斯韦的电磁理论、牛顿的引力理论、爱因斯坦的相对论等都建立在空间和时间连续的假设上。到目前为止，这种假设一直很成功。</p>
+<p><strong>极限尺度</strong></p>
+<p>普朗克长度  普朗克时间</p>
+<p><strong>关于无穷的趣事</strong></p>
+<p>在操场上，无穷曾以嘲弄和抬杠的方式出现：</p>
+<p><code>你是个混蛋！</code></p>
+<p><code>是啊，好吧。你是两倍的混蛋！</code></p>
+<p><code>你是无穷倍的混蛋！</code></p>
+<p><code>你是无穷加1倍的混蛋！</code></p>
+<p><code>那和无穷倍是一样的，你这个笨蛋！</code></p>
+<hr>
+<p><strong>原来微积分在小学就已经学了</strong>          无限循环小数0.333…=1/3，</p>
+<p>追击问题，兔子追乌龟，兔子10米每秒，乌龟1米每秒，起点乌龟领先10米</p>
+<p>微积分的思想：</p>
+<p><code>1秒后兔子追平落后的10米，此时乌龟又领先1米</code></p>
+<p><code>0.1秒后兔子追平落后的1米，此时乌龟又领先0.1米</code></p>
+<p><code>0.01秒后兔子追平落后的0.1米，此时乌龟又领先0.01米</code></p>
+<p><code>...</code></p>
+<p>相当于无穷级数1+0.1+0.01+…=1.11…=10/9</p>
+<p>当然还有另外的求解方法。比如设兔子追上乌龟用时为t秒，10t=10+t，就可以解得t=10/9。</p>
+<hr>
+<p>阿基米德  <strong>用三角形逼近抛物线弓形</strong>   无穷级数   重量想象</p>
+<p><strong>计算机动画电影</strong>之所看起来栩栩如生，部分原因在于它们体现了阿基米德的洞见：任何平滑的表面都可以令人信服地用三角形来来逼近。</p>
+<p>梦工厂创作史莱克与当地暴徒搏斗的场景时，每一帧都要用到不少于4500万个多边形。阿凡达更是用了数十亿个多边形，在潘多拉星球上的每一株植物，动画师都使用了大约100万个多边形。</p>
+<hr>
+<h3 id="地球上的运动——阿基米德的学生伽利略-理性主义者">地球上的运动——<strong>阿基米德的学生伽利略</strong>     理性主义者</h3>
+<p>奇数1、3、5、7……隐藏在物体下落的过程中</p>
+<p>垂直落体运动太快没有足够的科技手段进行观察记录，怎么办？</p>
+<p><strong>斜面试验——科学极简主义的艺术</strong></p>
+<p>“凹槽雕刻得非常平直，打磨得十分光滑”，“沿凹槽滚动的是一个坚硬光滑的铜球，非常圆”</p>
+<p>之所以关注斜面凹槽的平直度、光滑度、球的坚硬度、圆度、光滑度，因为伽利略想让球在它能设法实现的最简单最理想的条件下滚落，尽可能减少潜在问题的影响。</p>
+<p>背后的艺术性，通过提出一个美丽的问题，伽利略从大自然那里“哄骗”出一个美丽的答案。他就像一位抽象表现主义画家。</p>
+<p>简单、简介、最小化是很棒的审美</p>
+<hr>
+<h1><strong>----------------读书反思</strong></h1>
+<p>现在我最大的问题是，看到现在有90多页了，但是如果要我去给别人讲述，我就好像什么也不记得了，只留下对这本书的总体印象，好书，值得读，有收获！但具体是什么我却完全回忆不起来了。。。我是病了吗</p>
+<p>通过上面这么一想，倒是记起来一些东西      圆的面积——切割披萨  无穷细分再重组    抛物线弓形——三角形迭代拟合    假想重量天平   内接外接三角形——夹逼  计算机电影制作——阿凡达</p>
+<p>虽然记起来一些，但也是支离破碎的，零零散散的，我的记忆力真是太差了！</p>
+<hr>
+<p>研究抛体运动时，忽略阻力等噪声，关注信号本身，这样才能尽力捕捉到关于物体运动的真相与美。</p>
+<h3 id="苏格拉底式对话？">苏格拉底式对话？</h3>
+<p>钟摆的等时性    <strong>节拍器和摆钟的原理</strong>    钟摆摆动是所有摆动的始祖，它的规律具有普适性</p>
+<p>小幅度小于20度的摆动节奏不变，无论摆动幅度大或小，摆动一次的用时相等。</p>
+<p>在物理学和工程学领域，中百的摆动变成了振动的范式。</p>
+<p>约瑟夫预言   在接近绝对零度的条件下成对的超导电子可以来回隧穿一道难以穿透的绝缘屏障。</p>
+<p>约瑟夫森结   能探测到地球磁场1000亿分之一的微弱磁场，被应用与探测地下石油资源。神经外科医生用它寻找脑内肿瘤的位置。为下一代计算机的极速芯片、量子计算机奠定基础</p>
+<h3 id="钟摆赋予了人类第一种准确计时法">钟摆赋予了人类第一种准确计时法</h3>
+<p>如果有一台非常精确的时钟，航海经度问题便可以得到解决     可能用到的另一个原理是正午太阳偏角和地球赤道半径    估算出的距离误差在几公里</p>
+<p><strong>重复性的往复运动可以用来计时</strong></p>
+<p>原子钟，可以精确测量铯原子在两种能态间转换的次数，每秒钟919 263 1770次。</p>
+<p><strong>反过来时间也可以确定你的位置</strong></p>
+<p>GPS的24颗卫星在12000英里的高空绕轨运行，当你使用汽车上的GPS导航时，你的设备至少会从其中的4颗卫星那里接收无线信号，每颗卫星搭载了4个原子钟，时间精度均可达纳秒（十亿分之一秒）级，你的设备会接收到一连信号，其时间戳精确到纳秒，因此定位误差控制在几米   其中的原理是将它们惊人的时间精密度转换成我们期望的GPS定位空间精密度   另一个原理是三角测量，计算四颗卫星发送和接收信号的时间差乘以光速得到距离差，进而通过三角测量得到汽车的位置，还可以计算出海拔和速度。</p>
+<h3 id="太阳系的运动——开普勒-神秘主义者">太阳系的运动——开普勒    神秘主义者</h3>
+<p>几何学统治着宇宙！行星虽不像他最初猜想的与5种柏拉图立体有关，但他的直觉是正确的，行星的轨道是椭圆。</p>
+<p>“现在从8个月前的黎明、3个月前的白昼和几天前开始，当充足的阳光照亮我奇妙的猜想时，已经没有什么能阻止我了。我心甘情愿地陷入这种神圣的狂热状态。”</p>
+<p>科学进步不是由逻辑主宰的！很多科学发现中感性也发挥出了很大作用！</p>
+<p>作家亚瑟·库斯勒机敏的观察到，“约翰尼斯·开普勒迷恋上了毕达哥拉斯的梦想，并且在这种幻想的基础上，通过同样不可靠的推理方法，构建起现代天文学的坚固大厦。这是思想史上最令人震惊的片段之一，也是摒除‘科学进步由逻辑主宰’这个道貌岸然的信念的方法”</p>
+<hr>
+<h1><strong>----------------读书反思</strong></h1>
+<p>P118，3月14日早上，我觉得读书速度太慢了。于是尝试用我教外甥女读数学题的方式进行阅读。在读这本书时，确实速度更快了，也更有节奏感，甚至觉得有趣了。这种方法就是：将注意力只集中于关键词，在心里只读出关键词，句子的其他部分只用眼睛余光看到就能理解，不要在心里默读，那样太耗费时间。</p>
+<p>真的有趣！一小时读了昨天半天的页数了！</p>
+<p>另一个感觉就是这样子   气势凌驾于书本之上，想想我教外甥女时的场景，有那种气势在，就读书就像在做一件及其简单的事了（洒洒水的感觉。总之就是很自信吧！感觉和书的作者平等了，其实是把作者的身份抛却了！不想着这是什么艰涩难懂的东西，不想着作者有怎样的学识地位所以才能懂，那么你也能懂了！）</p>
+<p>不过  话说回来  学习数学史科学史    真实让人自卑的事情    因为很早以前，数学科学这些都是不赚钱的行业，所以能够搞这方面研究的人几乎都是有钱人家的孩子，所以在书中经常能看到类似“他致力于数学研究，纯粹是因为他喜欢数学”之类的话，他们通常都不用考虑经济问题，四处游历，讨论他们的研究。着实是羡慕不来！</p>
+<p>那么我之前想写哪些科研中的喜悦，现在看来那种喜悦，是我能学得来的么。。</p>
+<hr>
+<h2 id="解析几何">解析几何</h2>
+<p>让不同数学域相互作用与合作。数域，比如热量200卡路里或面包的数量3块。符号域，比如y=200x。</p>
+<p><strong>几何学直观具象</strong>，诉诸人的<strong>右脑</strong>，命题的真实性，一目了然。但几何证明不知从哪里入手。</p>
+<p><strong>代数是系统性的</strong>，是<strong>左脑</strong>型，机械式的，像织毛衣一样简单，但是重复枯燥，被赋予意义前它什么也不是。</p>
+<p>两者联合，势不可当。<strong>代数给几何学一个体系</strong>，此时几何学需要的不再是创造力而是韧性。它将依靠洞察力的难题，转化成虽然耗时费力但却简单直接的计算。符号的使用解放了头脑节省了时间和精力。<strong>几何学赋予代数意义</strong>，不再空洞枯燥乏味，而是化身为弯曲有致的几何形状。</p>
+<h3 id="数据压缩">数据压缩</h3>
+<p>最优化问题，求最值，不知可以用导数，早期   <strong>费马</strong>用的是  重交点的方法。  费马怎么知道在到达最优解之前一定有两个交点呢？。。。</p>
+<p>在图像压缩和音频压缩中的应用，   MP3和  JPEG</p>
+<p><strong>数据集</strong>：昼长</p>
+<p>正弦波      一年中昼长随随时间的变化时一条正弦波型曲线，年复一年画出来则是一段连续的正弦波</p>
+<p><strong>哪里有圆周运动哪里就有正弦波</strong></p>
+<p>只要循环现象发生，正弦波就会出现。</p>
+<p>荧光灯和电力线，60Hz，就是60个正弦波周期/秒，那些烦人的嗡嗡声就是正弦波每秒钟上下起伏60次产生的~</p>
+<p>昼长波的<strong>周期</strong>是一年，一年的精确值是365.25天，多出来的1/4天就是每4年要有一个闰年的原因！</p>
+<p><strong>平均数</strong>是波的基线值，昼长波的平均数代表一年中该地平均昼长    春分  秋分是该波形图两次经过平均数的时间（左右，大约估计，不是精确在这一天）。</p>
+<p><strong>波幅</strong>，说明了最长昼长与平均数的差距。</p>
+<p><strong>相位</strong>决定图的水平位置，改变相位波形图相应的左右平移，昼长波（图略了！就是6月作为对称轴的类抛物线的样子）的相位说明了春分前后会向上穿过平均数。</p>
+<p><strong>数据压缩</strong>  目前据我的理解   就是用确定曲线的参数（一个方程加截断条件）来代替这条曲线上的拟合点（很多个点）</p>
+<p>比如昼长数据集中，每两周采集一个昼长，一年得到27个数据，画出散点图，用一条正弦波图像来拟合，则只需知道正弦波的周期、平均数、波幅、相位4个参数，其中周期是1年，那么只需记录3个参数，如此一来，压缩率达到27/3=9。</p>
+<p>那么难点在于，找到一条完美拟合这些数据点的（尽可能完美，能够接受的程度！）的正弦曲线</p>
+<p>那么可以调整正弦波的3个参数，得到正弦波，计算各个数据点与拟合曲线的总误差，下冲和过冲都应该受惩罚，所以总误差取各点误差的平方和。通过这样的方法，我们找到正弦波拟合与数据点总误差最小的3个参数。<strong>这种方法称为最小二乘法</strong></p>
+<p><strong>模式是让数据压缩成为可能的首要条件</strong>！幸运的是，人们感兴趣的事物都是高度结构化、模式化的，比如音乐、面孔、指纹。</p>
+<p>为识别局部特征，提出了一种广义化正弦波——子波， 并不是在两个方向上周期性地无限延伸，而是在时间或空间上急剧集中。突然启动，振动一段时间然后停止，像心电监护仪上的信号。</p>
+<p>笛卡尔的光学论著   光的折射，当光从光疏介质进入光密介质时，光线会朝着两种介质垂线的方向弯曲；当光从光密介质中进入光疏介质时，光线会朝远离垂线的方向弯曲，比如水下反射出来的光进入空气中入射到我们眼中是从密到疏，入射光线与界面夹角偏小，所以你看起来鱼在偏远的位置。其实水中的鱼在更靠近你的位置，靠近多少取决于折射率（知道折射角的话就能够解三角形计算出来）</p>
+<p><strong>费马</strong>  <strong>最小时间原理</strong>   就是说<strong>最小作用量原理/最优性原理</strong>   就是说大自然会以最经济的方式运行。光会以最有效的方式传播，不是最直接而是最快！</p>
+<p><code>莱布尼兹通过最优性原理认为，在所有可能的世界中，我们的世界是最好的一个！它的一切也都是最好的！</code></p>
+<p>解析几何——切线——导数（很遗憾费马错过了它）——（牛顿-莱布尼兹统一了微分学和积分学）微积分~~~</p>
+<p>10 的零次方为什么等于1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1  10</span><br><span class="line"></span><br><span class="line">2  100</span><br><span class="line"></span><br><span class="line">3  1000</span><br><span class="line"></span><br><span class="line">1+2=3    10*100=1000	//10^1*10^2=10^(1+2)</span><br><span class="line"></span><br><span class="line">2-1=1     100/10=10		//10^2/10^1=10^(2-1)</span><br><span class="line"></span><br><span class="line">对应的</span><br><span class="line"></span><br><span class="line">1-1=0   10/10=1			//10^1/10^1=10^(1-1)</span><br></pre></td></tr></table></figure>
+<p>10的次方要谨慎对待，即使指数相差1，差距也是十分巨大的，而且这极容易混淆，认为差距只是1。</p>
+<p>比如，工资50万和5万，再比如PH值从7到2，代表的是氢离子浓度增加10万倍。但PH从7到2的度量方法，让这个过程看上去只是走了5小步，根本没发生多大变化。</p>
+<h3 id="函数"><strong>函数</strong></h3>
+<p><strong>对数</strong>，用简单的加法取代了乘法问题。再开普勒那个时代，对数简直就是超级计算机。</p>
+<p>指数可以为越来越快的增长过程建模，幂函数可以为不太剧烈的增长方式建模。将函数都看成是工具，比如指数函数是锤子，可以敲钉子，那么对数函数就是对指数函数的撤销， 相当于起钉器！    它们是<strong>反函数</strong></p>
+<p><strong>自然对数e是微积分领域的宠儿</strong>，因为e^x的变化率等于它自身！从解析几何来看，就是它的曲线任一点的斜率等于该点的高度！换句话，就是说它是它自身的导数！</p>
+<p>其他数的变化率与数本身成正比。这些都是<strong>爆炸式增长、滚雪球式增长、指数增长</strong></p>
+<p>麦克风的咆哮声，当我们使用扬声器和麦克风时，如果麦克风接收到扬声器的声音就会发出很大的噪声，因为扬声器包含一个放大器，会将输入的声音音量乘一个常数，如果麦克风接收到扬声器的声音，并再次通过放大器，它的音量将在正反馈电路中被反复放大，导致音量突然失控，以与当前音量成正比的速率增加，因而产生刺耳的啸叫声。</p>
+<p>还有核链式反应，铀裂变分离出中子，中子撞击其他原子，分离出更多中子，中子数量的指数增长就会引发核爆炸。</p>
+<p>相反的就是   <strong>指数衰减</strong></p>
+<p>实际问题中，变化率并不是一个恒定的值，而是一个不断变化的量，而变化率的变化规律就是<strong>导数</strong>    一个变化率关于自变量的函数</p>
+<p>更平常的来看导数，只要我们想要量化某个事物的变化与另一个事物的变化之间的关系，就会用到导数。</p>
+<p>有些实例我们容易混淆，不容易与导数建立关联。增加一种汀类药物的剂量，会在多大程度上提升其降低胆固醇的水平，或者增加其引发肝损伤等副作用的风险。</p>
+<p>不断变化的变化率才是微积分的精髓，不要把线性关系的变化率当做一个数，而应看成是常函数，是线性函数的导数。看成一个数容易造成混淆。</p>
+<p><strong>函数  方程  函数图像  的区别</strong>    函数是变量之间确定的对应关系，是无实体的规则。方程是这种关系的数学表达式。函数图像是可见的有形的，是由方程定义的图形。</p>
+<p><strong>重新定义我脑子里的光滑的概念</strong>：如果一条曲线在任何一点处被充分放大后，它越来越直，那么它是光滑的！</p>
+<p>可以看出变化率函数图像比昼长函数早3个月到达最高峰，因为周期是12个月，相当于提前了1/4个周期，而这正是正弦波的特别之处：如果一个变量遵循完美的正弦模式，那么它的变化率也是一个完美的正弦波，并且在时间上提前了1/4个周期。</p>
+<p>昼长函数及其导数的图像：</p>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/qq_pic_merged_1647332901253.jpg" style="zoom:50%;" />
+<p>这种神奇再生现象——傅里叶分析中会再讲</p>
+<h3 id="毕加索：“艺术是让我们认识真理的谎言”"><strong>毕加索：“艺术是让我们认识真理的谎言”</strong></h3>
+<p>连续-光滑——可导——微积分   如果我们设法把测量的<strong>分辨率</strong>推升得过高，在时空中极其细微地观察任何现象，就会看到<strong>光滑度的崩解</strong>。</p>
+<p>和所有科学领域一样，在建立数学模型时，我们总要对强调什么和忽略什么做出选择。抽象的艺术在于 知道什么是必不可少的，什么是细枝末节的；知道什么是信号，什么是噪声；知道什么是趋势，什么是波动。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203162123398.jpg" style="zoom:14%;" /></th>
+<th><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/IMG_20220316_185815.jpg" style="zoom: 13%;" /></th>
+<th><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203162205085.jpg" style="zoom: 15%;" /></th>
+</tr>
+</thead>
+</table>
+<p>微积分——a calculus/my <strong>caculus</strong>（莱布尼茨）</p>
+<ul>
+<li>caculus 这个词本身有很多故事，源自拉丁词根calx小石头，很早以前人们用鹅卵石计数和计算。牛顿患有膀胱结石，莱布尼兹患有肾结石。</li>
+</ul>
+<p>学习微积分的学生一直浸淫在基本定理中，所以视其为理所当然</p>
+<h3 id="牛顿把面积看成一个流动的或移动的量"><strong>牛顿把面积看成一个流动的或移动的量</strong></h3>
+<p>距离在速度-时间图像上的体现就是斜率/导数</p>
+<p>反过来速度在距离-时间图像上的体现则是速度曲线下方累积到时间t的面积</p>
+<p>微积分基本定理的<strong>运动版本</strong>：速度曲线下方的面积随时间的累积会给出距离随时间的变化情况</p>
+<p>微积分基本定理的<strong>几何版本</strong>：将运动版本中的变量时间改成某个距离</p>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203162227186.jpg" alt="几何版：油漆刷的长度y(x)随距离x改变" style="zoom:15%;" />
+<h3 id="微积分的三大核心问题"><strong>微积分的三大核心问题</strong></h3>
+<ul>
+<li>正向问题   已知一条曲线，求他各处的斜率     <strong>求导</strong></li>
+<li>反向问题   已知一条曲线各处的斜率，求这条曲线    <strong>积分</strong></li>
+<li>面积问题   已知一条曲线求它下方的面积    <strong>积分</strong></li>
+</ul>
+<p>曲线下方的面积（求导）——&gt;曲线（求导）——&gt;曲线的斜率</p>
+<p><strong>面积对几何学至关重要，而积分对一切来说都至关重要！</strong></p>
+<p>反向问题和面积问题是一出生就被拆散的双胞胎，或者说是人们看到的同一枚硬币的两面，本质相同。</p>
+<p>面积问题解决==反向问题解决</p>
+<p>曲线求积问题是积分学的圣杯，因为很多其它问题都可归结为这个问题。</p>
+<p>从现代的角度，面积问题旨在预测以不断变化的速率变化（变加速度运动）的事物与它随时间的累积程度之间的关系</p>
+<p>牛顿提出<strong>流数术</strong></p>
+<ul>
+<li>
+<p>流量（现在认为是指时间的函数），流数是指流量的导数，或随时间的变化率</p>
+</li>
+<li>
+<p>明确了微积分的两个核心问题：</p>
+<ul>
+<li>已知流量求流数  求导  即<strong>微分</strong>！
+<ul>
+<li><strong>局部问题</strong>   舍弃了<strong>显微镜</strong>所关注的那点的无穷小邻域以外的所有细节</li>
+</ul>
+</li>
+<li>已知流数求它们的流量    面积问题的关键所在  根据变化率推导未知函数  根据斜率推导曲线  <strong>积分</strong>
+<ul>
+<li><strong>整体问题</strong>  是用望远镜遥望远方，预测未来，所有干预事件都很重要不能被忽略。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>整体问题比局部问题难得多！</p>
+<p>关于牛顿的一些故事，艾萨克·牛顿，出生前3个月父逝，母亲改嫁，自然成了一个孤寂的男孩，16岁前在学校，学校评价其懒惰爱分心，但夜晚一个人在家他会在墙上画阿基米德画过的圆和多边形。辍学一段时间管理家庭农场后，返校，学术上表现优异，工费进入剑桥大学，公费意味着要在学校餐厅勤工俭学，吃残羹剩菜的情况时有，大学乃至一生几乎没有朋友，从未谈恋爱和结婚，也很少开怀大笑！</p>
+<h3 id="微积分运算变得毫不费力！">微积分运算变得毫不费力！</h3>
+<p><strong>幂级数法</strong>，牛顿在思考圆的面积时偶然所得。</p>
+<ul>
+<li>在研究圆弓形面积时，他利用解析几何的知识将圆写成方程的形式，并且认为平方根等价于1/2次方。</li>
+<li>平方根的运算还没有方法，于是他选择了避免对平方根进行计算，转而计算对应整数次方的圆弓型面积</li>
+<li>根据整数次方的圆弓星面积，牛顿猜出了1/2次方的圆弓形面积，就是惊人的幂级数形式。</li>
+</ul>
+<p><strong>双曲线</strong>   双曲线弓形下方的面积对应的幂级数   <strong>自然对数</strong>  ln(1+x)</p>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181527033.png" alt=" "></p>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181417206.png" alt=""></p>
+<p>然后进军  <strong>三角函数</strong>     早于牛顿250年前印度数学家就发现了三角函数的幂级数</p>
+<h3 id="混搭大师">混搭大师</h3>
+<p>在发现幂级数的过程中古希腊人的无穷原则解决几何学中的面积问题，把印度人的小数。伊斯兰人的代数和法国人的解析几何融入其中。</p>
+<p>牛顿与阿基米德的相似处</p>
+<ul>
+<li>阿基米德研究抛物线弓形面积    <strong>数字级数</strong>  相当于幂级数的一个特例！</li>
+<li>牛顿研究圆弓形面积    <strong>幂级数</strong></li>
+</ul>
+<p>牛顿站在巨人的肩膀上</p>
+<ul>
+<li>他统一、综合和归纳了伟大前辈的思想     创造了一种新事物——通用的级数法（通过变量x，他定义了无穷个无穷级数 ）
+<ul>
+<li>他继承了阿基米德的无穷原则</li>
+<li>他的切线知识来自费马</li>
+<li>他使用的小数和变量x分别来自印度数学家和阿拉伯代数</li>
+<li>他用方程表示xy平面上曲线的做法来自笛卡尔的著作</li>
+<li>他对无穷的随心所欲的玩法、他的实验精神及他对猜想和归纳的开放性态度都来自沃利斯。</li>
+</ul>
+</li>
+</ul>
+<p>微分才是微积分的核心，导数是微分的一部分，是后来引入的东西。</p>
+<p><strong>无穷小量</strong></p>
+<ul>
+<li>无穷小的数</li>
+<li>无穷小的长度  尽管不是一个点，但却比你能想到的任何长度都小</li>
+<li>无穷小的时间  尽管不是一瞬间，但却比你能想到的任何持续时间都短。</li>
+</ul>
+<p><strong>微积分背后的核心观点</strong></p>
+<ul>
+<li>在很多自变量x和因变量y之间的关系问题中输入一个小的变化量△x（偏移）都会使输出产生一个小的变化量△y</li>
+<li>这个小变化量通常是以我们可利用的结构化方式组织起来的，比如y=x^3，x=(x+△x)，则y=<u>x^3</u> + <u>3·x^2</u>·**△x **+ <u>3·x·</u><strong>△x^2</strong> + <strong>△x^3</strong></li>
+<li>输出的变化量包含不同层级的部分，按照大小无穷小的部分还可  分级为小、超小、超超小……  <strong>高阶无穷小量</strong></li>
+<li>我们关注<strong>占主导地位的变化量</strong>，忽略更微小的变化量
+<ul>
+<li>如果输入的变化量是<strong>有限的</strong>，比如2+0.0001，那么无疑得到的只是近似结果。</li>
+<li>但如果输入的变化量<strong>△x是无穷小</strong>的，那么这种<strong>近似处理</strong>反而得到<strong>精确的结果</strong>！</li>
+</ul>
+</li>
+<li>那么处理y的三次方这个函数时，如果dx是一个无穷小的差分，dy就可以取<u>x^3</u> + <u>3·x^2</u>·**dx **，保留dx一次方项，是为了研究无穷小变化量！</li>
+</ul>
+<p>我们课程所学大多是通过极限的思维来讲解，但其实通过无穷小来理解更接近微积分的本质，这时它们（dx、dy）叫做微分！</p>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181525533.jpg" style="zoom: 25%;" />
+<p>无穷小量dx尽管不等于0，但也必须满足类似x+dx=x这样无意义的方程</p>
+<p>一旦我们学会无穷小量，它们就会给出正确的答案。对我们而言，它们带来的好处可以大大弥补它们可能会造成的精神痛苦。就像毕加索眼中的艺术一样，它们也是能让我们了悟真相的“谎言”。</p>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181607315.jpg" style="zoom:25%;" />
+<p>在放大无穷倍的条件下，曲线下方对应△x的区域才是一个矩形，对宽度为任意一个有限值△x的竖条来说，面积的变化量是由两个部分来组成的，除了矩形部分还有上面的帽子部分。当矩形宽度趋于零，无穷小量时，即变成dx时，相较于矩形面积，“帽子”的面积就可以忽略不计！，因为矩形是小的，而“帽子”是超小的部分。无穷小的世界比现实世界更美好就体现在这！   dA=dx*f(x)，f(x)=dA/dx，嘭！这就是微积分基本定理！</p>
+<hr>
+<h1><strong>----------------读书反思</strong></h1>
+<p>这里有点像变魔术一样啊。忽略了高阶无穷小后得到了导数的表达式</p>
+<hr>
+<p>积分的符号是个拉伸的S，实际在提醒我们求和，求无穷多个宽度为无穷小的矩形条的面积之和</p>
+<p>趣事：<strong>大凡尔赛——莱布尼兹！</strong></p>
+<p>莱布尼兹用微积分轻松推导出光折射的正弦定律，并且自豪的指出：“其他学时渊博的人大费周章得出的结论，精通微积分的人却好像拥有魔法一样，只做了几步推导就搞定了。”</p>
+<p>惠更斯级数求和问题，促使莱布尼兹发现了积分的奥秘    类比！：高度计测台阶的高度   可以改写成连续差形式（分数拆分）    <strong>伸缩和</strong></p>
+<h3 id="微积分与艾滋病治疗"><strong>微积分与艾滋病治疗</strong></h3>
+<p>癌症病理：病毒攻击并感染白细胞之辅助性T细胞，操纵细胞的遗传机制，利用他们制造更多病毒。</p>
+<p>癌症表现为感染时类流感症状，最长可达10年的慢性和无症状期，艾滋病末期突然爆发</p>
+<ul>
+<li>抗反转录药物    病毒很快产生抗药性</li>
+<li>蛋白酶抑制剂   干扰新产生的病毒颗粒  能有效抑制病毒增长</li>
+<li>十年的稳定期是最大的疑点，出于试验的目的，何大一和佩雷尔森给患者注射了蛋白酶抑制剂，追踪到了人体免疫系统对抗HIV病毒的动态过程，所有患者血流中的病毒颗粒呈指数下降。利用微分学为这种指数衰减建模，用指数函数拟合，得出了惊人的结果。
+<ul>
+<li>血流中病毒数量衰减速率呈指数，一开始衰减很快最后衰减很慢，就像排放满满一桶水，最后水少了压力小了，排水就慢了</li>
+<li>无症状期就像同时开启水龙头和排水口，达到调平状态！不是潜伏期，而是免疫系统和HIV病毒激烈的持久战！！！</li>
+<li>根据在调定点病毒浓度保持不变，估算出稳态病毒载量大约为10亿，就是每天有10亿病毒被免疫系统清理，同时又有10亿病毒被制造出来！</li>
+<li>再次实验时，缩小了时间间隔，来放大观察免疫系统对抗HIV病毒的过程！用数据去拟合模型，稳态病毒载量更新到100亿。而且<strong>被感染的T细胞寿命只有2天</strong></li>
+</ul>
+</li>
+</ul>
+<p>他们的研究颠覆了对癌症治疗的基本观点</p>
+<ul>
+<li>研究之前普遍认为无症状期是HIV病毒休眠潜伏！，所以应该在无症状期间保留实力，不用药，以免病毒对药物产生抗性而无计可施，在无症状期结束时才用药更明智。</li>
+<li>研究之后会发现，从感染初期开始免疫系统就迫切希望得到帮助，以控制病情。</li>
+</ul>
+<p>病毒复制和突变的速率惊人，以至于总能找到逃避所有药物治疗的方法。必须联合使用多种药物才能打垮抑制HIV，通过利用数学工具，考虑HIV测定突变率、基因组大小，每天产生病毒颗粒数量等因素，用数学方法证明了在其基因组内的所有碱基上，HIV每天会多次发生各种可能的突变。即使是单一的突变也可能产生抗药性，单一药物治疗希望渺茫。在所有可能的双重突变中，有相当一部分也会每天发生，因此使用两种药物起效概率较高，但还不可靠。计算结果表明，HIV能够同时发生必要的三重突变以逃避三联疗法的概率大概是千万分之一。</p>
+<p>三联药物治疗，两周患者体内病毒降到初始的1%，两个月时基本检测不到病毒，但不一定完全清除，因为HIV可以隐藏在人体各处，一旦停止治疗，立刻又卷土重来。癌症变成有药可治的慢性病（昂贵！）</p>
+<p>微积分进化的故事是杂交的过程，引入以微积分为基础的工具，比如积分、无穷级数和</p>
+<p>、幂级数。</p>
+<hr>
+<h1><strong>----------------读书反思</strong></h1>
+<p>想做的事情多起来，反倒没法沉浸式体验一件事了。</p>
+<p>当初刚来实验室，也还没上课，老师让我看这本书，跟着师兄做做实验   感觉真好</p>
+<p>能够完全投入地看书。重点在于感觉生活很简洁。在做这件事的时候快乐感很大！</p>
+<p>想做的事情多了，待办列表长长的，又开始茫然了，每件事都挺难的。。。或许是因着这个所以怕了，倦了！</p>
+<p>我这不是学了微积分吗，不妨先微分！专心解决局部，最后“积分”一下，整体就解决了！</p>
+<hr>
+<p>微积分是数学领域的寒武纪大爆发，数学领域的多样性开始“进化”产生</p>
+<ul>
+<li>“微生物”，数字 形状 和字问题</li>
+<li>多细胞生物，高级数学分支，像微分几何、积分方程和解析数论</li>
+</ul>
+<p>牛顿理论的核心是他的运动微分方程：F=ma，是啊！a是速度的变化率。</p>
+<ul>
+<li>
+<p><strong>预测未来的先知</strong>   通过运动微分方程   可以知道未来一段时间的运动物体的速度变化情况   通过速度变化情况可以知道物体的位置变化</p>
+</li>
+<li>
+<p>牛顿怎么知道的呢？猜测是这样哈</p>
+<ul>
+<li>实验发现运动物体速度变化量与物体所受外力成正比</li>
+<li>于是假定了一个系数m</li>
+<li>重力加速度能测出来了</li>
+<li>就发现系数m=物体重量/重力加速度</li>
+</ul>
+</li>
+<li>
+<p>由此得到惯性定律</p>
+<ul>
+<li>受力为0的物体，a=0，保持静止或原有的速度直线运动</li>
+</ul>
+</li>
+</ul>
+<p>力不是物体运动的必要条件，而是物体运动中产生变化的必要条件</p>
+<p>像测量阶梯的高度用的方法一样，牛顿解决宇宙中二体相互作用问题时，对微积分的利用不需要逐一计算每个瞬间的速度，而是快速跃进，明确预测出在无限远的未来的状态！</p>
+<p><strong>牛顿微积分与独立宣言</strong></p>
+<p>牛顿的经验演绎法，以事实为基础，以微积分为动力，扫除了早期哲学家的先验形而上学方法。</p>
+<p>牛顿的思想还在从决定论和自由到自然律和人权等所有启蒙观念上留下了印记</p>
+<p>独立宣言</p>
+<ul>
+<li>效仿欧几里得在《几何原本》和牛顿在《原理》中的做法，也从公理（与主题相关不证自明的真理）着手，然后凭借逻辑的力量，从这些公理中推导出一一系列不可回避的命题。其中最重要的一个就是殖民地有权脱离英国的统治</li>
+</ul>
+<hr>
+<h1><strong>----------------读书反思</strong></h1>
+<p>F=ma，以前都不知道这是个微分方程，高中学的时候完全没联想到~~~</p>
+<p>学以致用，知行合一    才是学习的目的呀    不过更可能的是那时候压根也没学懂什么是微积分、导数</p>
+<p>看到283页了，后面的内容看起来比前面难一点了，涉及到微积分的具体内容，和在一些领域的应用。</p>
+<p>这时候我看的比较细，就要接受和思考很多与微积分并不直接相关的这些领域的内容，这些其实对于我阅读这本书来说就是噪声，需要关注，只需要了解。这里我感受到了<strong>光滑的崩解</strong>！当我过于关注航空领域的事情是，不就是在把这个局部放大吗，关于微积分的阅读的光滑曲线就出现了巨大的噪声波动。</p>
+<p>抽象的艺术在于 知道什么是必不可少的，什么是细枝末节的；知道什么是信号，什么是噪声；知道什么是趋势，什么是波动。</p>
+<hr>
+<p><strong>连续体和离散体：比如我们来看一碗汤</strong></p>
+<ul>
+<li>离散的角度（实际），一碗汤是一堆离散的分子，它们都在杂乱无章的跳跃。每个分子为对象，自变量是时间t
+<ul>
+<li>对象太多了</li>
+<li>每个对象的运动都太过复杂！</li>
+<li>单自变量，每个对象一个常微分方程</li>
+</ul>
+</li>
+<li>连续的角度（近似），看成是一个连续体，连续体的各个位置（x,y,z）和时间t都是自变量！
+<ul>
+<li>多自变量</li>
+<li>一个偏微分方程！</li>
+</ul>
+</li>
+</ul>
+<p>连续体假设这个在流体力学中好像很常见！！！当时完全不理解！</p>
+<p>弹性、声学、热流、流体流动和气体动力学等定律都是偏微分方程。</p>
+<p>现代科学中的微积分应用主要体现在偏微分方程的建立、求解和解释！</p>
+<p>爱因斯坦的广义相对论。将引力重新设想为思维时空弯曲的表现。将时空比作一个好似蹦床表面的有弹性、可变形的结构。把一个重物比比如一个保龄球放在它中心，它就会在重量的作用下弯曲，现在想象一个更小的东西比如弹珠，在蹦床的弯曲表面上滚动，由于保龄球重量导致蹦床表面凹陷，它使弹珠的运动轨迹发生偏移，它不再沿直线运动，而是沿着弯曲表面轮廓，反复绕保龄球旋转。这就是行星绕太阳转动原因，它们并未感受到力，而只是在弯曲时空中，沿着阻力最小的路径运动。</p>
+<p>这段描述很生动形象！</p>
+<h3 id="正弦波">正弦波</h3>
+<p><strong>用微积分预测粒子连续介质的运动和变化</strong></p>
+<p>傅里叶十岁成为孤儿，十几岁时体弱多病，认为热量对健康至关重要，即使在夏天他仍然要待在最热的房间里，裹上厚大衣。他专注于热，发明了全球变暖的概念。</p>
+<p>对热流的研究中，傅里叶提出铁棒上某一点的温度变化率正比于该点的温度与其两侧相邻点的平均温度之间的失配（关注点的两侧的无限接近的两个点）。他选择正弦波作为构建单元，因为它们能使问题变得更加简单。正弦不不会四处移动，当它们的热点降温冷点升温时，正弦波会减弱，变化的只是振幅~   也就是说如果温度的分布一开始是正弦波，那么随着铁棒的冷却，它仍然会保持这种模式。</p>
+<p>正弦波在音乐中，它们是吉他、小提琴和钢琴琴弦的固有振动模态。</p>
+<p>科学、数学与音乐之间的关联让我觉得很奇妙~     正弦波+正弦波可以得到三角波，进而多个正弦波叠加可以得到任意一种波？   纯音+所有泛音就形成了三角波。这是一个正弦函数表示的无穷级数和。<strong>三角波公式</strong>  （纯音如公式中的sin(x)，泛音如sin(3x)、sin(5x)） 任何乐器的时声音都可以用无穷多个音叉合成，我们要做的只是在适当的时间用适当的力度敲击音叉。电子音乐合成的原理~~~</p>
+<p>正弦波的音干净而宽广如长笛，方波的音尖利而刺耳如警报，三角波的音喧闹嘈杂。</p>
+<p><strong>万物皆波</strong>？  用傅里叶的方法可以分析各种波现象，热核爆炸的冲击波，通信的无线电波，在肠内促使营养物质吸收并推动废物朝着正确方向移动的消化波，大脑中与癫痫和帕金森震颤相关的病理性电波，公路上的交通拥挤波。</p>
+<hr>
+<h1><strong>----------------读书反思</strong></h1>
+<p>看着看着到后面快乐少了，有点急切想赶紧看完。。。目的心太强了。</p>
+<p>从早期科学家从事科研工作的故事中来看，在科研中，科学家的预感、审美显得十分重要。有些难以解决的问题最后竟然是通过感觉得出了合适的解释。科学的审美，崇尚的是简洁美。越是简洁的公式定理，往往蕴含着巨大的能量！</p>
+<p>对正弦波算是有了新的认识吧，最基本的一点是</p>
+<p>一个点在一个圆盘上绕圆运动，那么这个点在某个方向上的位移 随时间的变化就是一个正弦波~（位移-时间  函数图像）</p>
+<p>偏微分方程把本是离散的研究对象在关注程度允许的条件下看成连续体来解决。把无穷个常微分方程的集合，变成一个偏微分方程来解决。<strong>有点像是逆无穷原则了。</strong></p>
+<hr>
+<h3 id="微积分的未来">微积分的未来</h3>
+<p>会与很多先进前沿相关的应用</p>
+<p>还会在人文、哲学等领域发挥作用</p>
+<p><strong>无穷原则</strong>从一开始就存在！微积分可以用它的信条来定义：在解决关于任意连续体的难题时，先把它切分成无穷多个部分，然后一一求解，最后通过把各个部分的答案组合起来去解决原始的难题。这也是无穷原则的定义。</p>
+<p>**DNA的缠绕数 ** 几个很形象的描述</p>
+<ul>
+<li>在你大约10万亿个细胞中，每个都有约2米长的DNA，如果它们收尾相连，那么足够在地日间往返几十次。</li>
+<li>一个典型的细胞核的直径约为5微米，它是细胞内DNA长度的40万分之一，这个压缩系数相当于把20英里长的绳子塞到一个网球里。</li>
+</ul>
+<p>DNA包含了一个人成长发育所需的全部遗传信息，这么长也是理所应当得吧~</p>
+<p>DNA双螺旋我知道，但不知中间还有一根线轴，以及它们有序的打包方式~</p>
+<ul>
+<li><strong>DNA打包</strong>的形象比喻。你拉紧一条橡皮筋，，用手指夹住它的一端，并从另一端扭转它。刚开始橡皮筋每次转动都会产生一个扭结，当积累的扭转超过临界值时，橡皮筋不再保持绷直状态，而会突然弯曲并盘绕在自己身上，仿佛在痛苦地扭动。最终橡皮筋聚成一团。实现了压缩。DNA也是这样做的。</li>
+<li>扭曲和缠绕之间的转换，就好比一团卷好的水管，你去抽出来这种缠绕会转变扭曲，也就是你拿到的水管总是扭曲了很多个扭结的原因。或者我觉得可以拿风筝线来描述会更有体会，尤其质量不太好的风筝线感受最深，从线圈出来后就是有很多个扭结的，让强迫症心烦！</li>
+</ul>
+<h3 id="决定论及其局限">决定论及其局限</h3>
+<p><strong>拉普拉斯妖</strong>      拉普拉斯设想的一种全知全能的智慧生物，它可以追踪宇宙中所有原子的所有位置，还有作用于他们的所有力。“如果这个智慧生物也能对这些数据进行分析，那就没有什么是不确定的了，未来也会像过去一样呈现在它眼前”          超奇妙的设想！</p>
+<p>索菲·科瓦列夫斯卡娅证明了微积分的使用范围。她证明了不可能存在其它的可解陀螺，在她之前有人发现了两个，而她发现了一个，并证明这将是最后一个。这不是一个智力不足问题，而只是证明了根本没有能描述所有陀螺运动的特定类型的公式（时间的亚纯函数   不懂什么意思！~）但这从原则上说明了找到关于宇宙命运的公式无望。</p>
+<p>非线性  可太难了！果然作者也认可！</p>
+<p>索菲·科瓦列夫斯卡娅发现的不可解性与陀螺方程的一个结构特性有关，即该方程是非线性的。</p>
+<ul>
+<li>线性的，就像两个人称体重之和等于分别称体重相加，拉弓的力加大一倍弓被拉开的距离也增大一倍这种关系</li>
+<li>非线性的系统，各个部分互相干扰、合作、竞争时，发生非线性的相互作用。
+<ul>
+<li>同时听两首喜欢的歌不会感受到双倍的快乐！</li>
+<li>果冻和花生酱搭配更好吃！</li>
+</ul>
+</li>
+</ul>
+<h3 id="混沌">混沌</h3>
+<p>开始方式的小小改变，也会产生大不相同的结果。</p>
+<p>初期或许还可以预测，但是后期就完全失控。这个时间界限就是可预测性时界，整个太阳系的大概是400万年。</p>
+<p><strong>庞加莱图</strong></p>
+<p>钟摆的矢量场图</p>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203211039501.jpg" alt=""></p>
+<p>在我们解释这幅图之前，请记住这是抽象的，因为它没有展示出钟摆的实际形象。矢量场图展示的是钟摆状态从一个时刻到达下一个时刻的变化情况的的抽象图示。</p>
+<h3 id="模式！"><strong>模式</strong>！</h3>
+<p>这个词似乎很重要！很多科学发现，就是在用某个模式去拟合真实情况。</p>
+<p>类似于开普勒和伽利略他们发现的那些模式。    距离平方反比    斜坡1357</p>
+<h3 id="结语部分">结语部分</h3>
+<p>正确的运用无穷，微积分可以解开宇宙的奥秘。不知何故，人类发明的推理体系，竟然与自然的步调一致。微积分体现在生活、原子、宇宙等所有尺度上。</p>
+<p>微积分告诉我们的事情是是我们过去没见过，现在见不到，将来也无法看见的东西。在某些情况下，它会告诉我们一些从未存在过但有可能存在的事物，前提是我们要拥有使它们魔法般出现的智慧。</p>
+<ul>
+<li>
+<p>小数点后八位</p>
+</li>
+<li>
+<p>发现正电子</p>
+</li>
+<li>
+<p>可以理解的宇宙</p>
+</li>
+</ul>
+<p>你知道吗，当一个物体穿过引力场时，时间的流逝可能会加快或者减慢。GPS卫星就需要考虑这一点，哪里的引力场较弱，会使时空曲率扭曲，并导致钟表比在地面上走时快，每天都会比地面上的时钟快45微妙，这听起来似乎不太多，但别忘了GPS需要纳秒级的准确度才能正常运转，而45微秒是45000纳秒，如果没有广义相对论的修正，GPS的误差将以每天10千米的速度不断累计，整个导航系统在几分钟之内就会失去导航价值。</p>
+<p>作为漂浮在一个中量级星系中的一颗微不足道的行星上的一个无足轻重的物种，智人是如何成功预测出，在距离地球10亿光年之遥的浩瀚宇宙中的两个黑洞相撞后，时空会发生怎样的震颤呢？我们早在引力波到达地球之前，就知道他的声音应该是什么样子了。</p>
+<h1><strong>那些科研中的喜悦</strong></h1>
+<h2 id="阿基米德">阿基米德</h2>
+<h2 id="伽利略">伽利略</h2>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>SweerYeHe
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://sweeryehe.github.io/2022/03/11/%E3%80%8A%E5%BE%AE%E7%A7%AF%E5%88%86%E7%9A%84%E5%8A%9B%E9%87%8F%E3%80%8B/" title="《微积分的力量》">https://sweeryehe.github.io/2022/03/11/《微积分的力量》/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/" rel="tag"># 微积分</a>
+              <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag"># 读书笔记</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/03/06/Cpp%E5%9F%BA%E7%A1%80/" rel="prev" title="Cpp基础">
+                  <i class="fa fa-chevron-left"></i> Cpp基础
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SweerYeHe</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">NaNm</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">NaN:aN</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
