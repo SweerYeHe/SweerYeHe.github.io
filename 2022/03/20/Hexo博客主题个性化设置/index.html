@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/manifest.json">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"sweeryehe.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="next主题下载安装 以后自己折腾这些东西都如果真的有兴趣的话建议自己学会查看官方文档，一般里面都有很详细的步骤，以及对一些可能会遇到的问题的解决方案，比起去网上搜的别的人的教程靠谱多了！ 安装next主题 官方文档：开始|下一步 (theme-next.js.org) 进去github仓库复制它的ssh地址，下面代码我直接给出来了，不用进网站复制了 next-theme&#x2F;hexo-theme-n">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo博客主题个性化设置">
+<meta property="og:url" content="https://sweeryehe.github.io/2022/03/20/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/index.html">
+<meta property="og:site_name" content="SweerYeHe">
+<meta property="og:description" content="next主题下载安装 以后自己折腾这些东西都如果真的有兴趣的话建议自己学会查看官方文档，一般里面都有很详细的步骤，以及对一些可能会遇到的问题的解决方案，比起去网上搜的别的人的教程靠谱多了！ 安装next主题 官方文档：开始|下一步 (theme-next.js.org) 进去github仓库复制它的ssh地址，下面代码我直接给出来了，不用进网站复制了 next-theme&#x2F;hexo-theme-n">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/20220312213533.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203202037630.png">
+<meta property="article:published_time" content="2022-03-20T10:58:00.000Z">
+<meta property="article:modified_time" content="2022-03-21T13:02:59.428Z">
+<meta property="article:author" content="SweerYeHe">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="NexT主题">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/20220312213533.png">
+
+
+<link rel="canonical" href="https://sweeryehe.github.io/2022/03/20/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sweeryehe.github.io/2022/03/20/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/","path":"2022/03/20/Hexo博客主题个性化设置/","title":"Hexo博客主题个性化设置"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Hexo博客主题个性化设置 | SweerYeHe</title>
+  
+
+
+
+
+<script src="/lib/fireworks.js"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">SweerYeHe</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">day day up!</p>
+      <img class="custom-logo-image" src="/uploads/custom-logo.jpg" alt="SweerYeHe">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">20</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">13</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">next主题下载安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85next%E4%B8%BB%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">安装next主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#next%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0"><span class="nav-number">1.2.</span> <span class="nav-text">next版本更新</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">next主题配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E9%80%89%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88"><span class="nav-number">2.1.</span> <span class="nav-text">备选配置方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%AD%A3%E5%BC%8F%E5%BC%80%E5%A7%8B"><span class="nav-number">2.2.</span> <span class="nav-text">next主题配置正式开始</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo%E5%A4%B4%E5%83%8F%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">hexo头像不显示问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%A0%87%E9%A2%98%E6%97%81%E6%9C%89%E4%B8%80%E4%B8%AA%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E4%B8%8D%E5%87%BA%E6%9D%A5%E7%9A%84%E7%AC%A6%E5%8F%B7"><span class="nav-number">3.0.0.2.</span> <span class="nav-text">左上角标题旁有一个图片加载不出来的符号</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">进阶个性化页面设计完整教程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E6%A0%87"><span class="nav-number">4.0.0.1.</span> <span class="nav-text">图标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%83%9F%E8%8A%B1%E7%89%B9%E6%95%88"><span class="nav-number">4.0.0.2.</span> <span class="nav-text">安装烟花特效</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%B5%81%E7%A8%8B%E5%9B%BE%E6%94%AF%E6%8C%81"><span class="nav-number">4.0.0.3.</span> <span class="nav-text">添加流程图支持</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%A8%E7%AB%99%E6%90%9C%E7%B4%A2"><span class="nav-number">4.0.0.4.</span> <span class="nav-text">全站搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%81%E4%B9%85%E5%8C%96%E9%93%BE%E6%8E%A5-%E6%B2%A1%E6%88%90%E5%8A%9F-%E7%82%B9%E4%BB%BB%E4%BD%95%E6%96%87%E7%AB%A0%E9%83%BD%E8%B7%B3%E5%88%B0%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8E%BB%E4%BA%86"><span class="nav-number">4.0.0.5.</span> <span class="nav-text">持久化链接   没成功  点任何文章都跳到第一篇去了</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9A%90%E8%97%8F%E7%BD%91%E9%A1%B5%E5%BA%95%E9%83%A8powered-By-Hexo-%E5%BC%BA%E5%8A%9B%E9%A9%B1%E5%8A%A8"><span class="nav-number">4.0.0.6.</span> <span class="nav-text">隐藏网页底部powered By Hexo &#x2F; 强力驱动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%93%E8%B5%8F"><span class="nav-number">4.0.0.7.</span> <span class="nav-text">打赏~</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98%E8%83%8C%E6%99%AF%E5%9B%BE-%E8%8F%9C%E5%8D%95%E9%A2%98%E5%A4%B4%E9%A2%9C%E8%89%B2-%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="nav-number">4.0.0.8.</span> <span class="nav-text">修改主题背景图&amp;菜单题头颜色&amp;透明度</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">~~尚未亲测</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E5%BA%95%E9%83%A8%E4%B8%BB%E9%A2%98%E4%BF%A1%E6%81%AF%E5%88%A0%E9%99%A4"><span class="nav-number">5.0.0.1.</span> <span class="nav-text">页面底部主题信息删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E9%A1%B6%E9%83%A8%E9%BB%91%E8%89%B2%E7%BA%BF%E6%9D%A1%E5%88%A0%E9%99%A4"><span class="nav-number">5.0.0.2.</span> <span class="nav-text">页面顶部黑色线条删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%8E%8B%E7%BC%A9"><span class="nav-number">5.0.0.3.</span> <span class="nav-text">静态资源压缩</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="SweerYeHe"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">SweerYeHe</p>
+  <div class="site-description" itemprop="description">If we learn so much knowledge that we can not help others, what is the use of learning?</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/sweeryehe" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;sweeryehe" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:sweerhe@qq.com" title="E-Mail → mailto:sweerhe@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/7512971479" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7512971479" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sweeryehe.github.io/2022/03/20/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="SweerYeHe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SweerYeHe">
+      <meta itemprop="description" content="If we learn so much knowledge that we can not help others, what is the use of learning?">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Hexo博客主题个性化设置 | SweerYeHe">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo博客主题个性化设置
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-20 18:58:00" itemprop="dateCreated datePublished" datetime="2022-03-20T18:58:00+08:00">2022-03-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-21 21:02:59" itemprop="dateModified" datetime="2022-03-21T21:02:59+08:00">2022-03-21</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1>next主题下载安装</h1>
+<p>以后自己折腾这些东西都如果真的有兴趣的话建议自己学会查看官方文档，一般里面都有很详细的步骤，以及对一些可能会遇到的问题的解决方案，比起去网上搜的别的人的教程靠谱多了！</p>
+<h2 id="安装next主题">安装next主题</h2>
+<p>官方文档：<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/">开始|下一步 (theme-next.js.org)</a></p>
+<p>进去github仓库复制它的ssh地址，下面代码我直接给出来了，不用进网站复制了</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-theme-next">next-theme/hexo-theme-next: 🎉 Elegant and powerful theme for Hexo. (github.com)</a></p>
+<p>Open your terminal, change to Hexosite root directoryand clone the latest master branch of NexT theme:</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd hexo-site</span><br><span class="line">$ git clone git@github.com:next-theme/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="next版本更新">next版本更新</h2>
+<p>Or update to the latest master branch:</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd hexo-site</span><br><span class="line">$ cd themes/next</span><br><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
+<p>When running<code>git pull</code>, you can bypass merge conflicts (error message like**«Commit your changes or stash them before you can merge»**) by using the<code>Commit</code>,<code>Stash</code>or<code>Reset</code>commands for local changes. See<a target="_blank" rel="noopener" href="https://stackoverflow.com/a/15745424/5861495">here</a>how to do it.</p>
+<h1>next主题配置</h1>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/20220312213533.png" alt=""></p>
+<p>按照官方文档说的，为避免后期next主题更新时发生冲突，建议使用备选配置方案：</p>
+<h2 id="备选配置方案">备选配置方案</h2>
+<p>我的理解其实就是为了避免theme _config文件被更新下来的新文件覆盖，造成自定义的配置信息丢失。</p>
+<p><strong>官方推荐了两种解决方案：</strong></p>
+<ol>
+<li>在hexo根目录创建一个<code>_config.next.fml</code>的文件并在其中配置next主题，需要先把next的<code>_config.fml</code>文件复制进来，在进行个性化修改。</li>
+<li>直接在hexo的<code>_config.fml</code>文件中进行hexo及next主题的配置。</li>
+</ol>
+<p>具体请查看文档<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/configuration.html">Configuration | NexT (them时e-next.js.org)</a></p>
+<p><strong>我这里选择了第一种</strong>两个配置文件分开来还是比较清楚的吧</p>
+<p>不过我猜测是要每次更新后手动，把这个配置好的_config.next.fml文件复制到next的<code>_config.fml</code>文件中去。诶  ！好像不用！因为我发现默认主题就是这样的<code>_config.landscape.yml</code>。</p>
+<p><strong>如果介意这点的话那就使用第二种方案</strong></p>
+<h2 id="next主题配置正式开始">next主题配置正式开始</h2>
+<p>官方文档</p>
+<p><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/theme-settings/">配置|下一步 (theme-next.js.org)</a></p>
+<p>配置了基础的一部分</p>
+<p>明天继续！</p>
+<h1>问题</h1>
+<hr>
+<h4 id="hexo头像不显示问题"><strong>hexo头像不显示问题</strong></h4>
+<p>解决方案参考：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32627137/article/details/108047800">(22条消息) hexo无法显示头像问题_合成大西瓜是怎么火的-CSDN博客_hexo头像显示不出来</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/444277738">之前搭建的hexo博客一直头像不显示问题如何解决 - 知乎 (zhihu.com)</a></p>
+<hr>
+<h4 id="左上角标题旁有一个图片加载不出来的符号">左上角标题旁有一个图片加载不出来的符号</h4>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203202037630.png" alt=""></p>
+<p>还不知道怎么解决~~</p>
+<hr>
+<h1><strong>进阶个性化页面设计完整教程</strong></h1>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249/">GitHub+Hexo 搭建个人网站详细教程 - 知乎 (zhihu.com)</a></p>
+<p>优秀博客设计</p>
+<p><a target="_blank" rel="noopener" href="https://www.dandyweng.com/">翁天信 · Dandy Weng 的个人网站主页</a></p>
+<h4 id="图标">图标</h4>
+<p>这个里面找</p>
+<p><a target="_blank" rel="noopener" href="https://link.segmentfault.com/?enc=%2FkBZMhGSAa%2Bbk7wjeUqdyQ%3D%3D.XXqsp2m%2B44rPjcXW9%2FQp3luG0G%2FnDea9TQ1R5CZsMTY%3D">Font Awesome</a></p>
+<h4 id="安装烟花特效">安装烟花特效</h4>
+<p>点击鼠标时显示烟花特效，安装： <code>npm install next-theme/hexo-next-fireworks</code></p>
+<h4 id="添加流程图支持">添加流程图支持</h4>
+<ol>
+<li>安装：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-filter-mermaid-diagrams</span><br><span class="line">npm i --save hexo-filter-sequence</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>在站点设置里添加：</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mermaid</span>: #流程图</span><br><span class="line">  <span class="attr">enable</span>: <span class="literal">true</span></span><br><span class="line">  # <span class="title class_">Available</span> <span class="attr">themes</span>: <span class="keyword">default</span> | dark | forest | neutral</span><br><span class="line">  <span class="attr">theme</span>: <span class="keyword">default</span></span><br></pre></td></tr></table></figure>
+<h4 id="全站搜索">全站搜索</h4>
+<p>参考<a href="https://link.zhihu.com/?target=https%3A//github.com/next-theme/hexo-generator-searchdb">hexo-generator-searchdb</a>。</p>
+<ol>
+<li>安装：<code>npm install hexo-generator-searchdb</code> 2. 在站点设置里添加以下设置项：</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search</span>:</span><br><span class="line">  <span class="attr">path</span>: search.<span class="property">xml</span></span><br><span class="line">  <span class="attr">field</span>: post</span><br><span class="line">  <span class="attr">format</span>: html</span><br><span class="line">  <span class="attr">limit</span>: <span class="number">10000</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>在主题设置里找到<code>local_search</code>，修改成如下：</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">local_search</span>:</span><br><span class="line">  <span class="attr">enable</span>: <span class="literal">true</span></span><br><span class="line">  #auto, trigger search by changing input. manual, by pressing enter key or search button.</span><br><span class="line">  <span class="attr">trigger</span>: auto</span><br><span class="line">  <span class="attr">top_n_per_article</span>: -<span class="number">1</span> # <span class="title class_">Show</span> top n results per article, show all results by -<span class="number">1</span></span><br><span class="line">  <span class="attr">unescape</span>: <span class="literal">false</span> </span><br><span class="line">  <span class="attr">preload</span>: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h4 id="持久化链接-没成功-点任何文章都跳到第一篇去了">持久化链接   没成功  点任何文章都跳到第一篇去了</h4>
+<p>文章默认的链接是<code>http://url/2020/02/10/hello-world</code>这种类型，由<code>年/月/日/标题</code>组成。如果文章里调整过日期，链接名也会变化。而且如果标题是中文或存在特殊符号，链接可能就有问题。因此建议使用永久链接，即使更改了日期也能打开原来的链接。</p>
+<ol>
+<li>
+<p>安装：<code>npm install hexo-abbrlink --save</code>。</p>
+</li>
+<li>
+<p>在站点配置里修改：</p>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink</span>: p/:abbrlink.<span class="property">html</span></span><br><span class="line"><span class="attr">abbrlink</span>:</span><br><span class="line">  <span class="attr">alg</span>: crc32  # 算法：<span class="title function_">crc16</span>(<span class="keyword">default</span>) and crc32</span><br><span class="line">  <span class="attr">rep</span>: hex    # 进制：<span class="title function_">dec</span>(<span class="keyword">default</span>) and hex</span><br></pre></td></tr></table></figure>
+<h4 id="隐藏网页底部powered-By-Hexo-强力驱动">隐藏网页底部powered By Hexo / 强力驱动</h4>
+<p>打开<code>themes/next/layout/_partials/footer.njk</code>，直接删除图示<code>/**删掉</code>部分。位置如图：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">  &#123;%- if theme.busuanzi_count.total_views %&#125;</span><br><span class="line">    &lt;span class=&quot;post-meta-item&quot; id=&quot;busuanzi_container_site_pv&quot;&gt;</span><br><span class="line">      &lt;span class=&quot;post-meta-item-icon&quot;&gt;</span><br><span class="line">        &lt;i class=&quot;&#123;&#123; theme.busuanzi_count.total_views_icon &#125;&#125;&quot;&gt;&lt;/i&gt;</span><br><span class="line">      &lt;/span&gt;</span><br><span class="line">      &lt;span class=&quot;site-pv&quot; title=&quot;&#123;&#123; __(&#x27;footer.total_views&#x27;) &#125;&#125;&quot;&gt;</span><br><span class="line">        &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;</span><br><span class="line">      &lt;/span&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">  &#123;%- endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/**删掉</span><br><span class="line">&#123;%- if theme.footer.powered %&#125;</span><br><span class="line">  &lt;div class=&quot;powered-by&quot;&gt;</span><br><span class="line">    &#123;%- set next_site = &#x27;https://theme-next.js.org&#x27; if theme.scheme === &#x27;Gemini&#x27; else &#x27;https://theme-next.js.org/&#x27; + theme.scheme | lower + &#x27;/&#x27; %&#125;</span><br><span class="line">    &#123;&#123;- __(&#x27;footer.powered&#x27;, next_url(&#x27;https://hexo.io&#x27;, &#x27;Hexo&#x27;) + &#x27; &amp; &#x27; + next_url(next_site, &#x27;NexT.&#x27; + theme.scheme)) &#125;&#125;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line">**/</span><br><span class="line"></span><br><span class="line">&#123;%- if theme.add_this_id %&#125;</span><br><span class="line">  &lt;div class=&quot;addthis_inline_share_toolbox&quot;&gt;</span><br><span class="line">    &lt;script src=&quot;//s7.addthis.com/js/300/addthis_widget.js#pubid=&#123;&#123; theme.add_this_id &#125;&#125;&quot; async=&quot;async&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;&#123;- next_inject(&#x27;footer&#x27;) &#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="打赏">打赏~</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">reward_settings:</span><br><span class="line">  # If true, a donate button will be displayed in every article by default.</span><br><span class="line">  enable: true</span><br><span class="line">  animation: false</span><br><span class="line">  comment: Buy me a coffee</span><br><span class="line"></span><br><span class="line">reward:</span><br><span class="line"> 　wechatpay: https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203212035541.png #图片地址</span><br><span class="line"> 　alipay: https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203212035203.png #图片地址</span><br><span class="line">  #wechatpay: /images/wechatpay.png</span><br><span class="line">  #alipay: /images/alipay.png</span><br><span class="line">  #paypal: /images/paypal.png</span><br><span class="line">  #bitcoin: /images/bitcoin.png</span><br></pre></td></tr></table></figure>
+<h4 id="修改主题背景图-菜单题头颜色-透明度">修改主题背景图&amp;菜单题头颜色&amp;透明度</h4>
+<p>在`E:\HOLDER\blog\source_data创建一个styles.styl文件，添加如下内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">    background-image: url(https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/20220315223840.png);</span><br><span class="line">    background-attachment: fixed;</span><br><span class="line">    background-size: 100% 100%;</span><br><span class="line">	background-repeat: repeat;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//改掉题头颜色</span><br><span class="line">.site-meta &#123;</span><br><span class="line">background:url(https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203212028337.png)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//主标题颜色</span><br><span class="line">.brand&#123;</span><br><span class="line">  color: #f5f5f5</span><br><span class="line">  &#125;</span><br><span class="line">//副标题颜色</span><br><span class="line">.site-subtitle&#123;</span><br><span class="line">  color: #f5f5f5</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//文章内部背景色，不填就是默认色    修改不透明度</span><br><span class="line">.main-inner &#123;</span><br><span class="line">	//background: #fff;</span><br><span class="line">	opacity: 0.8;</span><br><span class="line">&#125;</span><br><span class="line">//文章透明度设置</span><br><span class="line">.post-block &#123;</span><br><span class="line">  opacity: 0.9;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//侧边框的透明度设置</span><br><span class="line">.sidebar &#123;</span><br><span class="line">  background: transparent;</span><br><span class="line">  opacity: 0.9;</span><br><span class="line">&#125;</span><br><span class="line">//菜单栏的透明度设置</span><br><span class="line">.header-inner &#123;</span><br><span class="line">  background: rgba(51,51,51,0.9);</span><br><span class="line">&#125;</span><br><span class="line">//搜索框（local-search）的透明度设置</span><br><span class="line">.popup &#123;</span><br><span class="line">  opacity: 0.9;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 图标颜色大小</span><br><span class="line">.fa&#123;</span><br><span class="line">  font-size: 14px;</span><br><span class="line">&#125;</span><br><span class="line">// 菜单栏</span><br><span class="line">.fa-home&#123;</span><br><span class="line">  color: #e74c3c;</span><br><span class="line">  font-size: 15px;</span><br><span class="line">&#125;</span><br><span class="line">.fa-archive&#123;</span><br><span class="line">  color: #1abc9c;</span><br><span class="line">&#125;</span><br><span class="line">.fa-tags&#123;</span><br><span class="line">  color: orange;</span><br><span class="line">&#125;</span><br><span class="line">.fa-chalkboard&#123;</span><br><span class="line">  color: #3498db;</span><br><span class="line">&#125;</span><br><span class="line">.fa-link&#123;</span><br><span class="line">  color: #FC427B;</span><br><span class="line">&#125;</span><br><span class="line">.fa-user&#123;</span><br><span class="line">  color: #9b59b6;</span><br><span class="line">&#125;</span><br><span class="line">.fa-camera&#123;</span><br><span class="line">  color: #1abc9c;</span><br><span class="line">&#125;</span><br><span class="line">.fa-envelope&#123;</span><br><span class="line">  color: #FC427B;</span><br><span class="line">&#125;</span><br><span class="line">.fa-zhihu&#123;</span><br><span class="line">  color: blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 文章</span><br><span class="line">.fa-calendar-check&#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br><span class="line">.fa-eye&#123;</span><br><span class="line">  color: #70a1ff;</span><br><span class="line">&#125;</span><br><span class="line">.fa-comment&#123;</span><br><span class="line">  color: #2ed573;</span><br><span class="line">&#125;</span><br><span class="line">.fa-comments&#123;</span><br><span class="line">  color: #2ed573;</span><br><span class="line">&#125;</span><br><span class="line">.fa-file-word&#123;</span><br><span class="line">  color: #273c75;</span><br><span class="line">&#125;</span><br><span class="line">.fa-clock&#123;</span><br><span class="line">  color: #ff5252;</span><br><span class="line">&#125;</span><br><span class="line">.fa-image&#123;</span><br><span class="line">  color: #FC427B;</span><br><span class="line">&#125;</span><br><span class="line">.fa-sun&#123;</span><br><span class="line">  color: orange;</span><br><span class="line">&#125;</span><br><span class="line">.fa-bookmark&#123;</span><br><span class="line">  color: #00FFFF;</span><br><span class="line">&#125;</span><br><span class="line">.fa-book&#123;</span><br><span class="line">  color: #1abc9c;</span><br><span class="line">&#125;</span><br><span class="line">.fa-images&#123;</span><br><span class="line">  color: #FF00FF;</span><br><span class="line">&#125;</span><br><span class="line">.fa-windows&#123;</span><br><span class="line">  color: #e74c3c;</span><br><span class="line">&#125;</span><br><span class="line">.fa-chrome&#123;</span><br><span class="line">  color: orange;</span><br><span class="line">&#125;</span><br><span class="line">.fa-desktop&#123;</span><br><span class="line">  color: #3498db;</span><br><span class="line">&#125;</span><br><span class="line">.fa-tools&#123;</span><br><span class="line">  color: #00FFFF;</span><br><span class="line">&#125;</span><br><span class="line">.fa-python&#123;</span><br><span class="line">  color: #3498db;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1>~~尚未亲测</h1>
+<h4 id="页面底部主题信息删除">页面底部主题信息删除</h4>
+<p>打开themes中的next文件夹，找到_config.yml文件，修改footer下面的配置为false即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">copyright:</span><br><span class="line"># -------------------------------------------------------------</span><br><span class="line"># Hexo link (Powered by Hexo).</span><br><span class="line">powered: false</span><br><span class="line"></span><br><span class="line">theme:</span><br><span class="line">  # Theme &amp; scheme info link (Theme - NexT.scheme).</span><br><span class="line">  enable: false</span><br><span class="line">  # Version info of NexT after scheme info (vX.X.X).</span><br><span class="line">  version: false</span><br></pre></td></tr></table></figure>
+<h4 id="页面顶部黑色线条删除">页面顶部黑色线条删除</h4>
+<p>打开themes中的next文件夹，找到/source/css/_common/components/header/headerband.styl文件，删除background样式即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.headband &#123;</span><br><span class="line">  height: $headband-height;</span><br><span class="line">  background: $headband-bg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="静态资源压缩">静态资源压缩</h4>
+<p>可以通过安装hexo-all-minifier来进行静态资源压缩，减少网络请求时候的数据包，加快网站响应速度。可以对html、css、js、images进行压缩，即把重复的代码合并，把多余的空格去掉，用算法对images进行压缩。<br>
+<code>npm install hexo-all-minifier --save</code><br>
+再在外层_config.yml中添加配置，可以分别对html、js、css、image进行处理：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"> html_minifier:</span><br><span class="line">  enable: true</span><br><span class="line">  ignore_error: false</span><br><span class="line">  exclude:</span><br><span class="line"></span><br><span class="line">css_minifier:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line">    - &#x27;*.min.css&#x27;</span><br><span class="line"></span><br><span class="line">js_minifier:</span><br><span class="line">  enable: true</span><br><span class="line">  mangle: true</span><br><span class="line">  output:</span><br><span class="line">  compress:</span><br><span class="line">  exclude:</span><br><span class="line">    - &#x27;*.min.js&#x27;</span><br><span class="line"></span><br><span class="line">image_minifier:</span><br><span class="line">  enable: true</span><br><span class="line">  interlaced: false</span><br><span class="line">  multipass: false</span><br><span class="line">  optimizationLevel: 2</span><br><span class="line">  pngquant: false</span><br><span class="line">  progressive: false</span><br></pre></td></tr></table></figure>
+<p>…</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee~</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203212035541.png" alt="SweerYeHe ��WechatPay">
+        <span>��WechatPay</span>
+      </div>
+      <div>
+        <img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203212035203.png" alt="SweerYeHe ��Alipay">
+        <span>��Alipay</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>SweerYeHe
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://sweeryehe.github.io/2022/03/20/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/" title="Hexo博客主题个性化设置">https://sweeryehe.github.io/2022/03/20/Hexo博客主题个性化设置/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/NexT%E4%B8%BB%E9%A2%98/" rel="tag"># NexT主题</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/03/17/%E3%80%90%E8%87%AA%E7%84%B6%E8%BE%A9%E8%AF%81%E6%B3%95%E3%80%91%E4%BB%80%E4%B9%88%E6%98%AF%E7%A7%91%E5%AD%A6/" rel="prev" title="【自然辩证法】什么是科学">
+                  <i class="fa fa-chevron-left"></i> 【自然辩证法】什么是科学
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SweerYeHe</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">NaNm</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">NaN:aN</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

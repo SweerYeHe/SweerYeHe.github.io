@@ -1300,6 +1300,7 @@ pre code {
   border: 1px solid #eee;
   max-width: 120px;
   padding: 2px;
+  border-radius: 50%;
 }
 .site-author-name {
   color: var(--text-color);
@@ -2175,6 +2176,10 @@ pre code {
 .post-reward div span {
   display: block;
 }
+.post-reward div:hover span {
+  animation: next-roll 0.1s infinite linear;
+  pointer-events: none;
+}
 .post-reward img {
   display: inline-block;
   margin: 0.8em 2em 0;
@@ -2730,7 +2735,7 @@ body {
   background-repeat: repeat;
 }
 .site-meta {
-  background: url("https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/1500202620193.jpeg");
+  background: url("https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203212028337.png");
 }
 .brand {
   color: #f5f5f5;
