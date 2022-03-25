@@ -16,112 +16,139 @@
   <entry>
     <title>用Typora工具快速编写MarkDown格式的文章</title>
     <url>/2022/03/04/%E7%94%A8Typora%E5%B7%A5%E5%85%B7%E5%BF%AB%E9%80%9F%E7%BC%96%E5%86%99MarkDown%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="Typora简介"><a href="#Typora简介" class="headerlink" title="Typora简介"></a>Typora简介</h1><p>“<em>Typora是一款跨平台的Markdown编辑器软件</em>，拥有Windows、macOS客户端。Typora支持MarkDown的标准语法，同时这款软件还支持动态预览功能，一键预览。”</p>
+    <content><![CDATA[<h1>Typora简介</h1>
+<p>“<em>Typora是一款跨平台的Markdown编辑器软件</em>，拥有Windows、macOS客户端。Typora支持MarkDown的标准语法，同时这款软件还支持动态预览功能，一键预览。”</p>
 <p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/Typora%E7%95%8C%E9%9D%A2.png" alt="Typora界面"></p>
 <p><strong>优点：界面简洁，编写所需功能应有尽有，可以打开左侧窗口管理当前文件夹的文档、查看当前文档大纲，功能很实用，编写MarkDown文档的利器！语法敲完即刻渲染完成，并显示预览效果。集成了Word和MarkDown的优点，使用体验很棒！</strong></p>
-<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><p>这篇文章介绍使用Typora基于MarkDown语法写文章！</p>
+<h1>语法</h1>
+<p>这篇文章介绍使用Typora基于MarkDown语法写文章！</p>
 <span id="more"></span>
-
 <p><strong>一到五和上篇文章没什么区别，可以直接跳过</strong></p>
-<h2 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h2><p>在想要设置为标题的文字前面加#来表示<br> 一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。</p>
+<h2 id="一、标题">一、标题</h2>
+<p>在想要设置为标题的文字前面加#来表示<br>
+一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。</p>
 <p>注：标准语法一般在#后跟个空格再写文字，貌似简书不加空格也行。</p>
 <p>示例：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这是一级标题</span></span><br><span class="line"><span class="comment">## 这是二级标题</span></span><br><span class="line"><span class="comment">### 这是三级标题</span></span><br><span class="line"><span class="comment">#### 这是四级标题</span></span><br><span class="line"><span class="comment">##### 这是五级标题</span></span><br><span class="line"><span class="comment">###### 这是六级标题</span></span><br></pre></td></tr></table></figure>
-
 <p>效果如下：</p>
-<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><hr>
-<h1 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h1><ul>
-<li><h5 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h5></li>
+<h1>这是一级标题</h1>
+<h2 id="这是二级标题">这是二级标题</h2>
+<h3 id="这是三级标题">这是三级标题</h3>
+<h4 id="这是四级标题">这是四级标题</h4>
+<h5 id="这是五级标题">这是五级标题</h5>
+<h6 id="这是六级标题">这是六级标题</h6>
+<hr>
+<h1>二、字体</h1>
+<ul>
+<li>
+<h5 id="加粗">加粗</h5>
+</li>
 </ul>
 <p>要加粗的文字左右分别用两个*号包起来</p>
 <ul>
-<li><h5 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h5></li>
+<li>
+<h5 id="斜体">斜体</h5>
+</li>
 </ul>
 <p>要倾斜的文字左右分别用一个*号包起来</p>
 <ul>
-<li><h5 id="斜体加粗"><a href="#斜体加粗" class="headerlink" title="斜体加粗"></a>斜体加粗</h5></li>
+<li>
+<h5 id="斜体加粗">斜体加粗</h5>
+</li>
 </ul>
 <p>要倾斜和加粗的文字左右分别用三个*号包起来</p>
 <ul>
-<li><h5 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h5></li>
+<li>
+<h5 id="删除线">删除线</h5>
+</li>
 </ul>
 <p>要加删除线的文字左右分别用两个~~号包起来</p>
 <p>示例：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">**这是加粗的文字**</span><br><span class="line">*这是倾斜的文字*`</span><br><span class="line">***这是斜体加粗的文字***</span><br><span class="line">~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure>
-
 <p>效果如下：</p>
-<p><strong>这是加粗的文字</strong><br> <em>这是倾斜的文字</em><br> <em><strong>这是斜体加粗的文字</strong></em><br> <del>这是加删除线的文字</del></p>
+<p><strong>这是加粗的文字</strong><br>
+<em>这是倾斜的文字</em><br>
+<em><strong>这是斜体加粗的文字</strong></em><br>
+<s>这是加删除线的文字</s></p>
 <hr>
-<h1 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h1><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;<br>n个…<br>貌似可以一直加下去，字体会逐级放大。</p>
+<h1>三、引用</h1>
+<p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;<br>
+n个…<br>
+貌似可以一直加下去，字体会逐级放大。</p>
 <p>引用在GitHub上不好使。</p>
 <p>示例：</p>
 <figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">&gt;这是引用的内容</span><br><span class="line">&gt;&gt;这是引用的内容</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</span><br></pre></td></tr></table></figure>
-
 <p>效果如下：</p>
 <blockquote>
-<p> 这是引用的内容</p>
+<p>这是引用的内容</p>
 </blockquote>
 <blockquote>
 <blockquote>
 <p>引用的内容</p>
 </blockquote>
 </blockquote>
-<h1 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h1><p>三个或者三个以上的 - 或者 * 都可以。</p>
+<h1>四、分割线</h1>
+<p>三个或者三个以上的 - 或者 * 都可以。</p>
 <p>示例：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">----</span><br><span class="line">***</span><br><span class="line">*****</span><br></pre></td></tr></table></figure>
-
-<p>效果如下：<br> 可以看到，显示效果是一样的。</p>
+<p>效果如下：<br>
+可以看到，显示效果是一样的。</p>
 <hr>
 <hr>
 <hr>
 <hr>
-<h1 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h1><p>语法：</p>
+<h1>五、图片</h1>
+<p>语法：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">![图片alt](图片地址 <span class="string">&quot;图片title&quot;</span>)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br></pre></td></tr></table></figure>
-
 <p>示例：</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">![blockchain](https:<span class="comment">//ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/</span></span><br><span class="line">u=<span class="number">702257389</span>,<span class="number">1274025419</span>&amp;fm=<span class="number">27</span>&amp;gp=<span class="number">0.</span>jpg <span class="string">&quot;区块链&quot;</span>)</span><br></pre></td></tr></table></figure>
-
 <p>效果如下：</p>
 <p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/webp.png" alt="网图"></p>
 <p><strong>上传本地图片直接点击导航栏的图片标志，选择图片即可</strong></p>
 <p>markdown格式追求的是简单、多平台统一。那么图片的存储就是一个问题，需要用<strong>图床</strong>，提供统一的外链，这样就不用在不同的平台去处理图片的问题了。才能做到书写一次，各处使用。</p>
-<h1 id="六、超链接"><a href="#六、超链接" class="headerlink" title="六、超链接"></a>六、超链接</h1><p>语法：</p>
+<h1>六、超链接</h1>
+<p>语法：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">[超链接名](超链接地址 <span class="string">&quot;title&quot;</span>)</span><br><span class="line">title可加可不加，加了鼠标进过时会显示title的内容</span><br></pre></td></tr></table></figure>
-
 <p>示例：</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">[简书](http:<span class="comment">//jianshu.com)</span></span><br><span class="line">[百度](http:<span class="comment">//baidu.com)</span></span><br></pre></td></tr></table></figure>
-
 <p>效果如下：</p>
-<p><a href="https://www.jianshu.com/u/1f5ac0cf6a8b">简书</a><br><a href="https://links.jianshu.com/go?to=http://baidu.com">百度</a></p>
+<p><a href="https://www.jianshu.com/u/1f5ac0cf6a8b">简书</a><br>
+<a href="https://links.jianshu.com/go?to=http%3A%2F%2Fbaidu.com">百度</a></p>
 <hr>
-<h1 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h1><h5 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h5><p>语法：<br> 无序列表用 - + * 任何一种都可以</p>
+<h1>七、列表</h1>
+<h5 id="无序列表">无序列表</h5>
+<p>语法：<br>
+无序列表用 - + * 任何一种都可以</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- 列表内容</span><br><span class="line">+ 列表内容</span><br><span class="line">* 列表内容</span><br><span class="line"></span><br><span class="line">注意：- + * 跟内容之间都要有一个空格</span><br></pre></td></tr></table></figure>
-
 <p>效果如下：</p>
 <ul>
 <li>列表内容</li>
 <li>列表内容</li>
 <li>列表内容</li>
 </ul>
-<h5 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h5><p>语法：<br> 数字加点加<strong>空格</strong></p>
+<h5 id="有序列表">有序列表</h5>
+<p>语法：<br>
+数字加点加<strong>空格</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 列表内容</span><br><span class="line">2. 列表内容</span><br><span class="line">3. 列表内容</span><br><span class="line"></span><br><span class="line">注意：序号跟内容之间要有空格</span><br></pre></td></tr></table></figure>
-
 <p>效果如下：</p>
 <ol>
 <li>列表内容</li>
 <li>列表内容</li>
 <li>列表内容</li>
 </ol>
-<h5 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h5><p><strong>上一级完成后回车自动生成同级，按下backspace键后输入再次输入列表格式（- + * 或数字加空格）就行</strong></p>
+<h5 id="列表嵌套">列表嵌套</h5>
+<p><strong>上一级完成后回车自动生成同级，按下backspace键后输入再次输入列表格式（- + * 或数字加空格）就行</strong></p>
 <p><strong>或者直接续上一级的列表格式然后按tab键自动调整缩进到下一级</strong></p>
 <ul>
-<li>一级无序列表内容<ul>
+<li>一级无序列表内容
+<ul>
 <li>二级无序列表内容</li>
 <li>二级无序列表内容</li>
 <li>二级无序列表内容</li>
 </ul>
 </li>
-<li>一级无序列表内容<ol>
+<li>一级无序列表内容
+<ol>
 <li>二级有序列表内容</li>
 <li>二级有序列表内容</li>
 <li>二级有序列表内容</li>
@@ -129,14 +156,17 @@
 </li>
 </ul>
 <ol>
-<li>一级有序列表内容<ul>
+<li>一级有序列表内容
+<ul>
 <li>二级无序列表内容</li>
 <li>二级无序列表内容</li>
 <li>二级无序列表内容</li>
 </ul>
 </li>
-<li>一级有序列表内容<ol>
-<li>二级有序列表内容<ol>
+<li>一级有序列表内容
+<ol>
+<li>二级有序列表内容
+<ol>
 <li>三级有序内容</li>
 <li>三级有序内容</li>
 </ol>
@@ -147,12 +177,11 @@
 </li>
 </ol>
 <hr>
-<h1 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h1><p>语法：</p>
+<h1>八、表格</h1>
+<p>语法：</p>
 <figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">输入表头后回车</span><br><span class="line"><span class="params">|表头|</span>表头<span class="params">|表头|</span></span><br></pre></td></tr></table></figure>
-
 <p>示例：</p>
 <figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="params">|姓名|</span>技能<span class="params">|排行|</span></span><br><span class="line">    enter键</span><br></pre></td></tr></table></figure>
-
 <p>效果如下：</p>
 <table>
 <thead>
@@ -162,75 +191,74 @@
 <th>排行</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>然后输入内容即可。现在版本这里跟word一样处理，很方便了！</p>
-<h1 id="九、代码"><a href="#九、代码" class="headerlink" title="九、代码"></a>九、代码</h1><p>语法：<br> 单行代码：代码之间分别用一个反引号包起来</p>
+<h1>九、代码</h1>
+<p>语法：<br>
+单行代码：代码之间分别用一个反引号包起来</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="string">`代码内容`</span></span><br></pre></td></tr></table></figure>
-
 <p>代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line">(<span class="string">``</span><span class="string">`)</span></span><br><span class="line"><span class="string">enter键</span></span><br><span class="line"><span class="string">  代码...</span></span><br><span class="line"><span class="string">  代码...</span></span><br><span class="line"><span class="string">  代码...</span></span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>注：为了防止转译，前后三个反引号处加了小括号，实际是没有的。这里只是用来演示，实际中去掉两边小括号即可。</p>
 </blockquote>
 <p>示例：</p>
 <p>单行代码</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="string">`create database hero;`</span></span><br></pre></td></tr></table></figure>
-
 <p>代码块</p>
 <figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">(```)</span><br><span class="line">    function <span class="function"><span class="title">fun</span><span class="params">()</span></span>&#123;</span><br><span class="line">         echo <span class="string">&quot;这是一句非常牛逼的代码&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">fun</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
-
 <p>效果如下：</p>
 <p>单行代码</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">create database hero;</span><br></pre></td></tr></table></figure>
-
 <p>代码块</p>
 <figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">function <span class="function"><span class="title">fun</span><span class="params">()</span></span>&#123;</span><br><span class="line">  echo <span class="string">&quot;这是一句非常牛逼的代码&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="title">fun</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
-
-<h1 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h1><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">```flow   </span><br><span class="line">    enter键</span><br></pre></td></tr></table></figure>
-
+<h1>十、流程图</h1>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">```flow   </span><br><span class="line">    enter键</span><br></pre></td></tr></table></figure>
 <p>就会显示这样的空模板<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/%E7%A9%BA%E6%A8%A1%E6%9D%BF.png" alt="流程图空模板"></p>
 <p>然后输入代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">    </span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">cond(yes)-&gt;e   </span><br></pre></td></tr></table></figure>
-
 <blockquote>
-<p>先是用&#x3D;&gt;定义start、operation、condition、end的代号分别对应不同的框样式；然后用-&gt;定义路径。</p>
+<p>先是用=&gt;定义start、operation、condition、end的代号分别对应不同的框样式；然后用-&gt;定义路径。</p>
 </blockquote>
 <p>效果如下：</p>
 <p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/Typora%E6%B5%81%E7%A8%8B%E5%9B%BE%E6%95%88%E6%9E%9C.png" alt="Typora流程图效果"></p>
-<h1 id="十一、时序图"><a href="#十一、时序图" class="headerlink" title="十一、时序图"></a>十一、时序图</h1><p><strong>复现微信支付的时序图</strong></p>
+<h1>十一、时序图</h1>
+<p><strong>复现微信支付的时序图</strong></p>
 <p>语法：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```mermaid</span><br><span class="line">    ……时序图代码……</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;    ……时序图代码……&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
 <p>代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    小程序 -&gt;&gt; 小程序 : wx.login()获取code</span><br><span class="line">    小程序 -&gt;&gt; + 服务器 : wx.request()发送code</span><br><span class="line">    服务器 -&gt;&gt; + 微信服务器 : code+appid+secret</span><br><span class="line">    微信服务器 --&gt;&gt; - 服务器 : openid</span><br><span class="line">    服务器 -&gt;&gt; 服务器 : 根据openid确定用户并生成token</span><br><span class="line">    服务器 --&gt;&gt; - 小程序 : token</span><br></pre></td></tr></table></figure>
-
 <p>效果：</p>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/Typora%E5%BE%AE%E4%BF%A1%E6%97%B6%E5%BA%8F%E5%9B%BE.png"></p>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/Typora%E5%BE%AE%E4%BF%A1%E6%97%B6%E5%BA%8F%E5%9B%BE.png" alt=""></p>
 <p>再演示一个微信支付的流程图</p>
 <p>代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    title: 微信支付时序图</span><br><span class="line">    participant 微信支付用户 as user</span><br><span class="line">    participant 微信客户端 as wxc</span><br><span class="line">    participant 商户APP客户端 as appc</span><br><span class="line">    participant 商户后台系统 as apps</span><br><span class="line">    participant 微信支付系统 as wxs</span><br><span class="line"></span><br><span class="line">    user-&gt;appc:1.打开商户APP客户端()</span><br><span class="line">    appc-&gt;appc:2.选择商品下单()</span><br><span class="line">    appc-&gt;apps:3.请求生成支付订单()</span><br><span class="line">    apps-&gt;wxs:4.调用统一下单API()</span><br><span class="line">    wxs-&gt;wxs:生成预付单()</span><br><span class="line">    wxs--&gt;&gt;apps:5.返回预付单信息(prepay_id)</span><br><span class="line">    apps-&gt;apps:6.生成带签名的客户端支付信息()</span><br><span class="line">    apps--&gt;&gt;appc:7:返回信息(prepay_id,sign等)</span><br><span class="line">    user-&gt;appc:8:用户确认支付()</span><br><span class="line">    appc--&gt;wxc:9:支付参数通过调用SDK调起微信支付()</span><br><span class="line">    wxc-&gt;wxs:10.发起支付请求()</span><br><span class="line">    wxs-&gt;wxs:验证支付参数, APP支付权限等()</span><br><span class="line">    wxs--&gt;&gt;wxc:11.返回需要支付授权()</span><br><span class="line">    user-&gt;wxc:12.用户确认支付, 输入密码()</span><br><span class="line">    wxc-&gt;wxs:13:提交支付授权()</span><br><span class="line">    wxs-&gt;wxs:验证授权, 完成支付交易()</span><br><span class="line">    wxs--&gt;&gt;apps:15.异步通知商户支付结果()</span><br><span class="line">    apps-&gt;apps:接收和保存支付通知()</span><br><span class="line">    apps-&gt;&gt;wxs:16.返回告知已成功接收处理()</span><br><span class="line">    wxs--&gt;wxc:14.返回支付结果, 发送微信消息提示()</span><br><span class="line">    wxc-&gt;appc:将支付状态通过商户APP已实现的回调接口执行回调()</span><br><span class="line">    appc-&gt;apps:后台查询实际支付结果()</span><br><span class="line">    apps-&gt;wxs:调用微信查询API查询支付结果()</span><br><span class="line">    wxs--&gt;&gt;apps:返回支付结果()</span><br><span class="line">    apps--&gt;appc:返回支付结果</span><br><span class="line">    appc--&gt;user:展示支付结果()</span><br><span class="line">    appc-&gt;appc:商户发货()</span><br></pre></td></tr></table></figure>
-
-
-
 <p>效果：</p>
 <p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="微信支付时序图"></p>
-<h1 id="十二、饼图"><a href="#十二、饼图" class="headerlink" title="十二、饼图"></a><strong>十二、饼图</strong></h1><p>饼图使用 <code>pie</code> 表示，标题下面分别是区域名称及其百分比。</p>
+<h1><strong>十二、饼图</strong></h1>
+<p>饼图使用 <code>pie</code> 表示，标题下面分别是区域名称及其百分比。</p>
 <p>格式：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```mermaid</span><br><span class="line">    饼图代码</span><br></pre></td></tr></table></figure>
-
-<p>代码：</p>
-<figure class="highlight vbnet"><table><tr><td class="code"><pre><span class="line">pie</span><br><span class="line">    title <span class="keyword">Key</span> elements <span class="keyword">in</span> Product X</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;Calcium&quot;</span> : <span class="number">42.96</span></span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;Potassium&quot;</span> : <span class="number">50.05</span></span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;Magnesium&quot;</span> : <span class="number">10.01</span></span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;Iron&quot;</span> :  <span class="number">5</span></span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;    饼图代码&lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">代码：</span><br><span class="line"></span><br><span class="line">```vbnet</span><br><span class="line">pie</span><br><span class="line">    title Key elements in Product X</span><br><span class="line"></span><br><span class="line">    &quot;Calcium&quot; : 42.96</span><br><span class="line"></span><br><span class="line">    &quot;Potassium&quot; : 50.05</span><br><span class="line"></span><br><span class="line">    &quot;Magnesium&quot; : 10.01</span><br><span class="line"></span><br><span class="line">    &quot;Iron&quot; :  5</span><br></pre></td></tr></table></figure>
 <p>效果：</p>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/Typora%E9%A5%BC%E5%9B%BE.png"></p>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/Typora%E9%A5%BC%E5%9B%BE.png" alt=""></p>
 <p>参考链接1：<a href="https://www.jianshu.com/p/191d1e21f7ed">https://www.jianshu.com/p/191d1e21f7ed</a></p>
 <p>参考链接2：<a href="https://www.jianshu.com/p/7fa30d7d6fd5">https://www.jianshu.com/p/7fa30d7d6fd5</a></p>
+<h1>makdown支持html语言</h1>
+<h2 id="居中">居中</h2>
+<p>对于标准的markdown文本，是不支持居中对齐的。还好markdown支持html语言，所以我们采用html语法格式即可。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span>这一行需要居中<span class="tag">&lt;/<span class="name">center</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<center>这一行需要居中</center>
+<h2 id="颜色">颜色</h2>
+<p>对于html语音中，颜色是用color来表示，所以可以表示如下</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">red</span> <span class="attr">size</span>=<span class="string">72</span>&gt;</span>颜色<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><font color=red size=72>颜色</font></p>
 ]]></content>
       <tags>
         <tag>MarkDown</tag>
@@ -441,6 +469,8 @@
 <p>当然还有另外的求解方法。比如设兔子追上乌龟用时为t秒，10t=10+t，就可以解得t=10/9。</p>
 <hr>
 <p>阿基米德  <strong>用三角形逼近抛物线弓形</strong>   无穷级数   重量想象</p>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203232156772.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203232159937.png" style="zoom: 50%;" />
 <p><strong>计算机动画电影</strong>之所看起来栩栩如生，部分原因在于它们体现了阿基米德的洞见：任何平滑的表面都可以令人信服地用三角形来来逼近。</p>
 <p>梦工厂创作史莱克与当地暴徒搏斗的场景时，每一帧都要用到不少于4500万个多边形。阿凡达更是用了数十亿个多边形，在潘多拉星球上的每一株植物，动画师都使用了大约100万个多边形。</p>
 <hr>
@@ -481,7 +511,7 @@
 <p>P118，3月14日早上，我觉得读书速度太慢了。于是尝试用我教外甥女读数学题的方式进行阅读。在读这本书时，确实速度更快了，也更有节奏感，甚至觉得有趣了。这种方法就是：将注意力只集中于关键词，在心里只读出关键词，句子的其他部分只用眼睛余光看到就能理解，不要在心里默读，那样太耗费时间。</p>
 <p>真的有趣！一小时读了昨天半天的页数了！</p>
 <p>另一个感觉就是这样子   气势凌驾于书本之上，想想我教外甥女时的场景，有那种气势在，就读书就像在做一件及其简单的事了（洒洒水的感觉。总之就是很自信吧！感觉和书的作者平等了，其实是把作者的身份抛却了！不想着这是什么艰涩难懂的东西，不想着作者有怎样的学识地位所以才能懂，那么你也能懂了！）</p>
-<p>不过  话说回来  学习数学史科学史    真实让人自卑的事情    因为很早以前，数学科学这些都是不赚钱的行业，所以能够搞这方面研究的人几乎都是有钱人家的孩子，所以在书中经常能看到类似“他致力于数学研究，纯粹是因为他喜欢数学”之类的话，他们通常都不用考虑经济问题，四处游历，讨论他们的研究。着实是羡慕不来！</p>
+<p>不过  话说回来  学习数学史科学史    真是让人自卑的事情    因为很早以前，数学科学这些都是不赚钱的行业，所以能够搞这方面研究的人几乎都是有钱人家的孩子，所以在书中经常能看到类似“他致力于数学研究，纯粹是因为他喜欢数学”之类的话，他们通常都不用考虑经济问题，四处游历，讨论他们的研究。着实是羡慕不来！</p>
 <p>那么我之前想写哪些科研中的喜悦，现在看来那种喜悦，是我能学得来的么。。</p>
 <hr>
 <h2 id="解析几何">解析几何</h2>
@@ -596,11 +626,10 @@
 <ul>
 <li>在研究圆弓形面积时，他利用解析几何的知识将圆写成方程的形式，并且认为平方根等价于1/2次方。</li>
 <li>平方根的运算还没有方法，于是他选择了避免对平方根进行计算，转而计算对应整数次方的圆弓型面积</li>
-<li>根据整数次方的圆弓星面积，牛顿猜出了1/2次方的圆弓形面积，就是惊人的幂级数形式。</li>
+<li>根据整数次方的圆弓形面积，牛顿猜出了1/2次方的圆弓形面积，就是惊人的幂级数形式。</li>
 </ul>
 <p><strong>双曲线</strong>   双曲线弓形下方的面积对应的幂级数   <strong>自然对数</strong>  ln(1+x)</p>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181527033.png" alt=" "></p>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181417206.png" alt=""></p>
+<center><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181527033.png" alt=" " style="zoom:50%;" /><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181417206.png" style="zoom:50%;" /></center>
 <p>然后进军  <strong>三角函数</strong>     早于牛顿250年前印度数学家就发现了三角函数的幂级数</p>
 <h3 id="混搭大师">混搭大师</h3>
 <p>在发现幂级数的过程中古希腊人的无穷原则解决几何学中的面积问题，把印度人的小数。伊斯兰人的代数和法国人的解析几何融入其中。</p>
@@ -677,8 +706,7 @@
 </ul>
 <p>病毒复制和突变的速率惊人，以至于总能找到逃避所有药物治疗的方法。必须联合使用多种药物才能打垮抑制HIV，通过利用数学工具，考虑HIV测定突变率、基因组大小，每天产生病毒颗粒数量等因素，用数学方法证明了在其基因组内的所有碱基上，HIV每天会多次发生各种可能的突变。即使是单一的突变也可能产生抗药性，单一药物治疗希望渺茫。在所有可能的双重突变中，有相当一部分也会每天发生，因此使用两种药物起效概率较高，但还不可靠。计算结果表明，HIV能够同时发生必要的三重突变以逃避三联疗法的概率大概是千万分之一。</p>
 <p>三联药物治疗，两周患者体内病毒降到初始的1%，两个月时基本检测不到病毒，但不一定完全清除，因为HIV可以隐藏在人体各处，一旦停止治疗，立刻又卷土重来。癌症变成有药可治的慢性病（昂贵！）</p>
-<p>微积分进化的故事是杂交的过程，引入以微积分为基础的工具，比如积分、无穷级数和</p>
-<p>、幂级数。</p>
+<p>微积分进化的故事是杂交的过程，引入以微积分为基础的工具，比如积分、无穷级数和、幂级数。</p>
 <hr>
 <h1><strong>----------------读书反思</strong></h1>
 <p>想做的事情多起来，反倒没法沉浸式体验一件事了。</p>
@@ -801,7 +829,7 @@
 <p>初期或许还可以预测，但是后期就完全失控。这个时间界限就是可预测性时界，整个太阳系的大概是400万年。</p>
 <p><strong>庞加莱图</strong></p>
 <p>钟摆的矢量场图</p>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203211039501.jpg" alt=""></p>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203211039501.jpg" style="zoom: 33%;" />
 <p>在我们解释这幅图之前，请记住这是抽象的，因为它没有展示出钟摆的实际形象。矢量场图展示的是钟摆状态从一个时刻到达下一个时刻的变化情况的的抽象图示。</p>
 <h3 id="模式！"><strong>模式</strong>！</h3>
 <p>这个词似乎很重要！很多科学发现，就是在用某个模式去拟合真实情况。</p>
@@ -1582,10 +1610,18 @@ n个…<br>
 <p>本科的通识教育还是没有到位的，过于表面了，没有理解到通识的本质。</p>
 <p>作为一个本科毕业生应该对所有现代知识学问有个整体性的认识。</p>
 <p><strong>博学笃志 格物明德——校训——路甬祥院长——2003</strong></p>
+<blockquote>
 <p>“博学”源自《中庸》中“博学之，审问之，慎思之，明辨之，笃行之。”的首句，是希望我们的学生通过刻苦学习和实践，获得广博的知识，不仅懂得自己攻读的专业，也能跨越学科的边界涉足其它的领域；不仅有自然科学、工程技术的训练，还要有一定的社会、历史、人文、艺术的修养；不仅要有较全面又相对合理的知识结构，还要有远大的抱负和广博的胸怀，面向社会，看待人生，走向未来，在生命途中永无止息地学习和充实自己。</p>
+</blockquote>
+<blockquote>
 <p>“笃志”源自《荀子·修身》中“笃志而体，君子也。”意思是具有坚定意志并能付诸实践的人，才是君子。其实路院长重视的“笃志”是有新意的，他曾讲过：“在发展我国科学技术，振兴中华的伟大实践中……要努力向钱学森、邓稼先、李四光、钱三强、吴文俊、彭加木、蒋祝英和蒋新松那样的杰出科学家学习。因为在他们身上，体现了对共产主义崇高理想的坚定信仰和对科学事业执著追求的完美统一。</p>
+</blockquote>
+<blockquote>
 <p>“格物”是《大学》中八条目的首目，也是八条目的基础。它是说要想达到“治国、平天下”的最高理想，首先要做的是仔细研究探察天下的万事万物，推究它们存在变化的真实道理，只有懂得其中的“理”，才能获得丰富的知识，这样才有智慧，从而使自己的意念诚实，心志端正，不受外物诱惑而达修身。所以“格物”也就是对知识和真理的追求，与博学有异曲同工之妙。</p>
+</blockquote>
+<blockquote>
 <p>“明德”是《大学》中三纲要之首纲，也是三纲要的核心和根本。它是说大学之中最高的为学之道，是要教导学生能够彰显自己心中美好的德性，时常想到上天所赋予你的天良，这样才能使人革旧从新，身体力行，处于内心清明的最高的、善的境界上。这就是做人的基本道理。这里“明德”与“笃志”亦有从善如流的相似含意。今天的“明德”最基本、最普遍的要求则是爱国主义，它应成为每一个中国人心中最虔诚的信念。</p>
+</blockquote>
 <hr>
 <h2 id="为什么产生这三大误解？">为什么产生这三大误解？</h2>
 <p><strong>传统文化的影响</strong></p>
@@ -1795,6 +1831,305 @@ n个…<br>
 <p>人类的女性为了直立行走，其骨盆的最大宽度只能容纳300毫升脑量的胎儿娩出，因此，进行无情的宣判，人类必须早产，这种生物学意义上的早产，使得人类的婴儿有较漫长的后天学习时间。</p>
 <p>正是先天的缺失，使得人类必须通过后天的努力自己创造自己，因此，人性并不是先天的，而是后天习得的，特别是，通过文化被构成的。</p>
 <hr>
+]]></content>
+      <tags>
+        <tag>读书笔记</tag>
+        <tag>自然辩证法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《微积分的力量》读书报告</title>
+    <url>/2022/03/25/%E3%80%8A%E5%BE%AE%E7%A7%AF%E5%88%86%E7%9A%84%E5%8A%9B%E9%87%8F%E3%80%8B%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/</url>
+    <content><![CDATA[<blockquote>
+<p>主题：微积分是上帝的语言，无所不在，充满力量</p>
+</blockquote>
+<blockquote>
+<p>发展历经三个方面：几何、运动、变化</p>
+</blockquote>
+<blockquote>
+<p>核心问题：3个问题-&gt;2个问题</p>
+</blockquote>
+<blockquote>
+<p>应用：在现代前沿科学技术领域中的应用</p>
+</blockquote>
+<p>这本书写的很精致。为什么这么说呢？倒不是只外观，而是只内容安排。书中用了很多例子，打了很多比喻。例子多是说明微积分的起源、发展、应用。从阿基米德、伽利略、笛卡尔、费马、牛顿、莱布尼兹、到拉普拉斯、爱因斯坦等。例子多并不足夸道，但是这些例子作者用的恰到好处，连接的行云流水，话语通俗而又不失准确性。</p>
+<p>十分推荐阅读，读完对微积分和数学产生了亲切感，好像提升了对数学的敏感度，打个不恰当的比方，在大学时关于这方面的学习，使我全身紧绷又僵硬，学完这本书则像是在温泉里泡了半小时，全身毛孔舒张。</p>
+<span id="more"></span>
+<h1>微积分</h1>
+<h2 id="几何">几何</h2>
+<p><strong>微积分是几何学的产物</strong></p>
+<blockquote>
+<p>圆是一种很特别的形状，它十分完美。大自然中圆无处不在，当我们凝视圆的时候，圆实际上也在注视着我们，因为它们就在我们所爱之人的瞳孔和虹膜的圆形轮廓中。    源于生活。</p>
+</blockquote>
+<p>内容上，从<strong>无穷</strong>说起，关于无穷的思考来自于<strong>几何</strong>问题。</p>
+<p><strong>曲边形面积</strong>（曲面积）</p>
+<p>无穷来源于曲线，因为矩形的面积一目了然，而人们对<strong>圆的面积</strong>一无所知，阿基米德等痴迷几何的科学家想到<strong>用已知来逼近未知</strong>的方法。内接一个正方形、再把每一条边分成相等的两条边得到正八边形……如此一直分下去……人们仿佛看到了无穷，无穷的尽头似乎是一个光滑的圆。主观上说来是的，但客观上来说却不是！无论分的多微小，只要显微镜的放大倍数足够大，光滑圆就会崩解成一段段直线~</p>
+<p><strong>微积分的几何表达：</strong></p>
+<p>让多边形变得光滑连续，就是积分的工作；</p>
+<p>让光滑连续的圆崩解成一条条线段，这就是微分。</p>
+<p>微积分可分为两个步骤：<strong>切分和重组</strong>。如上所述，用数学术语来说，切分过程总是涉及无限精密的减法运算，用于量化各部分之间的差异，这个部分叫做微分学。重组过程则总是涉及无限的加法运算，将各个部分整合成原来的整体，这个部分叫做积分学。</p>
+<p>曲线求面积问题是积分学的圣杯，因为很多其它问题都可归结为这个问题。</p>
+<p>从现代的角度，面积问题旨在预测以不断变化的速率变化（变加速度运动）的事物与它随时间的累积程度之间的关系</p>
+<p>牛顿提出<strong>流数术</strong></p>
+<ul>
+<li>
+<p>流量（现在认为是指时间的函数），流数是指流量的导数，或随时间的变化率</p>
+</li>
+<li>
+<p>明确了微积分的两个核心问题：</p>
+<ul>
+<li>已知流量求流数  求导  即<strong>微分</strong>！
+<ul>
+<li><strong>局部问题</strong>   舍弃了<strong>显微镜</strong>所关注的那点的无穷小邻域以外的所有细节</li>
+</ul>
+</li>
+<li>已知流数求它们的流量    面积问题的关键所在  根据变化率推导未知函数  根据斜率推导曲线  <strong>积分</strong>
+<ul>
+<li><strong>整体问题</strong>  是用望远镜遥望远方，预测未来，所有干预事件都很重要不能被忽略。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>整体问题比局部问题难得多！</p>
+<h2 id="运动">运动</h2>
+<p><strong>解析几何是一个强大的工具</strong></p>
+<p>已知物体位置随时间的变化，如何求物体速度随时间的变化</p>
+<ul>
+<li><strong>微分</strong>：放大——局部——<strong>变化</strong>率！</li>
+</ul>
+<blockquote>
+<p>可见运动中就体现了变化</p>
+<p>通过<strong>解析几何</strong>将这一运动问题转化成几何问题——<strong>斜率</strong></p>
+</blockquote>
+<p>关于已知物体运动速度随时间的变化规律，如何求物体位置随时间的变化</p>
+<ul>
+<li><strong>积分</strong>：由变化率求曲线=反向问题</li>
+</ul>
+<blockquote>
+<p>解决方法是求曲线与时间轴所围的面积随时间的累积</p>
+<p>通过<strong>解析几何</strong>将这一运动问题转变成了几何问题——<strong>曲面积</strong></p>
+</blockquote>
+<p><strong>微积分的核心</strong>——<strong>无穷</strong></p>
+<p><strong>无穷原则</strong>从一开始就存在！微积分可以用它的信条来定义：在解决关于任意连续体的难题时，先把它切分成无穷多个部分，然后一一求解，最后通过把各个部分的答案组合起来去解决原始的难题。这也是无穷原则的定义。</p>
+<h3 id="微积分的三大核心问题"><strong>微积分的三大核心问题</strong></h3>
+<ul>
+<li>正向问题   已知一条曲线，求他各处的斜率     <strong>求导</strong></li>
+<li>反向问题   已知一条曲线各处的斜率，求这条曲线    <strong>积分</strong></li>
+<li>面积问题   已知一条曲线求它下方的面积    <strong>积分</strong></li>
+</ul>
+<blockquote>
+<p>看书之前对微积分的认知也就停留在这了。但这本书却讲了300多页这么厚，那么要么是废话，要么就是精致了。而显然给我的印象是后者，作者的笔墨用的恰到好处，加深对微积分的印象、扩展对数学科学研究、科学发现方面的视野，有助于形成一个比较立体、完整的感知，知道科学研究的一些来龙去脉。</p>
+</blockquote>
+<p>曲线下方的面积（求导）——&gt;曲线（求导）——&gt;曲线的斜率</p>
+<p>反向问题和面积问题是一出生就被拆散的双胞胎，或者说是人们看到的同一枚硬币的两面，本质相同。</p>
+<p>面积问题解决==反向问题解决。</p>
+<h3 id="无穷小量"><strong>无穷小量</strong></h3>
+<ul>
+<li>无穷小的数</li>
+<li>无穷小的长度  尽管<strong>不是一个点</strong>，但却比你能想到的任何长度都小</li>
+<li>无穷小的时间  尽管<strong>不是一瞬间</strong>，但却比你能想到的任何持续时间都短。</li>
+</ul>
+<p><strong>微积分背后的核心观点</strong></p>
+<ul>
+<li>在很多自变量x和因变量y之间的关系问题中，输入一个小的变化量△x（偏移）都会使输出产生一个小的变化量△y</li>
+<li>这个小变化量通常是以我们可利用的结构化方式组织起来的，比如y=x^3，x=(x+△x)，则y=<u>x^3</u> + <u>3·x^2</u>·**△x **+ <u>3·x·</u><strong>△x^2</strong> + <strong>△x^3</strong></li>
+<li>输出的变化量包含不同层级的部分，按照大小无穷小的部分还可  分级为小、超小、超超小……  <strong>高阶无穷小量</strong></li>
+<li>我们关注<strong>占主导地位的变化量</strong>，忽略更微小的变化量
+<ul>
+<li>如果输入的变化量是<strong>有限的</strong>，比如2+0.0001，那么无疑得到的只是近似结果。</li>
+<li>但如果输入的变化量<strong>△x是无穷小</strong>的，那么这种<strong>近似处理</strong>反而得到<strong>精确的结果</strong>！</li>
+</ul>
+</li>
+<li>那么处理y的三次方这个函数时，如果dx是一个无穷小的差分，dy就可以取<u>x^3</u> + <u>3·x^2</u>·**dx **，保留dx一次方项，是为了研究无穷小变化量！</li>
+</ul>
+<p>我大学课程所学大多是通过<strong>极限</strong>的思维来讲解，但其实<strong>通过无穷小来理解更接近微积分的本质</strong>，这时它们（dx、dy）叫做微分！</p>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181525533.jpg" style="zoom: 25%;" />
+<p>无穷小量dx尽管不等于0，但也必须满足类似x+dx=x这样无意义的方程</p>
+<hr>
+<h1><strong>喜悦</strong></h1>
+<p>为什么我感受到他们的喜悦呢</p>
+<p>大概是因为我觉得他们发现的知识是理性知识，大概从他们身上我看到了<strong>纯粹科学的非实用性、非功利性</strong></p>
+<p>理性的知识自己决定自己，自己推出自己   仅为自己而存在，他们是<strong>自由的知识</strong>   <strong>只有自由的知识才是确定性知识</strong>  是绝对的，很可能成为<strong>永恒正确的</strong>。</p>
+<p>他们的科学很简单，就是出于兴趣，即使当初没有这项科学发现，对他们的生活不会产生多大影响，顶多是在酒宴上的少了一两件引以为豪的谈资。至少作者的描述让我这么觉得，于是我感受到他们的快乐。</p>
+<h3 id="阿基米德"><strong>阿基米德</strong></h3>
+<p>出于兴趣，发现了杠杆原理   浮力原理</p>
+<p>阿基米德  <strong>用三角形逼近抛物线弓形</strong>求其面积   无穷级数   重量想象</p>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203232156772.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203232159937.png" style="zoom: 50%;" />
+<p>用三角形去逼近抛物线弓形的面积，第2次开始每次以三角形的边为底再做三角形，去逼近弓形。不是随便做，每次做的三角形要确保面积最大。这样做可以在增加相同逼近次数的情况下确保最拟合精度最高。</p>
+<h3 id="伽利略"><strong>伽利略</strong></h3>
+<p>地球上的运动——<strong>阿基米德的学生伽利略</strong>     理性主义者</p>
+<p>出于兴趣，当然还有一贯严谨作风的功劳，他发现了奇数1、3、5、7……与物体下落运动的秘密</p>
+<p>垂直落体运动太快没有足够的科技手段进行观察记录，怎么办？于是</p>
+<p><strong>斜面试验——科学极简主义的艺术</strong></p>
+<p>“凹槽雕刻得非常平直，打磨得十分光滑”，“沿凹槽滚动的是一个坚硬光滑的铜球，非常圆”</p>
+<p>之所以关注斜面凹槽的平直度、光滑度、球的坚硬度、圆度、光滑度，因为伽利略想让球在它能设法实现的最简单最理想的条件下滚落，尽可能减少潜在问题的影响。</p>
+<p>伽利略对待实验十分严谨，就好像有些人痴迷于游戏、痴迷于动漫，若是能将这种热情调整到合适的方向上或许也潜力无限吧。</p>
+<h3 id="牛顿">牛顿</h3>
+<p>牛顿是少数的出身不好的，他从一个孤寂的男孩，一步步成为科学巨人。竟也是出于兴趣爱好。从他的笔记中也能看出其喜悦吧~</p>
+<p><strong>幂级数法</strong>，牛顿在思考圆的面积时偶然所得。微积分运算变得毫不费力！</p>
+<p>牛顿站在巨人的肩膀上</p>
+<ul>
+<li>他统一、综合和归纳了伟大前辈的思想     创造了一种新事物——通用的级数法（通过变量x，他定义了无穷个无穷级数 ）
+<ul>
+<li>他继承了阿基米德的无穷原则</li>
+<li>他的切线知识来自费马</li>
+<li>他使用的小数和变量x分别来自印度数学家和阿拉伯代数</li>
+<li>他用方程表示xy平面上曲线的做法来自笛卡尔的著作</li>
+<li>他对无穷的随心所欲的玩法、他的实验精神及他对猜想和归纳的开放性态度都来自沃利斯。</li>
+</ul>
+</li>
+</ul>
+<center><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181527033.png" alt=" " style="zoom:50%;" /><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203181417206.png" style="zoom:50%;" /></center>
+<h3 id="大凡尔赛——莱布尼兹！">大凡尔赛——莱布尼兹！</h3>
+<p>莱布尼兹用微积分轻松推导出光折射的正弦定律，并且自豪的指出：“其他学识渊博的人大费周章得出的结论，精通微积分的人却好像拥有魔法一样，只做了几步推导就搞定了。”</p>
+<p>莱布尼兹转行到数学，从谦卑求学，到与巨人比肩，其中的喜悦也是溢于言表~</p>
+<hr>
+<h1>启发</h1>
+<p>书中很多东西，让我眼前一亮，有些是新奇，有些是触动了即将被遗忘的记忆。蛮有趣的~</p>
+<h3 id="模式！"><strong>模式</strong>！</h3>
+<p>这个词似乎很重要！很多科学发现，就是在用某个模式去拟合真实物理现象</p>
+<p>类似于开普勒和伽利略他们发现的那些模式。   第三定律（相同时间扫过面积相同）    下落物体相同时间位移变化满足比例1:3:5:7……奇数比</p>
+<p>自然规律  用人类的语言描述出来就成了模式~</p>
+<p>惠更斯级数求和问题，促使莱布尼兹发现了积分的奥秘    类比！：高度计测台阶的高度   可以改写成连续差形式（分数拆分）    <strong>伸缩和</strong></p>
+<p>或者说发现物理问题的  <strong>数学模型</strong>！</p>
+<h3 id="光滑和光滑的崩解"><strong>光滑和光滑的崩解</strong></h3>
+<p>毕加索：“艺术是让我们认识真理的谎言”</p>
+<p><strong>重新定义我脑子里的光滑的概念</strong>：如果一条曲线在任何一点处被<strong>充分</strong>放大后，它越来越直，那么它是光滑的！(充分是要有个度的，就像煮熟和烧焦中间的那个度~)</p>
+<p>连续-光滑——可导——微积分   如果我们设法把测量的<strong>分辨率</strong>推升得过高，在时空中极其细微地观察任何现象，就会看到<strong>光滑度的崩解</strong>。</p>
+<p>和所有科学领域一样，在建立数学模型时，我们总要对强调什么和忽略什么做出选择。抽象的艺术在于 知道什么是必不可少的，什么是细枝末节的；知道什么是信号，什么是噪声；知道什么是趋势，什么是波动。</p>
+<blockquote>
+<p>就像前面的关于无穷小的讨论中，对微分方程的处理，正是通过忽略高阶无穷小的部分才得到了函数y=x^3的导数表达式dy/dx=3x^2</p>
+</blockquote>
+<p>某个奥运冠军的跑步时  <strong>低频拍照记录</strong>得到的<strong>位置-时间图</strong>、及其推算出的<strong>速度-时间图</strong>、高频拍照记录推算出的<strong>速度-时间图</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203162123398.jpg" style="zoom:14%;" /></th>
+<th style="text-align:center"><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/IMG_20220316_185815.jpg" style="zoom: 13%;" /></th>
+<th style="text-align:center"><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203162205085.jpg" style="zoom: 15%;" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">低频   位置-时间</td>
+<td style="text-align:center">低频   速度-时间</td>
+<td style="text-align:center">高频   速度-时间</td>
+</tr>
+</tbody>
+</table>
+<p>再如对任何研究对象，如果分辨率高到原子级，那么一切都不连续或光滑了。</p>
+<h3 id="科学的审美-直觉">科学的审美/直觉</h3>
+<p>简洁美</p>
+<blockquote>
+<p>背后的艺术性，通过提出一个美丽的问题，伽利略从大自然那里“哄骗”出一个美丽的答案。他就像一位抽象表现主义画家。</p>
+</blockquote>
+<blockquote>
+<p>纵观这些科学家发现的公式科学、公理定律，无不透露着简洁的美，似乎越是简洁的公式定理越是强大地令人震惊，比如爱因斯坦的质能方程式</p>
+<p>尽可能忽略掉噪音的影响将变量数最小化，获得了简洁的理论</p>
+<p>简洁和最小化是很棒的审美</p>
+</blockquote>
+<h3 id="连续体和离散体以及-微分方程"><strong>连续体和离散体以及   微分方程</strong></h3>
+<p><strong>比如我们来看一碗汤</strong></p>
+<ul>
+<li>离散的角度（实际），一碗汤是一堆离散的分子，它们都在杂乱无章的跳跃。每个分子为对象，自变量是时间t
+<ul>
+<li>对象太多了</li>
+<li>每个对象的运动都太过复杂！</li>
+<li>单自变量，每个对象对应一个<strong>常微分方程</strong></li>
+</ul>
+</li>
+<li>连续的角度（近似），看成是一个连续体，连续体的各个位置（x,y,z）和时间t都是自变量！
+<ul>
+<li>多自变量</li>
+<li>一个<strong>偏微分方程</strong>！</li>
+</ul>
+</li>
+</ul>
+<p>连续体假设   这在流体力学中很常见！！！当时不太能理解那些偏微分方程！</p>
+<p>弹性、声学、热流、流体流动和气体动力学的定理公式很多都是偏微分方程。</p>
+<p>现代科学中的微积分应用主要体现在偏微分方程的建立、求解和解释！</p>
+<h3 id="牛顿微积分与独立宣言"><strong>牛顿微积分与独立宣言</strong></h3>
+<p><strong>数学与人文、哲学的瓜葛</strong></p>
+<p>牛顿的经验演绎法，以事实为基础，以微积分 为动力，扫除了早期哲学家的先验形而上学方法。</p>
+<p>牛顿的思想还在从决定论和自由到自然律和人权等所有启蒙观念上留下了印记</p>
+<p><strong>独立宣言</strong></p>
+<ul>
+<li>效仿欧几里得在《几何原本》和牛顿在《原理》中的做法，也从公理（与主题相关不证自明的真理）着手，然后凭借逻辑的力量，从这些公理中推导出一一系列不可回避的命题。其中最重要的一个就是殖民地有权脱离英国的统治</li>
+</ul>
+<p>数学在人文哲学上应用，体现在数学思维的运用。</p>
+<h3 id="最早接触到无穷还是小时候"><strong>最早接触到无穷还是小时候</strong></h3>
+<p>在操场上，无穷曾以嘲弄和抬杠的方式出现：</p>
+<p><code>你是个混蛋！</code></p>
+<p><code>是啊，好吧。你是两倍的混蛋！</code></p>
+<p><code>你是无穷倍的混蛋！</code></p>
+<p><code>你是无穷加1倍的混蛋！</code></p>
+<p><code>那和无穷倍是一样的，你这个笨蛋！</code></p>
+<p>无穷+无穷还是无穷，但无穷的无穷倍就不一样了，就像一个具体数字（常量）表示的级数和，和一个用x（变量）表示的级数和后者是牛顿创造的通用级数法，他代表的是无穷个无穷~~显然比任意单个无穷强大~</p>
+<h3 id="隐藏在小学题里的微积分">隐藏在小学题里的微积分</h3>
+<p>无限循环小数0.333…=1/3，</p>
+<p>追击问题，兔子追乌龟，兔子10米每秒，乌龟1米每秒，起点乌龟领先10米</p>
+<p>微积分的思想：</p>
+<p><code>1秒后兔子追平落后的10米，此时乌龟又领先1米</code></p>
+<p><code>0.1秒后兔子追平落后的1米，此时乌龟又领先0.1米</code></p>
+<p><code>0.01秒后兔子追平落后的0.1米，此时乌龟又领先0.01米</code></p>
+<p><code>...</code></p>
+<p>相当于无穷级数1+0.1+0.01+…=1.11…=10/9</p>
+<p>当然还有另外的求解方法。比如设兔子追上乌龟用时为t秒，10t=10+t，就可以解得t=10/9。</p>
+<h3 id="万物皆数？">万物皆数？</h3>
+<p>万物皆波</p>
+<p>用傅里叶的方法可以分析各种波现象，热核爆炸的冲击波，通信的无线电波，在肠内促使营养物质吸收并推动废物朝着正确方向移动的消化波，大脑中与癫痫和帕金森震颤相关的病理性电波，公路上的交通拥挤波。脑电波、心率波</p>
+<p>科学、数学与音乐之间的关联蛮奇妙~     正弦波+正弦波可以得到三角波，进而多个正弦波叠加可以得到任意一种波？   纯音+所有泛音就形成了三角波。这是一个正弦函数表示的无穷级数和。<strong>三角波公式</strong>  （纯音如公式中的sin(x)，泛音如sin(3x)、sin(5x)） 任何乐器的时声音都可以用无穷多个音叉合成，我们要做的只是在适当的时间用适当的力度敲击音叉。电子音乐合成的原理~~~</p>
+<p>正弦波的音干净而宽广如长笛，方波的音尖利而刺耳如警报，三角波的音喧闹嘈杂。</p>
+<p><strong>正在他们的眼里或许    真是万物皆数吧   好奇妙</strong></p>
+<h3 id="DNA的缠绕数">DNA的缠绕数</h3>
+<ul>
+<li>在你大约10万亿个细胞中，每个都有约2米长的DNA，如果它们收尾相连，那么足够在地日间往返几十次。</li>
+<li>一个典型的细胞核的直径约为5微米，它是细胞内DNA长度的40万分之一，这个压缩系数相当于把20英里长的绳子塞到一个网球里。</li>
+</ul>
+<p>DNA包含了一个人成长发育所需的全部遗传信息，这么长也是理所应当的吧~</p>
+<p>DNA双螺旋我知道，但不知中间还有一根线轴，以及它们有序的打包方式~</p>
+<ul>
+<li><strong>DNA打包</strong>的形象比喻。你拉紧一条橡皮筋，用手指夹住它的一端，并从另一端扭转它。刚开始橡皮筋每次转动都会产生一个扭结，当积累的扭转超过临界值时，橡皮筋不再保持绷直状态，而会突然弯曲并盘绕在自己身上，仿佛在痛苦地扭动。最终橡皮筋聚成一团。实现了压缩。DNA也是这样做的。</li>
+<li>扭曲和缠绕之间的转换，就好比一团卷好的水管，你去抽出来这种缠绕会转变扭曲，也就是你拿到的水管总是扭曲了很多个扭结的原因。或者我觉得可以拿风筝线来描述会更有体会，尤其质量不太好的风筝线感受最深，从线圈出来后就是有很多个扭结的，让强迫症心烦！</li>
+</ul>
+<h3 id="GPS定位精度">GPS定位精度</h3>
+<blockquote>
+<p>你知道吗，当一个物体穿过引力场时，时间的流逝可能会加快或者减慢。GPS卫星就需要考虑这一点，哪里的引力场较弱，会使时空曲率扭曲，并导致钟表比在地面上走时快，每天都会比地面上的时钟快45微妙，这听起来似乎不太多，但别忘了GPS需要纳秒级的准确度才能正常运转，而45微秒是45000纳秒，如果没有广义相对论的修正，GPS的误差将以每天10千米的速度不断累计，整个导航系统在几分钟之内就会失去导航价值。</p>
+</blockquote>
+<hr>
+<h1>神秘</h1>
+<h3 id="拉普拉斯妖">拉普拉斯妖</h3>
+<blockquote>
+<p>拉普拉斯设想的一种全知全能的智慧生物，它可以追踪宇宙中所有<strong>原子</strong>的所有位置，还有作用于他们的所有力。“如果这个智慧生物也能对这些数据进行分析，那就没有什么是不确定的了，未来也会像过去一样呈现在它眼前”</p>
+</blockquote>
+<p>超奇妙的设想，堪称一部科幻巨作。然而三个陀螺让它终结了~    也有说是倒在了热力学和量子力学脚下的。</p>
+<h3 id="混沌-新认识">混沌   新认识</h3>
+<p><strong>开始方式的小小改变，也会产生大不相同的结果。</strong></p>
+<p>初期或许还可以预测，但是后期就完全失控。这个时间界限就是可预测性时界，整个太阳系的大概是400万年。</p>
+<blockquote>
+<p>作为漂浮在一个中量级星系中的一颗微不足道的行星上的一个无足轻重的物种，智人是如何成功预测出，在距离地球10亿光年之遥的浩瀚宇宙中的两个黑洞相撞后，时空会发生怎样的震颤呢？我们早在引力波到达地球之前，就知道他的声音应该是什么样子了。</p>
+</blockquote>
+<p>知道的越广，越发现自己的渺小和无知。</p>
+]]></content>
+      <tags>
+        <tag>微积分</tag>
+        <tag>读书报告</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【自然辩证法】听课笔记</title>
+    <url>/2022/03/24/%E3%80%90%E8%87%AA%E7%84%B6%E8%BE%A8%E8%AF%81%E6%B3%95%E3%80%91%E5%90%AC%E8%AF%BE%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>主题：【自然辩证法】听课笔记</p>
+<p><strong>哲学研究涵盖自然、社会和思维，可见自然辩证法只是其中一部分，但又不是独立的。</strong></p>
+<p>自然辩证法是马克思主义的<strong>自然观</strong>和<strong>自然科学观</strong>的反映。体现马克思主义哲学的世界观、认识论、方法论的统一，是马克思主义哲学的一个组成部分。现在中国自然辩证法专业的哲学名称是<strong>科学技术</strong>哲学。</p>
+<blockquote>
+<p>《自然辩证法》是德国哲学家弗里德里希·恩格斯一部尚未完成的著作，是恩格斯多年来对自然科学研究的总结。对19世纪中期的主要自然科学成就用辩证唯物主义的方法进行了概括，并批判了自然科学中的形而上学和唯心主义观念。</p>
+</blockquote>
+<p>自然辩证法作为马克思主义的自然哲学、科学哲学、技术哲学、科学技术与社会研究，不仅具有哲学属性，而且具有交叉学科的性质。</p>
+<p>不过  话说回来  学习数学史科学史    真是让人自卑的事情    因为很早以前，数学科学这些都是不赚钱的行业，所以能够搞这方面研究的人几乎都是有钱人家的孩子，所以在书中经常能看到类似“他致力于数学研究，纯粹是因为他喜欢数学”之类的话，他们通常都不用考虑经济问题，四处游历，讨论他们的研究。也正是如此他们能够沉浸在科学研究之中并不断发现乐趣吧，现在生活节奏比以前快多了，像笛卡尔、莱布尼兹这样的人更加难得了，牛顿那样轻功俭学执着于科学的人就更少了。这或许也是现代科学界面对的巨大挑战吧。现在我们拥有很多强大的工具——计算机及诸多强大的软件，如Matlab等超强科学计算软件，更快的通信——5G，更稳定健全的社会——全球化共同体化，如果在有那样的巨人，科学研究领域应该会更加欣欣向荣吧。</p>
+<p>科学、人、社会、自然是密切关联的，微积分就是连接他们的千丝万缕中的一缕，牛顿从自然中的圆提出圆弓面积的发现无穷级数和的奥秘、建立起微积分大厦的地基，到莱布尼兹统一微积分的符号，再到微积分在治疗艾滋病、医学药物建模、影视图像建模、工程建模等先进前沿领域的应用，在人文哲学方面，数学思想也发挥着重要的作用，比如在促进独立宣言的诞生方面做出了贡献，推进了人类思想启蒙。</p>
 ]]></content>
       <tags>
         <tag>读书笔记</tag>
