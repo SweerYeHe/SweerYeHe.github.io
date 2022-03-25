@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>我的第一篇blog</title>
-    <url>/2022/03/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/</url>
+    <url>/p/undefined.html</url>
     <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>搞了两三天了，还没搞好，昨天搞好了，换了个主题yilia结果头像图片显示不出来，搜索了很多解决方案，结果还是不行，有点烦了，全删了重新装了hexo。<br>烦人。</p>
 <h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>原来要在#符号后面加空格才能显示小标题字体！文章总算可以显示小标题了。</p>
 <h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><p>下一步学习在文章中放图片</p>
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <title>用Typora工具快速编写MarkDown格式的文章</title>
-    <url>/2022/03/04/%E7%94%A8Typora%E5%B7%A5%E5%85%B7%E5%BF%AB%E9%80%9F%E7%BC%96%E5%86%99MarkDown%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%96%87%E7%AB%A0/</url>
+    <url>/p/21915.html</url>
     <content><![CDATA[<h1>Typora简介</h1>
 <p>“<em>Typora是一款跨平台的Markdown编辑器软件</em>，拥有Windows、macOS客户端。Typora支持MarkDown的标准语法，同时这款软件还支持动态预览功能，一键预览。”</p>
 <p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/Typora%E7%95%8C%E9%9D%A2.png" alt="Typora界面"></p>
@@ -267,7 +267,7 @@ n个…<br>
   </entry>
   <entry>
     <title>GitHub+PicGo图床功能测试（&amp;教程）</title>
-    <url>/2022/03/05/GitHub+PicGo%E5%9B%BE%E5%BA%8A%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%EF%BC%88&amp;%E6%95%99%E7%A8%8B%EF%BC%89/</url>
+    <url>/p/54005.html</url>
     <content><![CDATA[<h1>图床测试（&amp;教程）</h1>
 <ul>
 <li>
@@ -398,7 +398,7 @@ n个…<br>
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2022/03/02/Hello%20World/</url>
+    <url>/p/undefined.html</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -416,7 +416,7 @@ n个…<br>
   </entry>
   <entry>
     <title>《微积分的力量》</title>
-    <url>/2022/03/11/%E3%80%8A%E5%BE%AE%E7%A7%AF%E5%88%86%E7%9A%84%E5%8A%9B%E9%87%8F%E3%80%8B/</url>
+    <url>/p/14449.html</url>
     <content><![CDATA[<p>看到第27页，我感到这本书在用常人能听懂的方式讲述微积分的实际应用。不得不说这种讲述方式很讨喜，我有点喜欢上了。</p>
 <p>同时令我想到了昨天在朋友桌上翻看的《费曼学习法》中所述，用输出逼迫自己高效输入，而输出的正确方式是将你所学到的知识用非专业的人能听懂的话来讲，如果是以想要炫耀自己学习深度的态度去输出比如用很多专业的术语，那样则没有效果。</p>
 <p>确实，作为这种输出方式的接受者我感到获得了帮助，如果这般输出还能使输出者高效输入，则是互利共赢了，实在找不到不接受的理由。</p>
@@ -861,7 +861,7 @@ n个…<br>
   </entry>
   <entry>
     <title>Cpp基础</title>
-    <url>/2022/03/06/Cpp%E5%9F%BA%E7%A1%80/</url>
+    <url>/p/61981.html</url>
     <content><![CDATA[<h1>C++编程介绍</h1>
 <p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/C++%E6%A1%86%E6%9E%B6.png" alt="C++框架"></p>
 <p><strong>头文件到底是个什么东西？</strong></p>
@@ -986,7 +986,7 @@ n个…<br>
   </entry>
   <entry>
     <title>C语言数据类型</title>
-    <url>/2022/03/06/C%E8%AF%AD%E8%A8%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <url>/p/3933.html</url>
     <content><![CDATA[<h1>数据类型</h1>
 <p>**原码：**原码表示法在数值前面前面有一位符号位（即最高位为符号位），<a href="http://baike.baidu.com/view/71505.htm">正数</a>该位为0，负数该位为1（0有两种表示：+0和-0），其余位表示数值的大小。</p>
 <p>**反码：**正数的反码与其原码相同；负数的反码是对其原码逐位取反，但符号位除外</p>
@@ -1040,7 +1040,7 @@ n个…<br>
   </entry>
   <entry>
     <title>Hexo博客图片显示问题解决方案（亲测有效）</title>
-    <url>/2022/03/03/Hexo%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/</url>
+    <url>/p/46457.html</url>
     <content><![CDATA[<h1>问题描述</h1>
 <p>按照教程搭载好博客，并且部署到远端，全文本格式的md都使用正常。但是带图片的博客却无法正常显示图片。</p>
 <span id="more"></span>
@@ -1072,7 +1072,7 @@ n个…<br>
   </entry>
   <entry>
     <title>Test</title>
-    <url>/2022/03/02/Test/</url>
+    <url>/p/14373.html</url>
     <content><![CDATA[<h1>测试一下</h1>
 <p>看看图片功能</p>
 <p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/test%E6%9C%AC%E5%9C%B0%E5%9B%BE.jpg" alt=""></p>
@@ -1095,7 +1095,7 @@ n个…<br>
   </entry>
   <entry>
     <title>MarkDown语法</title>
-    <url>/2022/03/04/MarkDown%E8%AF%AD%E6%B3%95/</url>
+    <url>/p/12921.html</url>
     <content><![CDATA[<h1>MarkDown简介</h1>
 <p>Markdown是一种<a href="https://baike.baidu.com/item/%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/52671915">轻量级标记语言</a>，创始人为约翰·格鲁伯（英语：John Gruber）。 它允许人们使用易读易写的<a href="https://baike.baidu.com/item/%E7%BA%AF%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F/9862288">纯文本格式</a>编写文档，然后转换成有效的<a href="https://baike.baidu.com/item/XHTML/316621">XHTML</a>（或者HTML）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。</p>
 <p>由于Markdown的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，许多网站都广泛使用Markdown来撰写帮助文档或是用于论坛上发表消息。 如<a href="https://baike.baidu.com/item/GitHub/10145341">GitHub</a>、<a href="https://baike.baidu.com/item/Reddit/1272010">Reddit</a>、<a href="https://baike.baidu.com/item/Diaspora/10726893">Diaspora</a>、[Stack Exchange](<a href="https://baike.baidu.com/item/Stack">https://baike.baidu.com/item/Stack</a> Exchange/13777796)、<a href="https://baike.baidu.com/item/OpenStreetMap/3171606">OpenStreetMap</a> 、<a href="https://baike.baidu.com/item/SourceForge/6562141">SourceForge</a>、<a href="https://baike.baidu.com/item/%E7%AE%80%E4%B9%A6/5782216">简书</a>、<a href="https://www.yuque.com/dashboard">工作台 · 语雀 (yuque.com)</a>、印象笔记等，甚至还能被使用来撰写<a href="https://baike.baidu.com/item/%E7%94%B5%E5%AD%90%E4%B9%A6/346054">电子书</a>。</p>
@@ -1319,7 +1319,7 @@ n个…<br>
   </entry>
   <entry>
     <title>搭建Hexo博客部署到GitHub上（2022）</title>
-    <url>/2022/03/03/%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A%EF%BC%882022%EF%BC%89/</url>
+    <url>/p/b4245912.html</url>
     <content><![CDATA[<h1>参照官网的文档进行安装和部署</h1>
 <p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <blockquote>
@@ -1433,7 +1433,7 @@ n个…<br>
   </entry>
   <entry>
     <title>Hexo博客主题个性化设置</title>
-    <url>/2022/03/20/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/</url>
+    <url>/p/31686.html</url>
     <content><![CDATA[<h1>next主题下载安装</h1>
 <p>以后自己折腾这些东西都如果真的有兴趣的话建议自己学会查看官方文档，一般里面都有很详细的步骤，以及对一些可能会遇到的问题的解决方案，比起去网上搜的别的人的教程靠谱多了！</p>
 <h2 id="安装next主题">安装next主题</h2>
@@ -1545,7 +1545,7 @@ n个…<br>
   </entry>
   <entry>
     <title>【自然辩证法】什么是科学</title>
-    <url>/2022/03/17/%E3%80%90%E8%87%AA%E7%84%B6%E8%BE%A9%E8%AF%81%E6%B3%95%E3%80%91%E4%BB%80%E4%B9%88%E6%98%AF%E7%A7%91%E5%AD%A6/</url>
+    <url>/p/31776.html</url>
     <content><![CDATA[<blockquote>
 <p>主题：《什么是科学》听课笔记</p>
 </blockquote>
@@ -1839,7 +1839,7 @@ n个…<br>
   </entry>
   <entry>
     <title>《微积分的力量》读书报告</title>
-    <url>/2022/03/25/%E3%80%8A%E5%BE%AE%E7%A7%AF%E5%88%86%E7%9A%84%E5%8A%9B%E9%87%8F%E3%80%8B%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/</url>
+    <url>/p/56552.html</url>
     <content><![CDATA[<blockquote>
 <p>主题：微积分是上帝的语言，无所不在，充满力量</p>
 </blockquote>
@@ -2127,7 +2127,7 @@ n个…<br>
   </entry>
   <entry>
     <title>【自然辩证法】听课笔记</title>
-    <url>/2022/03/24/%E3%80%90%E8%87%AA%E7%84%B6%E8%BE%A8%E8%AF%81%E6%B3%95%E3%80%91%E5%90%AC%E8%AF%BE%E7%AC%94%E8%AE%B0/</url>
+    <url>/p/130.html</url>
     <content><![CDATA[<p>主题：【自然辩证法】听课笔记</p>
 <p><strong>哲学研究涵盖自然、社会和思维，可见自然辩证法只是其中一部分，但又不是独立的。</strong></p>
 <p>自然辩证法是马克思主义的<strong>自然观</strong>和<strong>自然科学观</strong>的反映。体现马克思主义哲学的世界观、认识论、方法论的统一，是马克思主义哲学的一个组成部分。现在中国自然辩证法专业的哲学名称是<strong>科学技术</strong>哲学。</p>
