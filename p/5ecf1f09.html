@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/manifest.json">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"sweeryehe.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="LaTeX 是一种基于ΤΕΧ 的排版系统，其中非常突出的是方便而强大的数学公式排版能力。 结合Matlab的实时脚本编辑器使用！编编写Matlab学习文档很美。 不同的软件中使用LaTeX语法略有差别，不是完全一样的！">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="LaTeX语法&amp;结合Matlab实时文本编辑器介绍">
+<meta property="og:url" content="https://sweeryehe.github.io/p/5ecf1f09.html">
+<meta property="og:site_name" content="SweerYeHe">
+<meta property="og:description" content="LaTeX 是一种基于ΤΕΧ 的排版系统，其中非常突出的是方便而强大的数学公式排版能力。 结合Matlab的实时脚本编辑器使用！编编写Matlab学习文档很美。 不同的软件中使用LaTeX语法略有差别，不是完全一样的！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281905417.png">
+<meta property="og:image" content="c:/Users/HOLDER/AppData/Roaming/Typora/typora-user-images/image-20220328190453626.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281859950.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281849628.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281901476.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281918813.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281926814.png">
+<meta property="article:published_time" content="2022-04-05T11:50:44.000Z">
+<meta property="article:modified_time" content="2022-04-05T12:43:04.470Z">
+<meta property="article:author" content="SweerYeHe">
+<meta property="article:tag" content="Matlab">
+<meta property="article:tag" content="LaTeX">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281905417.png">
+
+
+<link rel="canonical" href="https://sweeryehe.github.io/p/5ecf1f09.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sweeryehe.github.io/p/5ecf1f09.html","path":"p/5ecf1f09.html","title":"LaTeX语法&结合Matlab实时文本编辑器介绍"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>LaTeX语法&结合Matlab实时文本编辑器介绍 | SweerYeHe</title>
+  
+
+
+
+
+<script src="/lib/fireworks.js"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">SweerYeHe</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">day day up!</p>
+      <img class="custom-logo-image" src="/uploads/custom-logo.jpg" alt="SweerYeHe">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">25</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">19</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">在哪看有哪些LaTeX命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">基本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">数学符号</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%92%8C%E7%9F%A9%E9%98%B5"><span class="nav-number">3.1.</span> <span class="nav-text">数组和矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%AE%B5%E5%87%BD%E6%95%B0%E5%BC%8F"><span class="nav-number">3.1.1.</span> <span class="nav-text">分段函数式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E6%95%B0%E3%80%81%E4%B8%8A%E4%B8%8B%E6%A0%87%E5%92%8C%E5%AF%BC%E6%95%B0"><span class="nav-number">3.2.</span> <span class="nav-text">指数、上下标和导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%BC%8F"><span class="nav-number">3.3.</span> <span class="nav-text">分式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B9%E5%BC%8F"><span class="nav-number">3.4.</span> <span class="nav-text">根式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E7%AC%A6%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">3.5.</span> <span class="nav-text">关系符和运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E7%AC%A6"><span class="nav-number">3.5.1.</span> <span class="nav-text">关系符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">3.5.2.</span> <span class="nav-text">运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0"><span class="nav-number">3.6.</span> <span class="nav-text">三角函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90-lim"><span class="nav-number">3.7.</span> <span class="nav-text">极限 \lim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%AF%E5%88%86%E5%8F%B7-%E2%88%AB-int"><span class="nav-number">3.8.</span> <span class="nav-text">积分号 ∫ (\int)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%82%E5%92%8C%E5%8F%B7-%E2%88%91-sum"><span class="nav-number">3.9.</span> <span class="nav-text">求和号 ∑  (\sum)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%AD%E5%A4%B4"><span class="nav-number">3.10.</span> <span class="nav-text">箭头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%AC%E5%8F%B7%E5%92%8C%E5%AE%9A%E7%95%8C%E7%AC%A6"><span class="nav-number">3.11.</span> <span class="nav-text">括号和定界符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E8%A1%8C%E8%B0%83%E8%8A%82%E6%8B%AC%E5%8F%B7%E5%A4%A7%E5%B0%8F"><span class="nav-number">3.11.1.</span> <span class="nav-text">自行调节括号大小</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E4%B8%80%E8%88%AC%E7%AC%A6%E5%8F%B7"><span class="nav-number">3.12.</span> <span class="nav-text">其他一般符号</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">复杂公式输入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E8%A1%8C%E5%85%AC%E5%BC%8F"><span class="nav-number">4.1.</span> <span class="nav-text">多行公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E9%BD%90%E5%A4%9A%E7%BB%84%E5%85%AC%E5%BC%8F"><span class="nav-number">4.2.</span> <span class="nav-text">对齐多组公式</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="SweerYeHe"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">SweerYeHe</p>
+  <div class="site-description" itemprop="description">If we learn so much knowledge that we can not help others, what is the use of learning?</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/sweeryehe" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;sweeryehe" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:sweerhe@qq.com" title="E-Mail → mailto:sweerhe@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/7512971479" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7512971479" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sweeryehe.github.io/p/5ecf1f09.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="SweerYeHe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SweerYeHe">
+      <meta itemprop="description" content="If we learn so much knowledge that we can not help others, what is the use of learning?">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="LaTeX语法&结合Matlab实时文本编辑器介绍 | SweerYeHe">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LaTeX语法&结合Matlab实时文本编辑器介绍
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-04-05 19:50:44 / 修改时间：20:43:04" itemprop="dateCreated datePublished" datetime="2022-04-05T19:50:44+08:00">2022-04-05</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>LaTeX 是一种基于ΤΕΧ 的排版系统，其中非常突出的是<strong>方便而强大的数学公式排版能力</strong>。</p>
+<p>结合Matlab的实时脚本编辑器使用！编编写Matlab学习文档很美。</p>
+<p><strong>不同的软件中使用LaTeX语法略有差别，不是完全一样的！</strong></p>
+<span id="more"></span>
+<h1>在哪看有哪些LaTeX命令</h1>
+<p><strong>在插入方程这里点击帮助按钮，或进入帮助文档搜索LaTeX，都可以查看Matlab支持哪些LaTeX命令，以及使用方法！</strong></p>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281905417.png" style="zoom:50%;" />
+<p><img src="C:/Users/HOLDER/AppData/Roaming/Typora/typora-user-images/image-20220328190453626.png" alt="image-20220328190453626"></p>
+<h1>基本</h1>
+<p>双反斜杠\表示换行</p>
+<p>空格要加反斜杠\转义<code>\ \</code></p>
+<h1>数学符号</h1>
+<h2 id="数组和矩阵">数组和矩阵</h2>
+<p>在 LaTeX 中，你可以通过矩阵环境来创建基础的矩阵公式，与其他类似表格结构的命令一样，通过\cr 创建新的行，&amp; 符号分割来创建列。</p>
+<p>举个例子：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\matrix</span>&#123;</span><br><span class="line">x <span class="built_in">&amp;</span> y <span class="keyword">\cr</span></span><br><span class="line">z <span class="built_in">&amp;</span> v&#125;</span><br></pre></td></tr></table></figure>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281859950.png" style="zoom:80%;" />
+<h3 id="分段函数式">分段函数式</h3>
+<p>语句如下：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">M_&#123;<span class="number">1</span>&#125;= \left \&#123;</span><br><span class="line">\begin&#123;array&#125;&#123;lr&#125;</span><br><span class="line">  M_&#123;ij&#125;(<span class="number">0</span>),          &amp; <span class="keyword">case</span> <span class="number">1</span>\\</span><br><span class="line">  \sum^&#123;N&#125;_&#123;<span class="built_in">j</span>=<span class="number">1</span>,<span class="built_in">j</span>\neq <span class="built_in">i</span>&#125;M_&#123;ij&#125;,   &amp; <span class="keyword">case</span> <span class="number">2</span>\\</span><br><span class="line">  <span class="number">0</span>,                 &amp; <span class="keyword">otherwise</span></span><br><span class="line">\<span class="keyword">end</span>&#123;array&#125;</span><br><span class="line">\right.</span><br></pre></td></tr></table></figure>
+<p><code>\begin&#123;array&#125;&#123;lr&#125;</code>这句中的<code>&#123;lr&#125;</code>表示第一列左对齐，第二列右对齐</p>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281849628.png" style="zoom:80%;" />
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\left</span> <span class="keyword">\&#123;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;array&#125;&#123;lr&#125;</span><br><span class="line"> x+2y=5   <span class="built_in">&amp;</span>(1)<span class="keyword">\\</span></span><br><span class="line">  2x-y=0  <span class="built_in">&amp;</span>(2)<span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;array&#125;</span><br><span class="line"><span class="keyword">\right</span>.</span><br></pre></td></tr></table></figure>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281901476.png" style="zoom:80%;" />
+<p>此外还有各种定界符的矩阵 pmatrix（(）、bmatrix（[）、Bmatrix（{）等。</p>
+<p>专门的Latex语法应该是这样子的，举个例子：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A<span class="built_in">_</span>&#123;m,n&#125; = </span><br><span class="line"><span class="keyword">\begin</span>&#123;pmatrix&#125; </span><br><span class="line">a<span class="built_in">_</span>&#123;1,1&#125; <span class="built_in">&amp;</span> a<span class="built_in">_</span>&#123;1,2&#125; <span class="built_in">&amp;</span> <span class="keyword">\cdots</span> <span class="built_in">&amp;</span> a<span class="built_in">_</span>&#123;1,n&#125; <span class="keyword">\\</span> </span><br><span class="line">a<span class="built_in">_</span>&#123;2,1&#125; <span class="built_in">&amp;</span> a<span class="built_in">_</span>&#123;2,2&#125; <span class="built_in">&amp;</span> <span class="keyword">\cdots</span> <span class="built_in">&amp;</span> a<span class="built_in">_</span>&#123;2,n&#125; <span class="keyword">\\</span> </span><br><span class="line"><span class="keyword">\vdots</span> <span class="built_in">&amp;</span> <span class="keyword">\vdots</span> <span class="built_in">&amp;</span> <span class="keyword">\ddots</span> <span class="built_in">&amp;</span> <span class="keyword">\vdots</span> <span class="keyword">\\</span> </span><br><span class="line">a<span class="built_in">_</span>&#123;m,1&#125; <span class="built_in">&amp;</span> a<span class="built_in">_</span>&#123;m,2&#125; <span class="built_in">&amp;</span> <span class="keyword">\cdots</span> <span class="built_in">&amp;</span> a<span class="built_in">_</span>&#123;m,n&#125; </span><br><span class="line"><span class="keyword">\end</span>&#123;pmatrix&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="指数、上下标和导数">指数、上下标和导数</h2>
+<p>在 LaTeX 中用 ^ 和 _ 标明上下标。上下标的内容如果包含多个字符，需要使用花括号 {} 来将其区分。</p>
+<p>模仿是最好的学习，我们来看一个公式 k_{n+1} = n^2 + k_n^2 - k_{n-1}。</p>
+<h2 id="分式">分式</h2>
+<p>\frac{分子}{分母}。</p>
+<p>但当你在书写连续分数时，则需用到 \cfrac 命令。举个例子：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;equation&#125;</span><br><span class="line">  x = a<span class="built_in">_</span>0 + <span class="keyword">\cfrac</span>&#123;1&#125;&#123;a<span class="built_in">_</span>1 </span><br><span class="line">         <span class="keyword">\+</span> <span class="keyword">\cfrac</span>&#123;1&#125;&#123;a<span class="built_in">_</span>2 </span><br><span class="line">         <span class="keyword">\+</span> <span class="keyword">\cfrac</span>&#123;1&#125;&#123;a<span class="built_in">_</span>3 + <span class="keyword">\cfrac</span>&#123;1&#125;&#123;a<span class="built_in">_</span>4&#125; &#125; &#125; &#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+<p>但在Matlab中这样就行：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = a<span class="built_in">_</span>0 +<span class="keyword">\frac</span>&#123;1&#125;</span><br><span class="line">	   &#123;2+<span class="keyword">\frac</span>&#123;1&#125;</span><br><span class="line">			   &#123;2&#125;&#125;</span><br></pre></td></tr></table></figure>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281918813.png" style="zoom:80%;" />
+<h2 id="根式">根式</h2>
+<p>一般的根式使用 \sqrt{…}。</p>
+<p>表示 n 次方根时写成 \sqrt[n]{…}，比如 \sqrt[n]{1+x+x^2+x^3+\dots+x^n}</p>
+<h2 id="关系符和运算符">关系符和运算符</h2>
+<p>在 LaTeX 中，除了一些常见的符号可以直接用键盘输入外，比如+ - = ! / () [] &lt;&gt; | ’ : *，其他的符号需要用命令输入。</p>
+<h3 id="关系符">关系符</h3>
+<p>=，&gt;，&lt;，直接输入</p>
+<p>不等号≠ \ne</p>
+<p>大于等于号 ≥ \ge</p>
+<p>小于等于号 ≤ \le</p>
+<p>约等号 ≈ \approx</p>
+<p>等价 ≡ \equiv</p>
+<h3 id="运算符">运算符</h3>
+<p>加减乘除+、−、∗、/ 可直接输入</p>
+<p>乘号 × \times</p>
+<p>除号 ÷ \div</p>
+<p>点乘 · \cdot</p>
+<p>加减号 ± \pm / ∓ \mp</p>
+<h2 id="三角函数">三角函数</h2>
+<p>\sin</p>
+<p>\cos</p>
+<p>\tan</p>
+<p>\cot</p>
+<p>举个例子：</p>
+<p>\cos (2\theta) = \cos^2 \theta - \sin^2 \theta</p>
+<h2 id="极限-lim">极限 \lim</h2>
+<p>举个例子：</p>
+<p>\lim_{x \rightarrow 0}</p>
+<p>\frac{\sin x}{x}=1</p>
+<h2 id="积分号-∫-int">积分号 ∫ (\int)</h2>
+<h2 id="求和号-∑-sum">求和号 ∑  (\sum)</h2>
+<p>举个例子：</p>
+<p>\sum_{k=1}^N k^2</p>
+<h2 id="箭头"><strong>箭头</strong></h2>
+<p>常用的箭头包括→ (\rightarrow 或 \to）、← （\leftarrow 或 \gets）。</p>
+<p>举个例子：</p>
+<p>a\xleftarrow{x+y+z} b</p>
+<h2 id="括号和定界符">括号和定界符</h2>
+<p>LaTeX 提供了多种括号和定界符表示公式块的边界，如小括号 ()、中括号 []、大括号 {} ({})、尖括号 ⟨⟩ (\langle \rangle)、上括号(\overbrace)、下括号(\underbrace)等。</p>
+<p>举个例子：</p>
+<p>{a,b,c} \neq {a,b,c}</p>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281926814.png" style="zoom:80%;" arl="上下括号有意思！"/>
+<h3 id="自行调节括号大小">自行调节括号大小</h3>
+<p>举个例子：</p>
+<p>\bigl( \Bigl( \biggl( \Biggl( \quad</p>
+<p>\bigr} \Bigr} \biggr} \Biggr} \quad</p>
+<h2 id="其他一般符号">其他一般符号</h2>
+<p>一般符号就是其英文名称，比如希腊字母符号（字母英文名称）如 α (\alpha)、β (\beta) 等，无穷大符号为 ∞ (\infty)等。</p>
+<hr>
+<h1>复杂公式输入</h1>
+<h2 id="多行公式">多行公式</h2>
+<p>当你的公式不止一行，为了让可读性增强减少阅读障碍，我们需要用到对齐和换行。在 LaTeX 中，&amp; 是对齐，\ 是换行。</p>
+<p>举个例子：</p>
+<p>\begin{align}</p>
+<p>a &amp; = b + c \</p>
+<p>&amp; = d + e</p>
+<p>\end{align}</p>
+<h2 id="对齐多组公式">对齐多组公式</h2>
+<p>可以用 align，公式之间也用 &amp; 分隔。</p>
+<p>举个例子：</p>
+<p>\begin{align}</p>
+<p>a &amp;=1 &amp; b &amp;=2 &amp; c &amp;=3 \</p>
+<p>d &amp;=-1 &amp; e &amp;=-2 &amp; f &amp;=-5</p>
+<p>\end{align}</p>
+<hr>
+<p><strong>参考资料：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/268569440">如何在1小时内快速入手LaTeX？ - 知乎 (zhihu.com)</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee~</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203212035541.png" alt="SweerYeHe ��WechatPay">
+        <span>��WechatPay</span>
+      </div>
+      <div>
+        <img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203212035203.png" alt="SweerYeHe ��Alipay">
+        <span>��Alipay</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>SweerYeHe
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://sweeryehe.github.io/p/5ecf1f09.html" title="LaTeX语法&amp;结合Matlab实时文本编辑器介绍">https://sweeryehe.github.io/p/5ecf1f09.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Matlab/" rel="tag"># Matlab</a>
+              <a href="/tags/LaTeX/" rel="tag"># LaTeX</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 学习笔记</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/p/7e5a64a7.html" rel="prev" title="【自然辩证法】听课笔记3">
+                  <i class="fa fa-chevron-left"></i> 【自然辩证法】听课笔记3
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/p/a456e8be.html" rel="next" title="Git把笔记上传GitHub仓库保管">
+                  Git把笔记上传GitHub仓库保管 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SweerYeHe</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">NaNm</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">NaN:aN</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

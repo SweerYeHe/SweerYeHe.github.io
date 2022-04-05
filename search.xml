@@ -223,7 +223,7 @@ n个…<br>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line">```flow   </span><br><span class="line">    enter键</span><br></pre></td></tr></table></figure>
 <p>就会显示这样的空模板<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/%E7%A9%BA%E6%A8%A1%E6%9D%BF.png" alt="流程图空模板"></p>
 <p>然后输入代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">    </span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">cond(yes)-&gt;e   </span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: 画流程图</span><br><span class="line">stu=&gt;operation: 去学习</span><br><span class="line">cond=&gt;condition: 会不会画?</span><br><span class="line">e=&gt;end: 结束</span><br><span class="line">    </span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(no)-&gt;stu</span><br><span class="line">stu-&gt;e</span><br><span class="line">cond(yes)-&gt;e  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>先是用=&gt;定义start、operation、condition、end的代号分别对应不同的框样式；然后用-&gt;定义路径。</p>
 </blockquote>
@@ -777,8 +777,9 @@ n个…<br>
 <p>连续体假设这个在流体力学中好像很常见！！！当时完全不理解！</p>
 <p>弹性、声学、热流、流体流动和气体动力学等定律都是偏微分方程。</p>
 <p>现代科学中的微积分应用主要体现在偏微分方程的建立、求解和解释！</p>
-<p>爱因斯坦的广义相对论。将引力重新设想为思维时空弯曲的表现。将时空比作一个好似蹦床表面的有弹性、可变形的结构。把一个重物比比如一个保龄球放在它中心，它就会在重量的作用下弯曲，现在想象一个更小的东西比如弹珠，在蹦床的弯曲表面上滚动，由于保龄球重量导致蹦床表面凹陷，它使弹珠的运动轨迹发生偏移，它不再沿直线运动，而是沿着弯曲表面轮廓，反复绕保龄球旋转。这就是行星绕太阳转动原因，它们并未感受到力，而只是在弯曲时空中，沿着阻力最小的路径运动。</p>
+<p>爱因斯坦的广义相对论。将引力重新设想为思维时空弯曲的表现。将时空比作一个好似蹦床表面的有弹性、可变形的结构。把一个重物比比如一个保龄球放在它中心，它就会在<strong>重量</strong>的作用下弯曲，现在想象一个更小的东西比如弹珠，在蹦床的弯曲表面上滚动，由于保龄球重量导致蹦床表面凹陷，它使弹珠的运动轨迹发生偏移，它不再沿直线运动，而是沿着弯曲表面轮廓，反复绕保龄球旋转。这就是行星绕太阳转动原因，它们并未感受到力，而只是在弯曲时空中，沿着阻力最小的路径运动。</p>
 <p>这段描述很生动形象！</p>
+<p><strong>那么重量是一种什么性质呢？在牛顿力学中是万有引力可以解释重量</strong>所以说万有引力还是存在的，这个描述是对时空具象化想象。</p>
 <h3 id="正弦波">正弦波</h3>
 <p><strong>用微积分预测粒子连续介质的运动和变化</strong></p>
 <p>傅里叶十岁成为孤儿，十几岁时体弱多病，认为热量对健康至关重要，即使在夏天他仍然要待在最热的房间里，裹上厚大衣。他专注于热，发明了全球变暖的概念。</p>
@@ -891,7 +892,7 @@ n个…<br>
 <ol start="3">
 <li><strong>汇编器</strong></li>
 </ol>
-<p><strong>将</strong>**.s****翻译成机器语言指令**，把这些指令打包成一种叫做<strong>可重定位目标程序</strong>的格式，并将结果保存在目标文件.o中(把汇编语言翻译成机器语言的过程)。</p>
+<p><strong>将.s翻译成机器语言指令</strong>，把这些指令打包成一种叫做<strong>可重定位目标程序</strong>的格式，并将结果保存在目标文件.o中(把汇编语言翻译成机器语言的过程)。</p>
 <ol start="4">
 <li><strong>链接器</strong>**</li>
 </ol>
@@ -988,26 +989,24 @@ n个…<br>
     <title>C语言数据类型</title>
     <url>/p/3933.html</url>
     <content><![CDATA[<h1>数据类型</h1>
+<h2 id="计算机数据存储"><strong>计算机数据存储</strong></h2>
 <p>**原码：**原码表示法在数值前面前面有一位符号位（即最高位为符号位），<a href="http://baike.baidu.com/view/71505.htm">正数</a>该位为0，负数该位为1（0有两种表示：+0和-0），其余位表示数值的大小。</p>
 <p>**反码：**正数的反码与其原码相同；负数的反码是对其原码逐位取反，但符号位除外</p>
 <p>**补码：**计算机用反码计算时存在-0问题，所以诞生了补码</p>
 <p><strong>补码计算</strong>：正数和+0的补码是其原码；负数则先计算其反码，然后反码加上1，得到补码；补码减掉1，得到反码，再将反码取反，得到原码。</p>
-<span id="more"></span>
 <p>8位二进制取值范围是(-2^7)～(２^7-1)，即-128～127。</p>
 <p>由于补码=10000000具有特殊性，计算机在编写底层算法时，将其规定为该取值范围中的最小数-128，其值与(-1)+(-127)的计算结果正好符合。</p>
 <p>8位二进制补码1000 0000没有对应的反码和原码，其他位数的二进制补码与此类似。</p>
-<ol>
-<li><strong>字符和整形变量</strong></li>
-</ol>
+<span id="more"></span>
+<h2 id="数据类型">数据类型</h2>
+<h3 id="字符和整形变量"><strong>字符和整形变量</strong></h3>
 <p>数据类型的本质就是为了合理利用内存空间</p>
 <p>字节：1B==8位b（二进制）</p>
 <p>1b只能存放0或1</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">	test01();</span><br><span class="line"></span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">test01</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">char</span> ch;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;sizeof (ch)=%d\n&quot;</span>, <span class="keyword">sizeof</span>(ch));<span class="comment">//1字节</span></span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> num;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;sizeof(num)=d%\n&quot;</span>, <span class="keyword">sizeof</span>(num));<span class="comment">//4字节</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<ol start="2">
-<li><strong>指针变量</strong></li>
-</ol>
+<h3 id="指针变量"><strong>指针变量</strong></h3>
 <p>硬盘——内存——CPU</p>
 <p>内存是CPU和硬盘的桥梁</p>
 <p>内存地址：内存编号，内存中每一个字节分配一个号码，就是内存编号</p>
@@ -1025,7 +1024,7 @@ n个…<br>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">testmy01() </span><br><span class="line">&#123;</span><br><span class="line">	int num = 1021;</span><br><span class="line">	int *p = NULL;</span><br><span class="line">	p = &amp;num;</span><br><span class="line">	printf(&quot;&amp;num=%u\n&quot;, &amp;num);</span><br><span class="line">	printf(&quot;p=%u\n&quot;, p);</span><br><span class="line">	printf(&quot;*p=%d\n&quot;, *p);</span><br><span class="line"></span><br><span class="line">	char *p1 = &amp;num;//p1步长是一个字节</span><br><span class="line"></span><br><span class="line">	printf(&quot;p1=%u\n&quot;, p1);</span><br><span class="line">	printf(&quot;*p1=%d\n&quot;, *p1);</span><br><span class="line"></span><br><span class="line">	p1 += 1;</span><br><span class="line">	printf(&quot;p1=%u\n&quot;, p1);</span><br><span class="line">	printf(&quot;*p1=%d\n&quot;, *p1);</span><br><span class="line"></span><br><span class="line">	p1 += 1;</span><br><span class="line">	printf(&quot;p1=%u\n&quot;, p1);</span><br><span class="line">	printf(&quot;*p1=%d\n&quot;, *p1);</span><br><span class="line"></span><br><span class="line">	p1 += 1;</span><br><span class="line">	printf(&quot;p1=%u\n&quot;, p1);</span><br><span class="line">	printf(&quot;*p1=%d\n&quot;, *p1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>编译结果：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&amp;num=5503868</span><br><span class="line">p=5503868</span><br><span class="line">*p=1021</span><br><span class="line">p1=5503868</span><br><span class="line">*p1=-3</span><br><span class="line">p1=5503869</span><br><span class="line">*p1=3</span><br><span class="line">p1=5503870</span><br><span class="line">*p1=0</span><br><span class="line">p1=5503871</span><br><span class="line">*p1=0</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure>
-<p><strong>我不李姐</strong></p>
+<h3 id="我不李姐"><strong>我不李姐</strong></h3>
 <hr>
 <p>test04</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">test04</span><span class="params">()</span> </span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> num = <span class="number">0x12020304</span>;<span class="comment">//赋值十六进制</span></span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> *p1 = &amp;num;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*p1=%#x\n&quot;</span>, *p1);<span class="comment">//输出十六进制</span></span><br><span class="line"></span><br><span class="line">	<span class="type">short</span> *p2 = &amp;num;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*p2=%#x\n&quot;</span>, *p2);</span><br><span class="line"></span><br><span class="line">	<span class="type">char</span> *p3 = &amp;num;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*p3=%#x\n&quot;</span>, *p3);</span><br><span class="line"></span><br><span class="line">	<span class="type">short</span> *p4 = &amp;num;</span><br><span class="line">	p4 += <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;*p4=%#x\n&quot;</span>, *p4);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2133,9 +2132,62 @@ n个…<br>
       </tags>
   </entry>
   <entry>
-    <title>【自然辩证法】听课笔记</title>
+    <title>Matlab软件故障解决</title>
+    <url>/p/8109aec6.html</url>
+    <content><![CDATA[<h1>Matlab软件启动慢初始化很久</h1>
+<ol>
+<li>首先右键此电脑—&gt;属性，找到高级系统设置</li>
+</ol>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203311636368.png" style="zoom: 67%;" />
+<ol start="2">
+<li>点击环境变量<span id="more"></span></li>
+</ol>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203311638126.png" style="zoom: 67%;" />
+<ol start="3">
+<li>新建一个系统变量，变量名为LM_LICENSE_FILE</li>
+</ol>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203311641515.png" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203311639649.png" style="zoom:67%;" />
+<ol start="4">
+<li>变量值：找到你注册的时候的License文件的绝对路径（一定要找到你的License，不要找到的是一个文件夹），比如我的：</li>
+</ol>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203311643266.png" style="zoom: 67%;" />
+<ol start="5">
+<li>选择好了就都一直点击确定。</li>
+</ol>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203311645386.png" style="zoom:67%;" />
+<ol start="6">
+<li>配置系统变量就够了，然后再重启MATLAB，我的MATLAB启动大概20秒就就绪了。</li>
+</ol>
+<h1>底层图形错误</h1>
+<p><font color=red>警告: MATLAB 先前因底层图形错误而崩溃。为避免在此会话期间再次崩溃，MATLAB 将使用软件 OpenGL 而不再使用图形硬件。要保存该设置以供此后的会话使用，请使用 opengl(‘save’, ‘software’) 命令。有关详细信息，请参见解决底层的图形问题。 </font></p>
+<blockquote>
+<p>位置：matlab.graphics.internal.initialize (第 15 行)<br>
+位置: matlab.graphics.internal.convertToRGB<br>
+位置: validatecolor (第 29 行)<br>
+位置: connector.internal.lifecycle.connectorStarted.InitializePreferencePanelManager<br>
+位置: connector.internal.lifecycle.callLifecycle<br>
+位置: connector.internal.lifecycle.callConnectorStarted<br>
+位置: connector.ensureServiceOn<br>
+位置: matlab.internal.debugger.breakpoints/EditorViewBreakpointStore/initListeners<br>
+位置: matlab.internal.debugger.breakpoints.EditorViewBreakpointStore<br>
+位置: matlab.internal.debugger.breakpoints/EditorViewBreakpointStore/getInstance<br>
+位置: matlab.internal.debugger.breakpoints.initBreakpointsStoreInstance</p>
+</blockquote>
+<p>没管它</p>
+]]></content>
+      <categories>
+        <category>MATLAB</category>
+      </categories>
+      <tags>
+        <tag>计算机</tag>
+        <tag>Matlab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【自然辩证法】听课笔记2</title>
     <url>/p/130.html</url>
-    <content><![CDATA[<p>主题：【自然辩证法】听课笔记</p>
+    <content><![CDATA[<p>主题：【自然辩证法】听课笔记2</p>
 <p><strong>哲学研究涵盖自然、社会和思维，可见自然辩证法只是其中一部分，但又不是独立的。</strong></p>
 <p>自然辩证法是马克思主义的<strong>自然观</strong>和<strong>自然科学观</strong>的反映。体现马克思主义哲学的世界观、认识论、方法论的统一，是马克思主义哲学的一个组成部分。现在中国自然辩证法专业的哲学名称是<strong>科学技术</strong>哲学。</p>
 <blockquote>
@@ -2148,6 +2200,208 @@ n个…<br>
       <tags>
         <tag>读书笔记</tag>
         <tag>自然辩证法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【自然辩证法】听课笔记3</title>
+    <url>/p/7e5a64a7.html</url>
+    <content><![CDATA[<blockquote>
+<p>主题：《自然辩证法》听课笔记3</p>
+</blockquote>
+<h1>系统</h1>
+<p><strong>系统与环境的关系</strong>   系统可以分为孤立系统、封闭系统和开放系统，在热力学中学到过。</p>
+<p><strong>系统的状态</strong>   系统可以分为平衡系统、近平衡系统和远离平衡系统。</p>
+<p><strong>系统相互作用</strong>   线性系统、非线性系统</p>
+<p><strong>要素一定是相对系统而言的</strong>。</p>
+<ul>
+<li>没有单一的要素，就像在《被讨厌的人》里面说的，没有一个孤立而存在的人，人/要素一定处在于某个或多个组织/系统中，比如家庭、班级、团队……</li>
+</ul>
+<p><strong>系统与其要素的关系是非加和性的</strong></p>
+<ul>
+<li>要素之间存在联系才能成为系统。</li>
+</ul>
+<p><strong>环境作用于系统：</strong></p>
+<p>环境提供了物质系统存在的外部条件</p>
+<p>物质系统的功能只有在环境中才得以表现</p>
+<p>环境调控物质系统</p>
+<p><strong>物质形态多样性</strong></p>
+<p>物质形态：<strong>非生命和非生命两大类</strong></p>
+<p>非生命的物质构成从宇观、宏观到微观的物质系统</p>
+<p>生命大体可分为微生物、职务和动物</p>
+<p><strong>自然界层次结构的规律</strong></p>
+<p><strong>上层系统与下层系统之间以双向因果链的方式相互作用</strong>。</p>
+<p>上向因果链：底层系统运行规律影响上层系统的运行规律，但上层规律不是下层规律的加和，上层规律会出现新的特征。</p>
+<p>下向因果链：上层系统的规律会限制下层系统的运行规律。要下层系统规律和相关性，还要考虑上层系统的限定。</p>
+<p><strong>可逆</strong>  如果系统从某一状态变到另一状态后，能够再回复到原来的状态，并且同时使系统的环境也回复到原状。</p>
+<p><strong>演化</strong>    是不可逆的运动，一切不可逆的过程都存在时间箭头。</p>
+<p>系统要走向进化、退化，必须要先远离平衡态。打破平衡！失稳。非线性机制是系统内诸要素之间相互维系形成有机整体。</p>
+<ul>
+<li>
+<p>进化</p>
+</li>
+<li>
+<p>退化</p>
+</li>
+</ul>
+<p><strong>二者同存共生</strong></p>
+<ul>
+<li>以进化为主的过程内在地包含着退化，以退化为主的过程常常也内在地包含着进化。纯粹的进化/退化很罕见</li>
+<li>某些方面进化、某些方面退化</li>
+<li><strong>进化以环境的某些退化为代价</strong></li>
+</ul>
+<p>反思：人类社会的进化，往往是以自然环境的退化为代价。</p>
+]]></content>
+      <tags>
+        <tag>读书笔记</tag>
+        <tag>自然辩证法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git把笔记上传GitHub仓库保管</title>
+    <url>/p/a456e8be.html</url>
+    <content><![CDATA[<h1>Git把笔记上传GitHub仓库保管</h1>
+<p>为E:\HOLDER\writing文件夹创建了git仓库</p>
+<p>在github上创建了个人仓库writing，用于存放这个文件夹下的所有笔记</p>
+<ol>
+<li>
+<p>选中文件夹，打开Git Gui界面</p>
+</li>
+<li>
+<p>Remote选项，连接到我的github上的writing仓库</p>
+</li>
+<li>
+<p>Branch选项，新建分支1.0</p>
+</li>
+<li>
+<p>依次Rescan、Stage Changed、Commit</p>
+</li>
+<li>
+<p>Push，输入密码，success !     完成了</p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204052025321.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>学习笔记</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LaTeX语法&amp;结合Matlab实时文本编辑器介绍</title>
+    <url>/p/5ecf1f09.html</url>
+    <content><![CDATA[<p>LaTeX 是一种基于ΤΕΧ 的排版系统，其中非常突出的是<strong>方便而强大的数学公式排版能力</strong>。</p>
+<p>结合Matlab的实时脚本编辑器使用！编编写Matlab学习文档很美。</p>
+<p><strong>不同的软件中使用LaTeX语法略有差别，不是完全一样的！</strong></p>
+<span id="more"></span>
+<h1>在哪看有哪些LaTeX命令</h1>
+<p><strong>在插入方程这里点击帮助按钮，或进入帮助文档搜索LaTeX，都可以查看Matlab支持哪些LaTeX命令，以及使用方法！</strong></p>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281905417.png" style="zoom:50%;" />
+<p><img src="C:/Users/HOLDER/AppData/Roaming/Typora/typora-user-images/image-20220328190453626.png" alt="image-20220328190453626"></p>
+<h1>基本</h1>
+<p>双反斜杠\表示换行</p>
+<p>空格要加反斜杠\转义<code>\ \</code></p>
+<h1>数学符号</h1>
+<h2 id="数组和矩阵">数组和矩阵</h2>
+<p>在 LaTeX 中，你可以通过矩阵环境来创建基础的矩阵公式，与其他类似表格结构的命令一样，通过\cr 创建新的行，&amp; 符号分割来创建列。</p>
+<p>举个例子：</p>
+<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\matrix</span>&#123;</span><br><span class="line">x <span class="built_in">&amp;</span> y <span class="keyword">\cr</span></span><br><span class="line">z <span class="built_in">&amp;</span> v&#125;</span><br></pre></td></tr></table></figure>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281859950.png" style="zoom:80%;" />
+<h3 id="分段函数式">分段函数式</h3>
+<p>语句如下：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">M_&#123;<span class="number">1</span>&#125;= \left \&#123;</span><br><span class="line">\begin&#123;array&#125;&#123;lr&#125;</span><br><span class="line">  M_&#123;ij&#125;(<span class="number">0</span>),          &amp; <span class="keyword">case</span> <span class="number">1</span>\\</span><br><span class="line">  \sum^&#123;N&#125;_&#123;<span class="built_in">j</span>=<span class="number">1</span>,<span class="built_in">j</span>\neq <span class="built_in">i</span>&#125;M_&#123;ij&#125;,   &amp; <span class="keyword">case</span> <span class="number">2</span>\\</span><br><span class="line">  <span class="number">0</span>,                 &amp; <span class="keyword">otherwise</span></span><br><span class="line">\<span class="keyword">end</span>&#123;array&#125;</span><br><span class="line">\right.</span><br></pre></td></tr></table></figure>
+<p><code>\begin&#123;array&#125;&#123;lr&#125;</code>这句中的<code>&#123;lr&#125;</code>表示第一列左对齐，第二列右对齐</p>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281849628.png" style="zoom:80%;" />
+<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\left</span> <span class="keyword">\&#123;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;array&#125;&#123;lr&#125;</span><br><span class="line"> x+2y=5   <span class="built_in">&amp;</span>(1)<span class="keyword">\\</span></span><br><span class="line">  2x-y=0  <span class="built_in">&amp;</span>(2)<span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;array&#125;</span><br><span class="line"><span class="keyword">\right</span>.</span><br></pre></td></tr></table></figure>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281901476.png" style="zoom:80%;" />
+<p>此外还有各种定界符的矩阵 pmatrix（(）、bmatrix（[）、Bmatrix（{）等。</p>
+<p>专门的Latex语法应该是这样子的，举个例子：</p>
+<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line">A<span class="built_in">_</span>&#123;m,n&#125; = </span><br><span class="line"><span class="keyword">\begin</span>&#123;pmatrix&#125; </span><br><span class="line">a<span class="built_in">_</span>&#123;1,1&#125; <span class="built_in">&amp;</span> a<span class="built_in">_</span>&#123;1,2&#125; <span class="built_in">&amp;</span> <span class="keyword">\cdots</span> <span class="built_in">&amp;</span> a<span class="built_in">_</span>&#123;1,n&#125; <span class="keyword">\\</span> </span><br><span class="line">a<span class="built_in">_</span>&#123;2,1&#125; <span class="built_in">&amp;</span> a<span class="built_in">_</span>&#123;2,2&#125; <span class="built_in">&amp;</span> <span class="keyword">\cdots</span> <span class="built_in">&amp;</span> a<span class="built_in">_</span>&#123;2,n&#125; <span class="keyword">\\</span> </span><br><span class="line"><span class="keyword">\vdots</span> <span class="built_in">&amp;</span> <span class="keyword">\vdots</span> <span class="built_in">&amp;</span> <span class="keyword">\ddots</span> <span class="built_in">&amp;</span> <span class="keyword">\vdots</span> <span class="keyword">\\</span> </span><br><span class="line">a<span class="built_in">_</span>&#123;m,1&#125; <span class="built_in">&amp;</span> a<span class="built_in">_</span>&#123;m,2&#125; <span class="built_in">&amp;</span> <span class="keyword">\cdots</span> <span class="built_in">&amp;</span> a<span class="built_in">_</span>&#123;m,n&#125; </span><br><span class="line"><span class="keyword">\end</span>&#123;pmatrix&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="指数、上下标和导数">指数、上下标和导数</h2>
+<p>在 LaTeX 中用 ^ 和 _ 标明上下标。上下标的内容如果包含多个字符，需要使用花括号 {} 来将其区分。</p>
+<p>模仿是最好的学习，我们来看一个公式 k_{n+1} = n^2 + k_n^2 - k_{n-1}。</p>
+<h2 id="分式">分式</h2>
+<p>\frac{分子}{分母}。</p>
+<p>但当你在书写连续分数时，则需用到 \cfrac 命令。举个例子：</p>
+<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;equation&#125;</span><br><span class="line">  x = a<span class="built_in">_</span>0 + <span class="keyword">\cfrac</span>&#123;1&#125;&#123;a<span class="built_in">_</span>1 </span><br><span class="line">         <span class="keyword">\+</span> <span class="keyword">\cfrac</span>&#123;1&#125;&#123;a<span class="built_in">_</span>2 </span><br><span class="line">         <span class="keyword">\+</span> <span class="keyword">\cfrac</span>&#123;1&#125;&#123;a<span class="built_in">_</span>3 + <span class="keyword">\cfrac</span>&#123;1&#125;&#123;a<span class="built_in">_</span>4&#125; &#125; &#125; &#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+<p>但在Matlab中这样就行：</p>
+<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line">x = a<span class="built_in">_</span>0 +<span class="keyword">\frac</span>&#123;1&#125;</span><br><span class="line">	   &#123;2+<span class="keyword">\frac</span>&#123;1&#125;</span><br><span class="line">			   &#123;2&#125;&#125;</span><br></pre></td></tr></table></figure>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281918813.png" style="zoom:80%;" />
+<h2 id="根式">根式</h2>
+<p>一般的根式使用 \sqrt{…}。</p>
+<p>表示 n 次方根时写成 \sqrt[n]{…}，比如 \sqrt[n]{1+x+x^2+x^3+\dots+x^n}</p>
+<h2 id="关系符和运算符">关系符和运算符</h2>
+<p>在 LaTeX 中，除了一些常见的符号可以直接用键盘输入外，比如+ - = ! / () [] &lt;&gt; | ’ : *，其他的符号需要用命令输入。</p>
+<h3 id="关系符">关系符</h3>
+<p>=，&gt;，&lt;，直接输入</p>
+<p>不等号≠ \ne</p>
+<p>大于等于号 ≥ \ge</p>
+<p>小于等于号 ≤ \le</p>
+<p>约等号 ≈ \approx</p>
+<p>等价 ≡ \equiv</p>
+<h3 id="运算符">运算符</h3>
+<p>加减乘除+、−、∗、/ 可直接输入</p>
+<p>乘号 × \times</p>
+<p>除号 ÷ \div</p>
+<p>点乘 · \cdot</p>
+<p>加减号 ± \pm / ∓ \mp</p>
+<h2 id="三角函数">三角函数</h2>
+<p>\sin</p>
+<p>\cos</p>
+<p>\tan</p>
+<p>\cot</p>
+<p>举个例子：</p>
+<p>\cos (2\theta) = \cos^2 \theta - \sin^2 \theta</p>
+<h2 id="极限-lim">极限 \lim</h2>
+<p>举个例子：</p>
+<p>\lim_{x \rightarrow 0}</p>
+<p>\frac{\sin x}{x}=1</p>
+<h2 id="积分号-∫-int">积分号 ∫ (\int)</h2>
+<h2 id="求和号-∑-sum">求和号 ∑  (\sum)</h2>
+<p>举个例子：</p>
+<p>\sum_{k=1}^N k^2</p>
+<h2 id="箭头"><strong>箭头</strong></h2>
+<p>常用的箭头包括→ (\rightarrow 或 \to）、← （\leftarrow 或 \gets）。</p>
+<p>举个例子：</p>
+<p>a\xleftarrow{x+y+z} b</p>
+<h2 id="括号和定界符">括号和定界符</h2>
+<p>LaTeX 提供了多种括号和定界符表示公式块的边界，如小括号 ()、中括号 []、大括号 {} ({})、尖括号 ⟨⟩ (\langle \rangle)、上括号(\overbrace)、下括号(\underbrace)等。</p>
+<p>举个例子：</p>
+<p>{a,b,c} \neq {a,b,c}</p>
+<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203281926814.png" style="zoom:80%;" arl="上下括号有意思！"/>
+<h3 id="自行调节括号大小">自行调节括号大小</h3>
+<p>举个例子：</p>
+<p>\bigl( \Bigl( \biggl( \Biggl( \quad</p>
+<p>\bigr} \Bigr} \biggr} \Biggr} \quad</p>
+<h2 id="其他一般符号">其他一般符号</h2>
+<p>一般符号就是其英文名称，比如希腊字母符号（字母英文名称）如 α (\alpha)、β (\beta) 等，无穷大符号为 ∞ (\infty)等。</p>
+<hr>
+<h1>复杂公式输入</h1>
+<h2 id="多行公式">多行公式</h2>
+<p>当你的公式不止一行，为了让可读性增强减少阅读障碍，我们需要用到对齐和换行。在 LaTeX 中，&amp; 是对齐，\ 是换行。</p>
+<p>举个例子：</p>
+<p>\begin{align}</p>
+<p>a &amp; = b + c \</p>
+<p>&amp; = d + e</p>
+<p>\end{align}</p>
+<h2 id="对齐多组公式">对齐多组公式</h2>
+<p>可以用 align，公式之间也用 &amp; 分隔。</p>
+<p>举个例子：</p>
+<p>\begin{align}</p>
+<p>a &amp;=1 &amp; b &amp;=2 &amp; c &amp;=3 \</p>
+<p>d &amp;=-1 &amp; e &amp;=-2 &amp; f &amp;=-5</p>
+<p>\end{align}</p>
+<hr>
+<p><strong>参考资料：</strong></p>
+<p><a href="https://www.zhihu.com/question/268569440">如何在1小时内快速入手LaTeX？ - 知乎 (zhihu.com)</a></p>
+]]></content>
+      <tags>
+        <tag>Matlab</tag>
+        <tag>LaTeX</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
 </search>
