@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/manifest.json">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"sweeryehe.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="什么是二值图像？什么是灰度图像？ 需要学习一下，分辨其区别。并且要知道怎么转换。怎么从一般图片得到。图片存储的原理，在计算机中的存储格式，要了解。">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Matlab中图像数据结构的理解">
+<meta property="og:url" content="https://sweeryehe.github.io/p/43e345d6.html">
+<meta property="og:site_name" content="SweerYeHe">
+<meta property="og:description" content="什么是二值图像？什么是灰度图像？ 需要学习一下，分辨其区别。并且要知道怎么转换。怎么从一般图片得到。图片存储的原理，在计算机中的存储格式，要了解。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204101747703.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204101837323.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204101850118.png">
+<meta property="article:published_time" content="2022-04-17T11:50:44.000Z">
+<meta property="article:modified_time" content="2022-04-23T02:01:02.847Z">
+<meta property="article:author" content="SweerYeHe">
+<meta property="article:tag" content="Matlab">
+<meta property="article:tag" content="学习笔记">
+<meta property="article:tag" content="图像处理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204101747703.png">
+
+
+<link rel="canonical" href="https://sweeryehe.github.io/p/43e345d6.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sweeryehe.github.io/p/43e345d6.html","path":"p/43e345d6.html","title":"Matlab中图像数据结构的理解"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Matlab中图像数据结构的理解 | SweerYeHe</title>
+  
+
+
+
+
+<script src="/lib/fireworks.js"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">SweerYeHe</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">day day up!</p>
+      <img class="custom-logo-image" src="/uploads/custom-logo.jpg" alt="SweerYeHe">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">27</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">27</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%8C%E5%80%BC%E5%9B%BE%E5%83%8F%EF%BC%9F%E4%BB%80%E4%B9%88%E6%98%AF%E7%81%B0%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">什么是二值图像？什么是灰度图像？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">图片数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9C%9F%E5%BD%A9%E8%89%B2%E5%9B%BE%E5%83%8F-RGB-%E8%BD%AC%E6%88%90%E7%81%B0%E5%BA%A6%E5%9B%BE"><span class="nav-number">2.1.</span> <span class="nav-text">真彩色图像 RGB 转成灰度图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E7%9C%9F%E5%BD%A9%E8%89%B2%E5%9B%BE%E7%9A%84%E5%A4%84%E7%90%86"><span class="nav-number">2.2.</span> <span class="nav-text">对于真彩色图的处理</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="SweerYeHe"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">SweerYeHe</p>
+  <div class="site-description" itemprop="description">If we learn so much knowledge that we can not help others, what is the use of learning?</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/sweeryehe" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;sweeryehe" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:sweerhe@qq.com" title="E-Mail → mailto:sweerhe@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/7512971479" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7512971479" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sweeryehe.github.io/p/43e345d6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="SweerYeHe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SweerYeHe">
+      <meta itemprop="description" content="If we learn so much knowledge that we can not help others, what is the use of learning?">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Matlab中图像数据结构的理解 | SweerYeHe">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Matlab中图像数据结构的理解
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-17 19:50:44" itemprop="dateCreated datePublished" datetime="2022-04-17T19:50:44+08:00">2022-04-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-23 10:01:02" itemprop="dateModified" datetime="2022-04-23T10:01:02+08:00">2022-04-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Matlab/" itemprop="url" rel="index"><span itemprop="name">Matlab</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="什么是二值图像？什么是灰度图像？">什么是二值图像？什么是灰度图像？</h2>
+<p>需要学习一下，分辨其区别。并且要知道怎么转换。怎么从一般图片得到。图片存储的原理，在计算机中的存储格式，要了解。</p>
+<span id="more"></span>
+<h2 id="图片数据类型">图片数据类型</h2>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204101747703.png" alt=""></p>
+<p>可以看到图片的读取到软件中之后是存放在一个数据类型为uint8的三维矩阵中</p>
+<p>第三维大小是3，我觉得是对应RGB三通道。所以第一维和第二维是图像的二维空间分布点，对应385×512个像素点，每个点有R、G、B三色通道的对应饱和值。</p>
+<blockquote>
+<p>感觉很快就可以理解二值图像的意思了！！</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204101837323.png" alt=""></p>
+<p>可以看到灰度图在软件中就是一个数据类型为uint8的二维矩阵，每个点就对应一个值，范围从0~255。表示白度。0是纯黑色，255是纯白色。</p>
+<p>逻辑运算得到的自然就是逻辑矩阵，二值图就对应逻辑矩阵。</p>
+<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204101850118.png" alt=""></p>
+<p>那么二值图的逻辑运算就更好理解了！</p>
+<h3 id="真彩色图像-RGB-转成灰度图">真彩色图像 <code>RGB</code> 转成灰度图</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I = rgb2gray(RGB);</span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">figure</span></span><br><span class="line">I = rgb2gray(imread(<span class="string">&#x27;peppers.png&#x27;</span>));</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>); imshow(I); title(<span class="string">&#x27;原图&#x27;</span>);</span><br><span class="line">I1 = imadjust(I);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">3</span>,<span class="number">2</span>); imshow(I1); title(<span class="string">&#x27;自动调整对比度&#x27;</span>);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>);</span><br><span class="line">I2 = imadjust( I,[<span class="number">0.2</span> <span class="number">0.8</span>],[<span class="number">0</span> <span class="number">1</span>]);</span><br><span class="line">imshow(I2); title(<span class="string">&#x27;取灰度中心区提高对比度&#x27;</span>)</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line">I3 = imadjust(I,[<span class="number">0</span> <span class="number">1</span>],[<span class="number">0</span> <span class="number">0.6</span>]);</span><br><span class="line">imshow(I3);title(<span class="string">&#x27;降低对比度至暗色&#x27;</span>);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>);</span><br><span class="line">I4 = imadjust(I,[],[],<span class="number">0.6</span>);</span><br><span class="line">imshow(I4); title(<span class="string">&#x27;伽马调亮运算&#x27;</span>);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">3</span>,<span class="number">6</span>);</span><br><span class="line">I5 = imadjust(I,[],[],<span class="number">1.4</span>);</span><br><span class="line">imshow(I5); title(<span class="string">&#x27;伽马调暗运算&#x27;</span>);</span><br><span class="line"></span><br><span class="line">J1 = I - I1;</span><br><span class="line">J2 = I - I2;</span><br><span class="line">J3 = I - I3;</span><br><span class="line">J4 = I - I4;</span><br><span class="line">J5 = I - I5;</span><br></pre></td></tr></table></figure>
+<p>从实验结果可以看出来</p>
+<p><strong>调高对比度</strong>，通常是整体调暗，暗的暗更多，亮的暗一点。整体数值都减小，暗部减少的更多。</p>
+<p><strong>降低对比度</strong>，反其道而行之。整体调亮，整体数值都增大，暗部增大的更多（整体调暗，整体数值都减小，亮部减少的更多。）</p>
+<p>调亮则    伽马小于1，调暗则伽马大于1。伽马与灰度值之间没发现明确关系。看了下<code>I4</code>和<code>I</code>的数值，没有找到0.6的比例关系。</p>
+<p>图像的解析其实也体现了微积分的思想。将一张图片（整体）分割成若干个像素点（单元），若干个像素点有序排布（整合）构成图片。</p>
+<p>调整每个像素点的色彩值（RGB或者灰度值）对图片进行处理。</p>
+<p>只有一个值，处理图片的能力有限。比如只能处理灰度图片。</p>
+<h3 id="对于真彩色图的处理">对于真彩色图的处理</h3>
+<p>局部视角：对于每个像素点，将所有颜色分割成三原色，三原色的强度值对应RGB三通道的值，通过分别调整三通道的值，再整合可以得到任意颜色。	<strong>任意改变像素点的色彩</strong></p>
+<p>整体视角：应用到一张图片中。通过对原图进行分析，通过一个映射关系，有规律地调整图片的所有点的像素颜色。处理后的图经过反映射又能回到原图。（理论上。实际可能有精度损失）	<strong>任意改变图片的色彩</strong></p>
+<p>可以看到，图片的处理和解析的过程，与微分再积分的过程非常相似。将大问题切割成小问题，解决小问题，整合构成大问题的解决方案。</p>
+<p>有了这样的微积分思想之后，照片的信息在计算机中的存储也就可以理解了。</p>
+<p>计算机数据与图片信息的对应关系：</p>
+<p>真彩色图：</p>
+<ul>
+<li>空间布局，二维矩阵，对应像素点的相对空间位置</li>
+<li>第三维大小是3，对应图片色彩强度RGB三通道</li>
+<li>三层空间位置上的值，对应像素点的R/G/B强度值</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee~</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203212035541.png" alt="SweerYeHe ��WechatPay">
+        <span>��WechatPay</span>
+      </div>
+      <div>
+        <img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202203212035203.png" alt="SweerYeHe ��Alipay">
+        <span>��Alipay</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>SweerYeHe
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://sweeryehe.github.io/p/43e345d6.html" title="Matlab中图像数据结构的理解">https://sweeryehe.github.io/p/43e345d6.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Matlab/" rel="tag"># Matlab</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 学习笔记</a>
+              <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" rel="tag"># 图像处理</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/p/2d388bdb.html" rel="prev" title="Matlab图片读入和导出">
+                  <i class="fa fa-chevron-left"></i> Matlab图片读入和导出
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/p/ccd0e7a.html" rel="next" title="Matlab中disp输出怎么换行">
+                  Matlab中disp输出怎么换行 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SweerYeHe</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">NaNm</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">NaN:aN</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
