@@ -2109,9 +2109,8 @@ n个…<br>
   <entry>
     <title>Git对Matlab代码进行管理</title>
     <url>/p/eaa00678.html</url>
-    <content><![CDATA[<h1>Git对Matlab代码进行管理</h1>
-<p>Matlab编程期间遇到很多问题，要一个个排查，自己直接修改而不备份，会搞得一团糟。着手去debug了，但是不一定成功，这样初始状态已经被改变了，此时如果代码能回到修改前就好了。Git代码管理可以帮助实现这一点。</p>
-<p>&lt;&gt;</p>
+    <content><![CDATA[<p>Matlab编程期间遇到很多问题，要一个个排查，自己直接修改而不备份，会搞得一团糟。着手去debug了，但是不一定成功，这样初始状态已经被改变了，此时如果代码能回到修改前就好了。Git代码管理可以帮助实现这一点。</p>
+<span id="more"></span>
 <h1>基本设置篇</h1>
 <ol>
 <li>安装完Git后在matlab中输入：<code>!git</code>会输出一段很长的内容如下，说明安装成功！</li>

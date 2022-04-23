@@ -235,7 +235,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-23 10:05:13" itemprop="dateModified" datetime="2022-04-23T10:05:13+08:00">2022-04-23</time>
+      <time title="修改时间：2022-04-23 10:12:54" itemprop="dateModified" datetime="2022-04-23T10:12:54+08:00">2022-04-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -254,7 +254,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>1.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -272,125 +272,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1>Git对Matlab代码进行管理</h1>
-<p>Matlab编程期间遇到很多问题，要一个个排查，自己直接修改而不备份，会搞得一团糟。着手去debug了，但是不一定成功，这样初始状态已经被改变了，此时如果代码能回到修改前就好了。Git代码管理可以帮助实现这一点。</p>
-<p>&lt;&gt;</p>
-<h1>基本设置篇</h1>
-<ol>
-<li>安装完Git后在matlab中输入：<code>!git</code>会输出一段很长的内容如下，说明安装成功！</li>
-</ol>
-<blockquote>
-<p>&gt;&gt;!git<br>
-usage: git [–version] [–help] [-C <path>] [-c <name>=<value>]<br>
-[–exec-path[=<path>]] [–html-path] [–man-path] [–info-path]<br>
-[-p | --paginate | -P | --no-pager] [–no-replace-objects] [–bare]<br>
-[–git-dir=<path>] [–work-tree=<path>] [–namespace=<name>]<br>
-[–super-prefix=<path>] [–config-env=<name>=<envvar>]<br>
-<command> [<args>]</p>
-<p>These are common Git commands used in various situations:</p>
-<p>……<br>
-push      Update remote refs along with associated objects</p>
-<p>‘git help -a’ and ‘git help -g’ list available subcommands and some<br>
-concept guides. See ‘git help <command>’ or ‘git help <concept>’<br>
-to read about a specific subcommand or concept.<br>
-See ‘git help git’ for an overview of the system.</p>
-</blockquote>
-<ol start="2">
-<li>
-<p>配置Git，我这里已经配置好了，参照Git教程</p>
-</li>
-<li>
-<p>创建GIt仓库操作：</p>
-</li>
-</ol>
-<ul>
-<li>
-<p>右键工作目录/源代码管理/管理文件   弹出如图窗口</p>
-<ul>
-<li>沙盒   要求是一个空文件夹    就是你之后创建项目和代码的工作文件文件夹</li>
-</ul>
-</li>
-<li>
-<p>存储路径/更改	弹出二级子窗口，点“+”按钮创建本地GIT存储库（或者设置GITHUB远程库，把github对应仓库的url填上就行）</p>
-<ul>
-<li>验证/确定</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204211110317.png" alt=""></p>
-<ul>
-<li>完成后就是下面这样子。</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204211118248.png" alt=""></p>
-<ul>
-<li>在工作区单击右键/源代码管理	可以向GIT存储库执行提取、推送、取回、分支、暂存、添加到Git等操作。具体操作下面尝试一下</li>
-</ul>
-<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204211133857.png" style="zoom: 80%;" />
-<h1>入门操作篇</h1>
-<h3 id="存档-保存版本（备份）">存档/保存版本（备份）</h3>
-<p>创建脚本文件code1.m，敲代码，保存</p>
-<ul>
-<li>添加到Git</li>
-</ul>
-<p>鼠标选中code1.m文件，右键/源代码管理/添加到Git</p>
-<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204212121332.png" style="zoom:80%;" />
-<ul>
-<li>保存到Git	<strong>第一个版本</strong></li>
-</ul>
-<p>鼠标选中code1.m文件，右键/源代码管理/查看并提交更改	填写comment（必填！），点commit提交。</p>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204212055960.png" alt=""></p>
-<ul>
-<li>
-<p>修改了文件code1.m，编译正常，要去尝试新的想法，添加新的功能。   <strong>存档一次</strong>，</p>
-</li>
-<li>
-<p>鼠标选中code1.m文件，右键，重复上述操作。	<strong>第二个版本</strong></p>
-</li>
-</ul>
-<h3 id="查看修订版本信息">查看修订版本信息</h3>
-<p>鼠标选中code1.m文件，右键/源代码管理/显示修订版本</p>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204212132125.png" alt=""></p>
-<h3 id="还原到前面存档的节点（版本）">还原到前面存档的节点（版本）</h3>
-<p>比如尝试了一下新想法，发现不行。建议先将这个失败品也存档，因为也许是思考的不全面，以后再尝试。</p>
-<ul>
-<li>然后还原到原之前的版本。	<strong>还原到Git中的版本</strong></li>
-</ul>
-<p>鼠标选中code1.m文件，右键/源代码管理/使用Git还原，在子窗口选择要还原到的版本。</p>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204212113712.png" alt=""></p>
-<h3 id="与前代比较">与前代比较</h3>
-<p>鼠标选中code1.m文件，右键/源代码管理/与前代比较</p>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204212133156.png" alt=""></p>
-<h3 id="与修订版本比较">与修订版本比较</h3>
-<p>鼠标选中code1.m文件，右键/源代码管理/与修订版比较   选中要比较的版本/与本地文件比较</p>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204212138871.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204212136904.png" alt=""></p>
-<blockquote>
-<p>这些修订版都存在c盘，不知道怎么修改位置。！！！哭了</p>
-</blockquote>
-<hr>
-<h1>进阶操作篇</h1>
-<h3 id="创建分支">创建分支</h3>
-<p>鼠标选中code1.m文件，右键/源代码管理/分支	弹出子窗口如图</p>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204212143404.png" alt=""></p>
-<ul>
-<li>这步没什么问题，输入分支名称，点创建就直接创建成功了</li>
-</ul>
-<h3 id="切换分支">切换分支</h3>
-<p>鼠标选中code1.m文件，右键/源代码管理/分支	弹出子窗口如图：跟着红色框操作。</p>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204212152085.png" alt=""></p>
-<ul>
-<li>可能会切换失败</li>
-</ul>
-<img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204212156507.png" style="zoom:80%;" />
-<ul>
-<li>原因是当前分支的文件有修改还没有提交，需要先提交或者暂存。
-<ul>
-<li>将当前分支下最新修改保存、提交。在尝试切换分支就成功了如图：</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/SweerYeHe/PicBed_PicGo/main/img/202204212149108.png" alt=""></p>
-
+          <p>Matlab编程期间遇到很多问题，要一个个排查，自己直接修改而不备份，会搞得一团糟。着手去debug了，但是不一定成功，这样初始状态已经被改变了，此时如果代码能回到修改前就好了。Git代码管理可以帮助实现这一点。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/p/eaa00678.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
